@@ -40,7 +40,7 @@ public class AchievementSystem {
         // Progression Achievements
         SIEVE_MASTER("Sieve Master", "Sieve 1000 blocks", 500),
         HAMMER_TIME("Hammer Time", "Use hammer 500 times", 300),
-        MOB_FARMER("Mob Farmer", "Spawn 100 mobs with dolls", 800),
+        MOB_FARMER("Mob Farmer", "Spawn 100 mobs with spawn eggs", 800),
 
         // Special Achievements
         VISITOR("Visitor", "Visit 10 different islands", 400),

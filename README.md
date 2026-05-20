@@ -27,7 +27,6 @@
 - **Dusts**: Iron, Gold, Copper, Tin, Aluminum, Silver, Lead, Nickel
 - **Ore Pieces**: Iron, Gold, Copper, Diamond, Emerald, Coal
 - **Silkworms**: Infest leaves to get String
-- **Dolls**: Blaze (Angry Doll), Enderman (Creepy Doll)
 - **Machines**: Sieve, Barrel, Crucible
 
 ### Shop System ✅
