@@ -35,8 +35,25 @@ public class MechanicsListener implements Listener {
     private final MachineProcessor machineProcessor;
     private final WorthService worthService;
     private final JobService jobService;
+    private final com.wiredid.skytree.impl.ResourceDropManager dropManager;
     private final java.util.Map<String, org.bukkit.inventory.ItemStack> dustSmeltingMap;
     private final java.util.Map<String, org.bukkit.inventory.ItemStack> foodSmeltingMap;
+    private final java.util.Random random = new java.util.Random();
+    private final java.util.Set<Material> treeLeavesMaterials = new java.util.HashSet<>();
+    private boolean treeLeavesInitialized = false;
+
+    // Hammer block conversion map
+    private static final java.util.Map<Material, Material> HAMMER_RECIPES = new java.util.LinkedHashMap<>();
+    static {
+        HAMMER_RECIPES.put(Material.COBBLESTONE, Material.GRAVEL);
+        HAMMER_RECIPES.put(Material.STONE, Material.COBBLESTONE);
+        HAMMER_RECIPES.put(Material.GRAVEL, Material.SAND);
+        HAMMER_RECIPES.put(Material.SAND, Material.GUNPOWDER); // Dust (generic)
+        HAMMER_RECIPES.put(Material.NETHERRACK, Material.GRAVEL);
+        HAMMER_RECIPES.put(Material.ANDESITE, Material.COBBLESTONE);
+        HAMMER_RECIPES.put(Material.DIORITE, Material.COBBLESTONE);
+        HAMMER_RECIPES.put(Material.GRANITE, Material.COBBLESTONE);
+    }
 
     public MechanicsListener(SkytreePlugin plugin, ItemRegistry itemRegistry, RecipeService recipeService,
             MultiblockService multiblockService, MachineProcessor machineProcessor, WorthService worthService, JobService jobService) {
@@ -47,10 +64,23 @@ public class MechanicsListener implements Listener {
         this.machineProcessor = machineProcessor;
         this.worthService = worthService;
         this.jobService = jobService;
+        this.dropManager = new com.wiredid.skytree.impl.ResourceDropManager(plugin);
         this.dustSmeltingMap = new java.util.HashMap<>();
         this.foodSmeltingMap = new java.util.HashMap<>();
         initDustSmeltingMap();
         initFoodSmeltingMap();
+        initTreeLeavesMaterials();
+    }
+
+    private void initTreeLeavesMaterials() {
+        treeLeavesMaterials.add(Material.AZALEA_LEAVES);
+        treeLeavesMaterials.add(Material.FLOWERING_AZALEA_LEAVES);
+        for (com.wiredid.skytree.impl.ResourceDropManager.TreeDropTable table : dropManager.getAllTreeDrops().values()) {
+            if (table.leaves != null) {
+                treeLeavesMaterials.add(table.leaves);
+            }
+        }
+        treeLeavesInitialized = true;
     }
 
     private void initFoodSmeltingMap() {
@@ -96,6 +126,35 @@ public class MechanicsListener implements Listener {
         }
     }
 
+    // Sneak + right-click on dirt/grass to find pebbles
+    @EventHandler
+    public void onDirtScavenge(PlayerInteractEvent event) {
+        if (event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
+        Player player = event.getPlayer();
+        if (!player.isSneaking()) return;
+
+        Block block = event.getClickedBlock();
+        if (block == null) return;
+
+        Material type = block.getType();
+        if (type != Material.DIRT && type != Material.GRASS_BLOCK && type != Material.COARSE_DIRT
+                && type != Material.ROOTED_DIRT && type != Material.PODZOL && type != Material.MYCELIUM
+                && type != Material.GRASS_PATH && type != Material.FARMLAND) return;
+
+        ItemStack hand = player.getInventory().getItemInMainHand();
+        if (!hand.getType().isAir()) return;
+
+        if (random.nextDouble() < 0.4) {
+            block.getWorld().dropItemNaturally(block.getLocation().add(0.5, 0.5, 0.5),
+                    itemRegistry.getItem("pebble_stone"));
+            player.sendMessage("§7You found a pebble!");
+        } else {
+            player.sendMessage("§7You scavenge but find nothing.");
+        }
+
+        event.setCancelled(true);
+    }
+
     // Silkworm: right-click leaves with empty hand
     @EventHandler
     public void onLeafInteract(PlayerInteractEvent event) {
@@ -106,12 +165,21 @@ public class MechanicsListener implements Listener {
         if (block == null) return;
 
         Material type = block.getType();
-        boolean isLeaf = type.name().endsWith("_LEAVES") || type == Material.AZALEA_LEAVES
-                || type == Material.FLOWERING_AZALEA_LEAVES;
+        boolean isLeaf = type.name().endsWith("_LEAVES") || treeLeavesMaterials.contains(type);
         if (!isLeaf) return;
 
         Player player = event.getPlayer();
         ItemStack hand = player.getInventory().getItemInMainHand();
+
+        // Crook: right-click leaves with crook
+        String handId = itemRegistry.getItemId(hand);
+        if (handId != null && dropManager.isCrook(handId)) {
+            handleCrookInteract(player, block, hand, handId);
+            event.setCancelled(true);
+            return;
+        }
+
+        // Empty hand silkworm
         if (hand.getType() != Material.AIR) return;
 
         if (Math.random() < 0.6) {
@@ -126,6 +194,90 @@ public class MechanicsListener implements Listener {
         }
 
         event.setCancelled(true);
+    }
+
+    private void handleCrookInteract(Player player, Block block, ItemStack crook, String crookId) {
+        Material leafType = block.getType();
+        // Determine trunk type by looking 1-2 blocks below
+        Material trunkType = Material.AIR;
+        for (int y = 1; y <= 3; y++) {
+            Block below = block.getRelative(0, -y, 0);
+            if (below.getType().name().endsWith("_LOG") || below.getType().name().endsWith("_WOOD")
+                    || below.getType() == Material.STONE) {
+                trunkType = below.getType();
+                break;
+            }
+        }
+        if (trunkType == Material.AIR) {
+            trunkType = Material.OAK_LOG; // Default fallback
+        }
+
+        // Identify tree type
+        String treeKey = dropManager.identifyTreeType(leafType, trunkType);
+        if (treeKey == null) {
+            // Try to match by material only for vanilla trees
+            if (leafType.name().endsWith("_LEAVES")) {
+                // Use generic oak drops for unrecognized trees
+                treeKey = "dirt_tree";
+            } else {
+                player.sendMessage("§cNo resources found on these leaves.");
+                return;
+            }
+        }
+
+        com.wiredid.skytree.impl.ResourceDropManager.TreeDropTable table = dropManager.getTreeDrop(treeKey);
+        if (table == null || table.drops.isEmpty()) {
+            player.sendMessage("§cThis tree has no harvestable resources.");
+            return;
+        }
+
+        double bonus = dropManager.getCrookBonus(crookId);
+        boolean droppedAny = false;
+
+        for (com.wiredid.skytree.impl.ResourceDropManager.DropEntry entry : table.drops) {
+            double effectiveChance = entry.chance * (1.0 + bonus);
+            if (random.nextDouble() * 100 < effectiveChance) {
+                int amount = entry.min + random.nextInt(entry.max - entry.min + 1);
+                ItemStack drop = resolveDropItem(entry.itemId, amount);
+                if (drop != null) {
+                    block.getWorld().dropItemNaturally(block.getLocation().add(0.5, 0.7, 0.5), drop);
+                    droppedAny = true;
+                }
+            }
+        }
+
+        if (droppedAny) {
+            player.sendMessage("§a§l[Crook] §7Harvested " + treeKey.replace("_", " ") + "!");
+        } else {
+            player.sendMessage("§7No drops this time.");
+        }
+
+        // Damage crook
+        if (crook.getType() != Material.AIR) {
+            crook.damage(1, player);
+            if (crook.getType() == Material.AIR) {
+                player.getInventory().setItemInMainHand(null);
+            }
+        }
+    }
+
+    private ItemStack resolveDropItem(String itemId, int amount) {
+        if (itemId == null) return null;
+
+        // Check custom items first
+        ItemStack custom = itemRegistry.getItem(itemId);
+        if (custom != null) {
+            custom.setAmount(amount);
+            return custom;
+        }
+
+        // Check vanilla materials
+        Material mat = Material.matchMaterial(itemId.toUpperCase());
+        if (mat != null && mat != Material.AIR) {
+            return new ItemStack(mat, amount);
+        }
+
+        return null;
     }
 
     // Composter override: harvest gives dirt instead of bone meal
@@ -396,16 +548,39 @@ public class MechanicsListener implements Listener {
             }
         }
 
+        // Hammer: break block override
+        String handId = plugin.getItemRegistry().getItemId(tool);
+        if (handId != null && handId.startsWith("hammer_")) {
+            Material result = HAMMER_RECIPES.get(block.getType());
+            if (result != null) {
+                event.setCancelled(true);
+                block.setType(Material.AIR);
+                block.getWorld().dropItemNaturally(block.getLocation().add(0.5, 0.5, 0.5), new ItemStack(result));
+                if (tool.getType() != Material.AIR) {
+                    tool.damage(1, player);
+                    if (tool.getType() == Material.AIR) {
+                        player.getInventory().setItemInMainHand(null);
+                    }
+                }
+                player.sendMessage("§7§l[Hammer] §7Crushed " + formatBlockName(block.getType()) + "!");
+                return;
+            }
+        }
+
         if (machineProcessor.getActiveMachinesLocations().contains(block.getLocation())) {
             machineProcessor.unregisterMachine(block.getLocation());
         }
     }
 
+    private String formatBlockName(Material mat) {
+        return mat.name().toLowerCase().replace("_", " ");
+    }
+
     private void openBarrelGUI(Player player) {
-        Inventory gui = Bukkit.createInventory(null, 27, ComponentUtil.parse("§6§lBarrel"));
+        Inventory gui = Bukkit.createInventory(null, 27, ComponentUtil.parse("§6§lCrushing Tub"));
         setupMachineGUI(gui);
         gui.setItem(10, null);
-        gui.setItem(14, createButton(Material.LIME_STAINED_GLASS_PANE, "§a§lProcess", "§7Click to Compost"));
+        gui.setItem(14, createButton(Material.LIME_STAINED_GLASS_PANE, "§a§lProcess", "§7Crush organics into water"));
         player.openInventory(gui);
     }
 

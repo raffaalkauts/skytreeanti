@@ -1,0 +1,37 @@
+# Resource tree drop tables
+# Each tree type defines:
+#   growth_time: seconds until fully grown
+#   drops: items dropped when crooking leaves
+#     item_id: { chance: %, min: count, max: count }
+
+resource_trees:
+  dirt_tree:
+    growth_time: 30
+    trunk: OAK_LOG
+    leaves: OAK_LEAVES
+    drops:
+      dirt_acorn: { chance: 40, min: 1, max: 3 }
+      dirt_resin: { chance: 30, min: 1, max: 2 }
+      dirt_sapling: { chance: 15, min: 1, max: 1 }
+      pebble_stone: { chance: 10, min: 1, max: 2 }
+
+  petrified_tree:
+    growth_time: 45
+    trunk: STONE
+    leaves: COBBLESTONE
+    drops:
+      petrified_acorn: { chance: 40, min: 1, max: 3 }
+      petrified_resin: { chance: 30, min: 1, max: 2 }
+      cobblestone: { chance: 15, min: 1, max: 1 }
+      pebble_stone: { chance: 15, min: 1, max: 2 }
+
+# Crook tier drop rate multiplier
+crook_bonus:
+  crook_wood: 0.0
+  crook_stone: 0.1
+  crook_bone: 0.05
+  crook_iron: 0.25
+  crook_gold: 0.5
+  crook_diamond: 0.5
+  crook_emerald: 0.75
+  crook_netherite: 1.0

@@ -41,7 +41,7 @@ public class MachineGUIListener implements Listener {
 
         // Only handle actual machine GUIs, not every "§6§l" GUI
         boolean isMachine = title.equals("§6§lSieve")
-                || title.contains("Barrel") || title.contains("Crucible")
+                || title.contains("Crushing Tub") || title.contains("Barrel") || title.contains("Crucible")
                 || title.contains("Compressor") || title.contains("Pulverizer")
                 || title.contains("Electric Furnace") || title.contains("Generator")
                 || title.contains("Cobblestone Generator");
@@ -63,7 +63,7 @@ public class MachineGUIListener implements Listener {
 
         if (title.equals("§6§lSieve")) {
             handleSieve(player, event.getInventory(), displayName);
-        } else if (title.contains("Barrel")) {
+        } else if (title.contains("Crushing Tub") || title.contains("Barrel")) {
             handleBarrel(player, event.getInventory(), displayName);
         } else if (title.contains("Crucible")) {
             handleCrucible(player, event.getInventory(), displayName);
@@ -123,24 +123,24 @@ public class MachineGUIListener implements Listener {
             ItemStack input = inv.getItem(10); // Input slot
 
             if (input == null || input.getType() == Material.AIR) {
-                player.sendMessage("§c§l[Barrel] §cNo input item!");
+                player.sendMessage("§c§l[Crushing Tub] §cNo input item!");
                 return;
             }
 
             if (!recipeService.canCompost(input.getType())) {
-                player.sendMessage("§c§l[Barrel] §cThis item cannot be composted!");
+                player.sendMessage("§c§l[Crushing Tub] §cThis item cannot be crushed!");
                 return;
             }
 
             // Process
             ItemStack result = recipeService.getBarrelResult(input.getType());
             if (result == null) {
-                player.sendMessage("§c§l[Barrel] §cNo recipe found!");
+                player.sendMessage("§c§l[Crushing Tub] §cNo recipe found!");
                 return;
             }
 
             player.getInventory().addItem(result);
-            player.sendMessage("§a§l[Barrel] §aComposted " + input.getType().name() + "!");
+            player.sendMessage("§b§l[Crushing Tub] §bExtracted water from " + input.getType().name() + "!");
 
             // Consume input
             input.setAmount(input.getAmount() - 1);

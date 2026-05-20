@@ -216,72 +216,8 @@ public class SkytreeRecipeService implements RecipeService {
                                 Map.of('I', Material.IRON_INGOT));
 
                 // ===================================
-                // 3x3 COMPRESSION RECIPES (Pebbles/Pieces)
+                // ALLOY RECIPES
                 // ===================================
-
-                // Pebbles -> Blocks
-                ItemStack pebbleDiorite = itemRegistry.getItem("pebble_diorite");
-                if (pebbleDiorite != null) {
-                        addShapedRecipe("diorite_from_pebble", new ItemStack(Material.DIORITE),
-                                        new String[] { "PPP", "PPP", "PPP" },
-                                        Map.of('P', pebbleDiorite.getType()));
-                }
-                // if
-                // itemRegistry.getItem()
-                // returns ItemStack
-                // with special meta.
-                // Actually, shaped recipe only supports Material ingredients natively.
-                // Ideally we should use Choice or ExactChoice but helper only supports
-                // Map<Character, Material>.
-                // For now, we assume pebbles etc are distinguishable by Material or we accept
-                // any item of that Material.
-                // Since "pebble_diorite" is GRAVEL, this would mean 9 GRAVEL = DIORITE. That
-                // conflicts with vanilla?
-                // 9 Gravel usually doesn't create anything in vanilla (maybe gravel block? no).
-
-                // Wait, custom items share base materials (Gravel, Iron Nugget, etc.).
-                // Using standard Bukkit Recipe with Material ingredients WILL CAUSE CONFLICTS.
-                // 9 Gravel = Diorite? 9 Gravel = Coarse Dirt?
-
-                // The implementation plan assumes we can add these recipes.
-                // BUT since we are using a lightweight "No NBT Recipe API" approach in the
-                // helper method `addShapedRecipe`,
-                // we'll run into issues.
-                //
-                // However, since the user asked for this, and we already use custom items in
-                // other recipes (like Sieve),
-                // we might need a better `addShapedRecipe` that supports ExactChoice.
-
-                // Let's UPDATE `addShapedRecipe` to support ItemStacks if possible, or just
-                // accept the limitation
-                // that 9 Gravel -> Diorite might be the only recipe for 9 Gravel.
-                // Actually, 9 Gravel -> Coarse Dirt isn't a thing.
-                // So 9 Gravel -> Diorite is fine.
-                // But 9 Gravel -> Andesite? -> Conflict.
-
-                // FIX: We need a custom crafting listener for 3x3 custom items,
-                // OR we accept that we can't register conflicting standard recipes.
-                // The prompt says "Add missing recipes".
-                // I will add them as standard recipes using base materials, BUT
-                // since Pebble = Gravel, Piece = Nugget, we have conflicts.
-
-                // Improved approach: Use `prepareItemCraftEvent` listener for advanced recipes?
-                // Or just added them for now and let the server pick one? (Bad UX).
-
-                // ALTERNATIVE: Use the Custom Item as the key ingredient.
-                // I will implement a `CustomCraftingListener` later if needed, but for now,
-                // I'll skip the potentially conflicting 3x3 recipes here
-                // AND INSTEAD implement them in `MechanicsListener` or a new
-                // `CraftingListener`?
-                //
-                // actually SkytreeRecipeService helper `addShapedRecipe` uses
-                // `recipe.setIngredient(key, Material)`.
-                // It does NOT support ItemStack ingredients.
-
-                // I will implement the Alloy Dust recipes (Copper + Zinc = Brass)
-                // because Dusts are different materials (Gunpowder vs Sugar vs Redstone etc).
-
-                // Alloys
                 // Copper (Gunpowder) + Zinc (Sugar) -> Brass (Gold Nugget)
                 addShapelessRecipe("dust_brass", itemRegistry.getItem("dust_brass"), 2,
                                 itemRegistry.getItem("dust_copper").getType(),
@@ -309,6 +245,32 @@ public class SkytreeRecipeService implements RecipeService {
                 registerFullSetRecipes("bronze", "ingot_bronze");
                 registerFullSetRecipes("steel", "ingot_steel");
                 registerFullSetRecipes("uranium", "ingot_uranium");
+
+                // ===================================
+                // RESOURCE PROGRESSION RECIPES
+                // ===================================
+
+                // 4 Pebbles → 1 Cobblestone
+                addShapedRecipe("cobble_from_pebbles", new ItemStack(Material.COBBLESTONE),
+                                new String[] { "PP ", "PP ", "   " },
+                                Map.of('P', itemRegistry.getItem("pebble_stone").getType()));
+
+                // Dirt Acorn + Dirt Resin + Dirt = Dirt Sapling
+                addShapelessRecipeExact("dirt_sapling_craft", itemRegistry.getItem("dirt_sapling"), 1,
+                                itemRegistry.getItem("dirt_acorn"),
+                                itemRegistry.getItem("dirt_resin"),
+                                new ItemStack(Material.DIRT));
+
+                // Petrified Acorn + Petrified Resin + Cobblestone = Petrified Sapling
+                addShapelessRecipeExact("petrified_sapling_craft", itemRegistry.getItem("petrified_sapling"), 1,
+                                itemRegistry.getItem("petrified_acorn"),
+                                itemRegistry.getItem("petrified_resin"),
+                                new ItemStack(Material.COBBLESTONE));
+
+                // Dirt Acorn + Dirt Resin → Dirt block (in crafting table)
+                addShapelessRecipeExact("dirt_from_acorn_resin", new ItemStack(Material.DIRT, 1), 1,
+                                itemRegistry.getItem("dirt_acorn"),
+                                itemRegistry.getItem("dirt_resin"));
         }
 
         private void registerFullSetRecipes(String prefix, String ingotId) {
@@ -439,10 +401,8 @@ public class SkytreeRecipeService implements RecipeService {
                 addSieveRecipe(Material.GRAVEL, "string",
                                 new ItemStack(Material.FLINT),
                                 new ItemStack(Material.IRON_NUGGET, 2),
-                                itemRegistry.getItem("pebble_diorite"),
-                                itemRegistry.getItem("pebble_andesite"),
-                                itemRegistry.getItem("pebble_basalt"),
-                                itemRegistry.getItem("pebble_blackstone"));
+                                itemRegistry.getItem("pebble_stone"),
+                                itemRegistry.getItem("pebble_stone"));
                 addSieveRecipe(Material.DIRT, "string",
                                 new ItemStack(Material.WHEAT_SEEDS),
                                 new ItemStack(Material.BEETROOT_SEEDS),
@@ -539,15 +499,72 @@ public class SkytreeRecipeService implements RecipeService {
         }
 
         private void registerBarrelRecipes() {
-                // Barrel: Sapling → water_bottle
-                barrelRecipes.put(Material.OAK_SAPLING, itemRegistry.getItem("water_bottle"));
-                barrelRecipes.put(Material.BIRCH_SAPLING, itemRegistry.getItem("water_bottle"));
-                barrelRecipes.put(Material.SPRUCE_SAPLING, itemRegistry.getItem("water_bottle"));
-                barrelRecipes.put(Material.JUNGLE_SAPLING, itemRegistry.getItem("water_bottle"));
-                barrelRecipes.put(Material.ACACIA_SAPLING, itemRegistry.getItem("water_bottle"));
-                barrelRecipes.put(Material.DARK_OAK_SAPLING, itemRegistry.getItem("water_bottle"));
-                barrelRecipes.put(Material.CHERRY_SAPLING, itemRegistry.getItem("water_bottle"));
-                barrelRecipes.put(Material.MANGROVE_PROPAGULE, itemRegistry.getItem("water_bottle"));
+                // Barrel (Crushing Tub): organic items → water_bottle
+                ItemStack waterBottle = itemRegistry.getItem("water_bottle");
+                if (waterBottle == null) return;
+
+                // All saplings
+                for (Material mat : new Material[]{
+                        Material.OAK_SAPLING, Material.BIRCH_SAPLING, Material.SPRUCE_SAPLING,
+                        Material.JUNGLE_SAPLING, Material.ACACIA_SAPLING, Material.DARK_OAK_SAPLING,
+                        Material.CHERRY_SAPLING, Material.MANGROVE_PROPAGULE
+                }) {
+                        barrelRecipes.put(mat, waterBottle);
+                }
+
+                // All leaves
+                for (Material mat : Material.values()) {
+                        if (mat.name().endsWith("_LEAVES") || mat == Material.AZALEA_LEAVES || mat == Material.FLOWERING_AZALEA_LEAVES) {
+                                barrelRecipes.put(mat, waterBottle);
+                        }
+                }
+
+                // Organic items
+                barrelRecipes.put(Material.APPLE, waterBottle);
+                barrelRecipes.put(Material.GOLDEN_APPLE, waterBottle);
+                barrelRecipes.put(Material.ENCHANTED_GOLDEN_APPLE, waterBottle);
+                barrelRecipes.put(Material.SWEET_BERRIES, waterBottle);
+                barrelRecipes.put(Material.GLOW_BERRIES, waterBottle);
+                barrelRecipes.put(Material.WHEAT, waterBottle);
+                barrelRecipes.put(Material.WHEAT_SEEDS, waterBottle);
+                barrelRecipes.put(Material.BEETROOT, waterBottle);
+                barrelRecipes.put(Material.BEETROOT_SEEDS, waterBottle);
+                barrelRecipes.put(Material.CARROT, waterBottle);
+                barrelRecipes.put(Material.POTATO, waterBottle);
+                barrelRecipes.put(Material.MELON_SLICE, waterBottle);
+                barrelRecipes.put(Material.MELON_SEEDS, waterBottle);
+                barrelRecipes.put(Material.PUMPKIN, waterBottle);
+                barrelRecipes.put(Material.PUMPKIN_SEEDS, waterBottle);
+                barrelRecipes.put(Material.COCOA_BEANS, waterBottle);
+                barrelRecipes.put(Material.KELP, waterBottle);
+                barrelRecipes.put(Material.DRIED_KELP, waterBottle);
+                barrelRecipes.put(Material.SUGAR_CANE, waterBottle);
+                barrelRecipes.put(Material.BAMBOO, waterBottle);
+                barrelRecipes.put(Material.CACTUS, waterBottle);
+                barrelRecipes.put(Material.VINE, waterBottle);
+                barrelRecipes.put(Material.TWISTING_VINES, waterBottle);
+                barrelRecipes.put(Material.WEEPING_VINES, waterBottle);
+                barrelRecipes.put(Material.NETHER_WART, waterBottle);
+                barrelRecipes.put(Material.BROWN_MUSHROOM, waterBottle);
+                barrelRecipes.put(Material.RED_MUSHROOM, waterBottle);
+                barrelRecipes.put(Material.CRIMSON_FUNGUS, waterBottle);
+                barrelRecipes.put(Material.WARPED_FUNGUS, waterBottle);
+                barrelRecipes.put(Material.GLOW_LICHEN, waterBottle);
+                barrelRecipes.put(Material.HANGING_ROOTS, waterBottle);
+                barrelRecipes.put(Material.MANGROVE_ROOTS, waterBottle);
+                barrelRecipes.put(Material.SHORT_GRASS, waterBottle);
+                barrelRecipes.put(Material.TALL_GRASS, waterBottle);
+                barrelRecipes.put(Material.FERN, waterBottle);
+                barrelRecipes.put(Material.LARGE_FERN, waterBottle);
+                barrelRecipes.put(Material.DEAD_BUSH, waterBottle);
+                barrelRecipes.put(Material.ROSE_BUSH, waterBottle);
+                barrelRecipes.put(Material.LILAC, waterBottle);
+                barrelRecipes.put(Material.PEONY, waterBottle);
+                barrelRecipes.put(Material.SUNFLOWER, waterBottle);
+                barrelRecipes.put(Material.LILY_PAD, waterBottle);
+                barrelRecipes.put(Material.SPORE_BLOSSOM, waterBottle);
+                // Custom resource saplings (will be added by ID in code)
+                // These are handled by the MechanicsListener barrel handler via item ID
 
                 // 4 water_bottle → glass_water_bucket (shapeless)
                 ItemStack waterBottle = itemRegistry.getItem("water_bottle");
@@ -666,11 +683,8 @@ public class SkytreeRecipeService implements RecipeService {
                 compressionRecipes.put("dust_zinc_9", itemRegistry.getItem("compressed_dust_1x"));
                 compressionRecipes.put("dust_obsidian_9", new ItemStack(Material.OBSIDIAN, 1));
 
-                // Pebbles (9 -> 1 Block)
-                compressionRecipes.put("pebble_diorite_9", new ItemStack(Material.DIORITE, 1));
-                compressionRecipes.put("pebble_andesite_9", new ItemStack(Material.ANDESITE, 1));
-                compressionRecipes.put("pebble_basalt_9", new ItemStack(Material.BASALT, 1));
-                compressionRecipes.put("pebble_blackstone_9", new ItemStack(Material.BLACKSTONE, 1));
+                // Pebbles (9 -> 1 Cobblestone)
+                compressionRecipes.put("pebble_stone_9", new ItemStack(Material.COBBLESTONE, 1));
 
                 // Pieces (9 -> 1 Ore/Item)
                 compressionRecipes.put("piece_iron_9", new ItemStack(Material.IRON_ORE, 1));

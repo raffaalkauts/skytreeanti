@@ -227,25 +227,43 @@ items:
     name: "§4Netherite Mesh"
     lore: ["§7Best drops"]
 
-  pebble_diorite:
+  pebble_stone:
     material: GRAVEL
-    name: "§fDiorite Pebble"
-    lore: ["§79 = 1 Diorite"]
+    name: "§7Pebble"
+    lore: ["§74 Pebbles = 1 Cobblestone"]
 
-  pebble_andesite:
-    material: GRAVEL
-    name: "§7Andesite Pebble"
-    lore: ["§79 = 1 Andesite"]
+  # ===================================
+  # RESOURCE TREES
+  # ===================================
+  dirt_acorn:
+    material: BROWN_DYE
+    name: "§6Dirt Acorn"
+    lore: ["§7From Dirt Tree leaves"]
 
-  pebble_basalt:
-    material: GRAVEL
-    name: "§8Basalt Pebble"
-    lore: ["§79 = 1 Basalt"]
+  dirt_resin:
+    material: BROWN_DYE
+    name: "§6Dirt Resin"
+    lore: ["§7From Dirt Tree leaves"]
 
-  pebble_blackstone:
-    material: GRAVEL
-    name: "§0Blackstone Pebble"
-    lore: ["§79 = 1 Blackstone"]
+  dirt_sapling:
+    material: OAK_SAPLING
+    name: "§6Dirt Sapling"
+    lore: ["§7Grows into a Dirt Tree", "§7Produces dirt resources"]
+
+  petrified_acorn:
+    material: GRAY_DYE
+    name: "§8Petrified Acorn"
+    lore: ["§7From Petrified Tree leaves"]
+
+  petrified_resin:
+    material: GRAY_DYE
+    name: "§8Petrified Resin"
+    lore: ["§7From Petrified Tree leaves"]
+
+  petrified_sapling:
+    material: DEAD_BUSH
+    name: "§8Petrified Sapling"
+    lore: ["§7Grows into a Petrified Tree", "§7Produces cobblestone resources"]
 
   dust_iron:
     material: GUNPOWDER
@@ -547,7 +565,7 @@ items:
   barrel:
     material: BARREL
     name: "§eBarrel"
-    lore: ["§7Turns saplings into water"]
+    lore: ["§7Crushing Tub", "§7Turns organic items into water"]
 
   crucible:
     material: CAULDRON

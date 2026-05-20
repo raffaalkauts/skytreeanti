@@ -893,10 +893,13 @@ categories:
     powered_spawner: { price: 200000, sell: 40000 }
 
   resources:
-    pebble_diorite: { price: 2, sell: 1 }
-    pebble_andesite: { price: 2, sell: 1 }
-    pebble_basalt: { price: 3, sell: 1 }
-    pebble_blackstone: { price: 3, sell: 1 }
+    pebble_stone: { price: 2, sell: 1 }
+    dirt_acorn: { price: 10, sell: 2 }
+    dirt_resin: { price: 10, sell: 2 }
+    dirt_sapling: { price: 100, sell: 25 }
+    petrified_acorn: { price: 20, sell: 5 }
+    petrified_resin: { price: 20, sell: 5 }
+    petrified_sapling: { price: 200, sell: 50 }
     piece_copper: { price: 3, sell: 1 }
     piece_tin: { price: 4, sell: 1 }
     piece_aluminum: { price: 4, sell: 1 }

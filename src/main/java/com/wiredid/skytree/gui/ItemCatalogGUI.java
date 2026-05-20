@@ -54,7 +54,7 @@ public class ItemCatalogGUI {
         List<Category> list = new ArrayList<>();
 
         list.add(new Category("sieve", "§e§lSieve", Material.HOPPER, Arrays.asList(
-                "pebble_diorite", "pebble_andesite", "pebble_basalt", "pebble_blackstone",
+                "pebble_stone",
                 "piece_copper", "piece_tin", "piece_aluminum", "piece_silver",
                 "piece_lead", "piece_nickel", "piece_zinc", "piece_gold",
                 "piece_uranium", "piece_iron", "piece_coal",
