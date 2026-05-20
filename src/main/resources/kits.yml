@@ -1,0 +1,474 @@
+kits:
+  starter:
+    name: "Starter"
+    price: 0
+    cooldown: 86400 # 24 hours in seconds
+    icon: DIAMOND_PICKAXE
+    contents:
+      - item: DIAMOND_HELMET
+        amount: 1
+      - item: DIAMOND_CHESTPLATE
+        amount: 1
+      - item: DIAMOND_LEGGINGS
+        amount: 1
+      - item: DIAMOND_BOOTS
+        amount: 1
+      - item: DIAMOND_SWORD
+        amount: 1
+      - item: DIAMOND_PICKAXE
+        amount: 1
+      - item: DIAMOND_AXE
+        amount: 1
+      - item: DIAMOND_SHOVEL
+        amount: 1
+      - item: END_CRYSTAL
+        amount: 64
+        slots: 2 # 2 stacks of 64 to make 128
+      - item: OBSIDIAN
+        amount: 64
+  
+  overlord:
+    name: "Overlord"
+    price: 50000000 # 50M
+    cooldown: 0
+    icon: NETHERITE_CHESTPLATE
+    contents:
+      - item: NETHERITE_HELMET
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          RESPIRATION: 3
+          AQUA_AFFINITY: 1
+          MENDING: 1
+      - item: NETHERITE_CHESTPLATE
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          MENDING: 1
+      - item: NETHERITE_LEGGINGS
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          SWIFT_SNEAK: 3
+          MENDING: 1
+      - item: NETHERITE_BOOTS
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          FEATHER_FALLING: 4
+          DEPTH_STRIDER: 3
+          MENDING: 1
+      - item: NETHERITE_SWORD
+        amount: 1
+        enchants:
+          SHARPNESS: 5
+          UNBREAKING: 3
+          FIRE_ASPECT: 2
+          LOOTING: 3
+          SWEEPING_EDGE: 3
+          MENDING: 1
+      - item: NETHERITE_PICKAXE
+        amount: 1
+        name: "Fortune Pickaxe"
+        enchants:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          FORTUNE: 3
+          MENDING: 1
+      - item: NETHERITE_PICKAXE
+        amount: 1
+        name: "Silk Touch Pickaxe"
+        enchants:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          SILK_TOUCH: 1
+          MENDING: 1
+      - item: NETHERITE_AXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          SHARPNESS: 5
+          MENDING: 1
+      - item: NETHERITE_SHOVEL
+        amount: 1
+        enchants:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          SILK_TOUCH: 1
+          MENDING: 1
+      - item: END_CRYSTAL
+        amount: 64
+        slots: 2
+      - item: OBSIDIAN
+        amount: 64
+      - item: TOTEM_OF_UNDYING
+        amount: 1
+        
+  weekly:
+    name: "Weekly"
+    price: 0
+    cooldown: 604800 # 7 days
+    icon: IRON_BLOCK
+    contents:
+      - item: IRON_BLOCK
+        amount: 2
+      - item: DIAMOND
+        amount: 10
+      - item: COOKED_BEEF
+        amount: 64
+      - item: GOLDEN_APPLE
+        amount: 5
+
+  monthly:
+    name: "Monthly"
+    price: 0
+    cooldown: 2592000 # 30 days
+    icon: DIAMOND_BLOCK
+    contents:
+      - item: DIAMOND_BLOCK
+        amount: 5
+      - item: NETHERITE_INGOT
+        amount: 1
+      - item: ENCHANTED_GOLDEN_APPLE
+        amount: 2
+      - item: EXPERIENCE_BOTTLE
+        amount: 64
+
+  miner:
+    name: "Miner"
+    price: 5000
+    cooldown: 3600 # 1 hour
+    icon: GOLDEN_PICKAXE
+    contents:
+      - item: IRON_PICKAXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 3
+          UNBREAKING: 1
+      - item: TORCH
+        amount: 64
+      - item: COAL
+        amount: 32
+
+  food:
+    name: "Food"
+    price: 1000
+    cooldown: 3600
+    icon: COOKED_BEEF
+    contents:
+      - item: COOKED_BEEF
+        amount: 32
+      - item: BREAD
+        amount: 32
+      - item: GOLDEN_CARROT
+        amount: 16
+
+  warrior:
+    name: "Warrior"
+    price: 10000
+    cooldown: 14400 # 4 hours
+    icon: IRON_SWORD
+    contents:
+      - item: IRON_SWORD
+        amount: 1
+        enchants:
+          SHARPNESS: 3
+      - item: IRON_HELMET
+        amount: 1
+        enchants:
+          PROTECTION: 1
+      - item: IRON_CHESTPLATE
+        amount: 1
+        enchants:
+          PROTECTION: 1
+      - item: IRON_LEGGINGS
+        amount: 1
+        enchants:
+          PROTECTION: 1
+      - item: IRON_BOOTS
+        amount: 1
+        enchants:
+          PROTECTION: 1
+      - item: BOW
+        amount: 1
+  # --- RANK KITS ---
+
+  iolite:
+    name: "Iolite"
+    price: 0
+    cooldown: 86400
+    icon: IRON_CHESTPLATE
+    contents:
+      - item: IRON_HELMET
+        amount: 1
+      - item: IRON_CHESTPLATE
+        amount: 1
+      - item: IRON_LEGGINGS
+        amount: 1
+      - item: IRON_BOOTS
+        amount: 1
+      - item: IRON_SWORD
+        amount: 1
+      - item: IRON_PICKAXE
+        amount: 1
+      - item: IRON_AXE
+        amount: 1
+      - item: IRON_SHOVEL
+        amount: 1
+      - item: IRON_HOE
+        amount: 1
+      - item: COOKED_BEEF
+        amount: 32
+
+  beryl:
+    name: "Beryl"
+    price: 0
+    cooldown: 86400
+    icon: IRON_CHESTPLATE
+    contents:
+      - item: IRON_HELMET
+        amount: 1
+        enchants:
+          PROTECTION: 1
+          UNBREAKING: 1
+      - item: IRON_CHESTPLATE
+        amount: 1
+        enchants:
+          PROTECTION: 1
+          UNBREAKING: 1
+      - item: IRON_LEGGINGS
+        amount: 1
+        enchants:
+          PROTECTION: 1
+          UNBREAKING: 1
+      - item: IRON_BOOTS
+        amount: 1
+        enchants:
+          PROTECTION: 1
+          UNBREAKING: 1
+      - item: IRON_SWORD
+        amount: 1
+        enchants:
+          SHARPNESS: 1
+          UNBREAKING: 1
+      - item: IRON_PICKAXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 1
+          UNBREAKING: 1
+      - item: IRON_AXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 1
+          UNBREAKING: 1
+      - item: IRON_SHOVEL
+        amount: 1
+        enchants:
+          EFFICIENCY: 1
+          UNBREAKING: 1
+      - item: IRON_HOE
+        amount: 1
+        enchants:
+          UNBREAKING: 1
+      - item: COOKED_BEEF
+        amount: 64
+
+  garnet:
+    name: "Garnet"
+    price: 0
+    cooldown: 86400
+    icon: DIAMOND_CHESTPLATE
+    contents:
+      - item: DIAMOND_HELMET
+        amount: 1
+      - item: DIAMOND_CHESTPLATE
+        amount: 1
+      - item: DIAMOND_LEGGINGS
+        amount: 1
+      - item: DIAMOND_BOOTS
+        amount: 1
+      - item: DIAMOND_SWORD
+        amount: 1
+      - item: DIAMOND_PICKAXE
+        amount: 1
+      - item: DIAMOND_AXE
+        amount: 1
+      - item: DIAMOND_SHOVEL
+        amount: 1
+      - item: DIAMOND_HOE
+        amount: 1
+      - item: GOLDEN_CARROT
+        amount: 32
+
+  amethyst:
+    name: "Amethyst"
+    price: 0
+    cooldown: 86400
+    icon: DIAMOND_CHESTPLATE
+    contents:
+      - item: DIAMOND_HELMET
+        amount: 1
+        enchants:
+          PROTECTION: 2
+          UNBREAKING: 2
+      - item: DIAMOND_CHESTPLATE
+        amount: 1
+        enchants:
+          PROTECTION: 2
+          UNBREAKING: 2
+      - item: DIAMOND_LEGGINGS
+        amount: 1
+        enchants:
+          PROTECTION: 2
+          UNBREAKING: 2
+      - item: DIAMOND_BOOTS
+        amount: 1
+        enchants:
+          PROTECTION: 2
+          UNBREAKING: 2
+      - item: DIAMOND_SWORD
+        amount: 1
+        enchants:
+          SHARPNESS: 2
+          UNBREAKING: 2
+      - item: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 2
+          UNBREAKING: 2
+      - item: DIAMOND_AXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 2
+          UNBREAKING: 2
+      - item: DIAMOND_SHOVEL
+        amount: 1
+        enchants:
+          EFFICIENCY: 2
+          UNBREAKING: 2
+      - item: DIAMOND_HOE
+        amount: 1
+        enchants:
+          UNBREAKING: 2
+      - item: GOLDEN_CARROT
+        amount: 64
+
+  emerald:
+    name: "Emerald"
+    price: 0
+    cooldown: 86400
+    icon: DIAMOND_CHESTPLATE
+    contents:
+      - item: DIAMOND_HELMET
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+      - item: DIAMOND_CHESTPLATE
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+      - item: DIAMOND_LEGGINGS
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+      - item: DIAMOND_BOOTS
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+      - item: DIAMOND_SWORD
+        amount: 1
+        enchants:
+          SHARPNESS: 4
+          UNBREAKING: 3
+      - item: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 4
+          UNBREAKING: 3
+      - item: DIAMOND_AXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 4
+          UNBREAKING: 3
+      - item: DIAMOND_SHOVEL
+        amount: 1
+        enchants:
+          EFFICIENCY: 4
+          UNBREAKING: 3
+      - item: DIAMOND_HOE
+        amount: 1
+        enchants:
+          UNBREAKING: 3
+      - item: GOLDEN_APPLE
+        amount: 16
+
+  divine:
+    name: "Divine"
+    price: 0
+    cooldown: 86400
+    icon: NETHERITE_CHESTPLATE
+    contents:
+      - item: NETHERITE_HELMET
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          MENDING: 1
+      - item: NETHERITE_CHESTPLATE
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          MENDING: 1
+      - item: NETHERITE_LEGGINGS
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          MENDING: 1
+      - item: NETHERITE_BOOTS
+        amount: 1
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          MENDING: 1
+      - item: NETHERITE_SWORD
+        amount: 1
+        enchants:
+          SHARPNESS: 5
+          UNBREAKING: 3
+          MENDING: 1
+      - item: NETHERITE_PICKAXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          MENDING: 1
+      - item: NETHERITE_AXE
+        amount: 1
+        enchants:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          MENDING: 1
+      - item: NETHERITE_SHOVEL
+        amount: 1
+        enchants:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          MENDING: 1
+      - item: NETHERITE_HOE
+        amount: 1
+        enchants:
+          UNBREAKING: 3
+          MENDING: 1
+      - item: ENCHANTED_GOLDEN_APPLE
+        amount: 5

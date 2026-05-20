@@ -1,0 +1,38 @@
+# Skytree Investment System Configuration
+
+stocks:
+  emerald_corp:
+    name: "Emerald Corp"
+    initial_price: 1500.0
+    volatility: 0.05
+    min_price: 500.0
+    max_price: 5000.0
+  diamond_mining:
+    name: "Diamond Mining Inc"
+    initial_price: 2500.0
+    volatility: 0.1
+    min_price: 1000.0
+    max_price: 10000.0
+  skytree_logistics:
+    name: "Skytree Logistics"
+    initial_price: 800.0
+    volatility: 0.03
+    min_price: 300.0
+    max_price: 2000.0
+
+bonds:
+  short_term:
+    name: "Short Term Bond"
+    duration_min: 60
+    return_multiplier: 1.05 # 5% profit
+    min_investment: 1000
+  medium_term:
+    name: "Medium Term Bond"
+    duration_min: 1440 # 1 day
+    return_multiplier: 1.25 # 25% profit
+    min_investment: 5000
+  long_term:
+    name: "Government Bond"
+    duration_min: 10080 # 7 days
+    return_multiplier: 2.5 # 250% total (150% profit)
+    min_investment: 25000

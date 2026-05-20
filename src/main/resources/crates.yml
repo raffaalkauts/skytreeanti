@@ -1,0 +1,110 @@
+# Skytree Crate System Configuration
+
+crates:
+  common:
+    name: "§aCommon Crate"
+    key:
+      material: TRIPWIRE_HOOK
+      name: "§aCommon Crate Key"
+      lore:
+        - "§7Use this key to open a §aCommon Crate§7."
+    rewards:
+      - display: "§f1,000 USDT"
+        chance: 28.0
+        money: 1000.0
+      - display: "§e10x Golden Apple"
+        chance: 20.0
+        item: GOLDEN_APPLE
+        amount: 10
+      - display: "§bDiamond Axe"
+        chance: 14.0
+        item: DIAMOND_AXE
+      - display: "§6Rare Key"
+        chance: 8.0
+        command: "crates give %player% rare 1"
+      - display: "§f2,500 USDT"
+        chance: 10.0
+        money: 2500.0
+      - display: "§a16x Experience Bottle"
+        chance: 8.0
+        item: EXPERIENCE_BOTTLE
+        amount: 16
+      - display: "§764x Iron Ingot"
+        chance: 12.0
+        item: IRON_INGOT
+        amount: 64
+
+  rare:
+    name: "§bRare Crate"
+    key:
+      material: TRIPWIRE_HOOK
+      name: "§bRare Crate Key"
+      lore:
+        - "§7Use this key to open a §bRare Crate§7."
+      enchanted: true
+    rewards:
+      - display: "§f5,000 USDT"
+        chance: 22.0
+        money: 5000.0
+      - display: "§e32x Enchanted Golden Apple"
+        chance: 13.0
+        item: ENCHANTED_GOLDEN_APPLE
+        amount: 32
+      - display: "§dNetherite Scraps"
+        chance: 15.0
+        item: NETHERITE_SCRAP
+        amount: 4
+      - display: "§b50 Shards"
+        chance: 15.0
+        command: "shards give %player% 50"
+      - display: "§6Legendary Key"
+        chance: 7.0
+        command: "crates give %player% legendary 1"
+      - display: "§f10,000 USDT"
+        chance: 10.0
+        money: 10000.0
+      - display: "§bDiamond Tool Bundle"
+        chance: 10.0
+        command: "give %player% diamond_pickaxe 1;give %player% diamond_axe 1;give %player% diamond_shovel 1"
+      - display: "§dEnchanted Book Pack"
+        chance: 8.0
+        command: "give %player% enchanted_book 3"
+
+  legendary:
+    name: "§6Legendary Crate"
+    key:
+      material: TRIPWIRE_HOOK
+      name: "§6Legendary Crate Key"
+      lore:
+        - "§7Use this key to open a §6Legendary Crate§7."
+      enchanted: true
+    rewards:
+      - display: "§f25,000 USDT"
+        chance: 16.0
+        money: 25000.0
+      - display: "§cFull Netherite Armor + Tools"
+        chance: 13.0
+        command: "give %player% netherite_helmet 1;give %player% netherite_chestplate 1;give %player% netherite_leggings 1;give %player% netherite_boots 1;give %player% netherite_sword 1;give %player% netherite_pickaxe 1;give %player% netherite_axe 1;give %player% netherite_shovel 1;give %player% netherite_hoe 1"
+      - display: "§b250 Shards"
+        chance: 14.0
+        command: "shards give %player% 250"
+      - display: "§eExclusive Legend Tag"
+        chance: 8.0
+        command: "tags give %player% skytree_legend"
+      - display: "§6Ancient Tome"
+        chance: 10.0
+        item: ENCHANTED_BOOK
+        lore:
+          - "§7A mysterious tome containing powerful magic."
+      - display: "§f50,000 USDT Jackpot"
+        chance: 10.0
+        money: 50000.0
+      - display: "§6Beacon Bundle"
+        chance: 10.0
+        command: "give %player% beacon 2;give %player% nether_star 2"
+      - display: "§dMythic Utility Pack"
+        chance: 9.0
+        command: "give %player% elytra 1;give %player% totem_of_undying 2;give %player% enchanted_golden_apple 16"
+      - display: "§5Legendary Spawner Pack"
+        chance: 10.0
+        command: "give %player% spawner 2"

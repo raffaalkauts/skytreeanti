@@ -1,0 +1,208 @@
+# Skytree Custom Enchantments Configuration
+# Rarity weights: 1000 = Always, 1 = Extremely Rare
+
+enchants:
+  lifesteal:
+    weight: 25
+  armored:
+    weight: 50
+  molten:
+    weight: 75
+  haste:
+    weight: 100
+  telepathy:
+    weight: 150
+  experience:
+    weight: 100
+  vein_miner:
+    weight: 25
+  trench:
+    weight: 15
+  auto_reel:
+    weight: 50
+  abiding:
+    weight: 10
+  
+  # Batch 2 planned
+  blindness:
+    weight: 80
+  poison:
+    weight: 80
+  wither:
+    weight: 40
+  vampire:
+    weight: 30
+  execute:
+    weight: 50
+  reflect:
+    weight: 40
+  auto_smelt:
+    weight: 60
+  fortune_plus:
+    weight: 40
+  replenish:
+    weight: 70
+  lumberjack:
+    weight: 30
+  excavator:
+    weight: 30
+  gears:
+    weight: 100
+  springs:
+    weight: 100
+  oxygen:
+    weight: 150
+  fire_immunity:
+    weight: 50
+  driller:
+    weight: 40
+  magnet:
+    weight: 60
+  night_vision:
+    weight: 120
+  flight:
+    weight: 5
+  # Batch 3
+  bleed:
+    weight: 60
+  critical:
+    weight: 40
+  double_strike:
+    weight: 20
+  disarm:
+    weight: 15
+  ice_cold:
+    weight: 40
+  saturation:
+    weight: 10
+  health_boost:
+    weight: 10
+  resistance_ench:
+    weight: 30
+  cactus:
+    weight: 70
+  burn:
+    weight: 80
+  double_shot:
+    weight: 30
+  explosive:
+    weight: 15
+  lightning:
+    weight: 40
+  pull:
+    weight: 60
+  venom:
+    weight: 80
+  teleport_bow:
+    weight: 10
+  experience_plus:
+    weight: 30
+  timber:
+    weight: 40
+  growth:
+    weight: 90
+  # Batch 4
+  fear:
+    weight: 60
+  levitation:
+    weight: 50
+  rage:
+    weight: 40
+  cleave:
+    weight: 40
+  stun:
+    weight: 20
+  confuse:
+    weight: 60
+  bounty_hunter:
+    weight: 15
+  invisibility:
+    weight: 10
+  force_field:
+    weight: 20
+  sonar:
+    weight: 40
+  angel:
+    weight: 5
+  berserk:
+    weight: 25
+  heavy:
+    weight: 60
+  guardian:
+    weight: 50
+  web:
+    weight: 40
+  sniper:
+    weight: 30
+  multishot_ench:
+    weight: 15
+  flare:
+    weight: 40
+  auto_repair:
+    weight: 10
+  drill:
+    weight: 50
+  nautilus:
+    weight: 60
+  greed:
+    weight: 20
+  blessed:
+    weight: 40
+
+  # Fishing Specialized (Registered as CEs)
+  tidal_speed:
+    weight: 30
+  instant_strike:
+    weight: 20
+  steady_hand:
+    weight: 50
+  abyssal_luck:
+    weight: 15
+  mutation_mastery:
+    weight: 10
+  shiny_glow:
+    weight: 20
+  compassion:
+    weight: 30
+  ancient_wisdom:
+    weight: 15
+  limited_reach:
+    weight: 10
+  depth_diver:
+    weight: 20
+  biome_master:
+    weight: 15
+  double_hook:
+    weight: 25
+  triple_hook:
+    weight: 10
+  trawling_net:
+    weight: 5
+  gilded_hook:
+    weight: 20
+  capitalism:
+    weight: 10
+  merchant_eye:
+    weight: 15
+  heavy_weight:
+    weight: 30
+  calibrated_scale:
+    weight: 20
+  treasure_hunter:
+    weight: 15
+  bait_saver:
+    weight: 50
+  infernal_hook:
+    weight: 10
+  ocean_grace:
+    weight: 20
+  adrenaline_rush:
+    weight: 20
+  zen_meditation:
+    weight: 15
+  glow_eyes:
+    weight: 40
+  dragon_breath:
+    weight: 10
+  immortality:
+    weight: 5

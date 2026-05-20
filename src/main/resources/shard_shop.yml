@@ -1,0 +1,24 @@
+# Shard Shop Configuration
+# Format:
+# item_id:
+#   price: <amount>
+#   slot: <0-53>
+timber_axe:
+  price: 12500
+  slot: 10
+trench_pickaxe:
+  price: 18750
+  slot: 11
+trench_shovel:
+  price: 8750
+  slot: 12
+harvester_hoe:
+  price: 10000
+  slot: 13
+slayer_sword:
+  price: 25000
+  slot: 14
+god_wings:
+  price: 50000
+  slot: 15
+

@@ -1,0 +1,1447 @@
+{
+    "meta": {
+        "project": "SansSMP-MythicConfig-Full100",
+        "version": "1.0",
+        "author": "yuki (assistant)",
+        "currency": "BTC",
+        "notes": "Full 100-item config (developer-ready). All recipes use vanilla crafting table or furnace; Divine Forge reserved for fusion."
+    },
+    "global": {
+        "pity_threshold": 100,
+        "btc_baseCost": 5,
+        "divine_forge_max_safe_level": 2000000000
+    },
+    "baseItemMapping": {
+        "ORACLE_CHEST_BASIC": {
+            "displayName": "Oracle Chest I",
+            "baseItem": "minecraft:ender_chest",
+            "customModelData": 6001
+        },
+        "ORACLE_CHEST_DIVINE": {
+            "displayName": "Oracle Chest II",
+            "baseItem": "minecraft:ender_chest",
+            "customModelData": 6002
+        },
+        "BLESSED_WATER": {
+            "displayName": "Ramuan Ajaib",
+            "baseItem": "minecraft:potion",
+            "customModelData": 2001
+        },
+        "VANGUARD_BLADE": {
+            "displayName": "Vanguard Blade",
+            "baseItem": "minecraft:netherite_sword",
+            "customModelData": 2002
+        },
+        "DIVINEBREAKER": {
+            "displayName": "Divinebreaker",
+            "baseItem": "minecraft:netherite_sword",
+            "customModelData": 2003
+        }
+    },
+    "items": [
+        {
+            "id": "DIVINE_EXCAVATOR",
+            "name": "Divine Excavator",
+            "rarity": "Legendary",
+            "category": "Tool",
+            "description": "The ultimate netherite pickaxe, forged by the gods. Auto-smelt, area modes, huge speed.",
+            "usage": "Mining tool with area modes, fortune V, auto-smelt.",
+            "acquisition": "Primary: Oracle Chest Divine (legendary pool). Optional: admin auction. (Not draftable by default.)",
+            "effects": {
+                "positive": "Mining speed x8, auto-smelt 100%, auto-pickup radius 5, fortune V",
+                "negative": "Banned in spawn/arena; heavy balancing risk; high repair cost"
+            },
+            "baseItem": "minecraft:netherite_pickaxe",
+            "craftable": false,
+            "nbt": {
+                "divine": true,
+                "durability": 40000,
+                "mineSpeedMultiplier": 8.0,
+                "autoSmelt": true,
+                "autoPickupRadius": 5,
+                "fortuneLevel": 5,
+                "areaModes": [
+                    1,
+                    3,
+                    5
+                ]
+            }
+        },
+        {
+            "id": "GODWINGS",
+            "name": "GodWings",
+            "rarity": "Legendary",
+            "category": "Armor/Relic",
+            "description": "Relic of Ascension: grants unlimited creative-like flight when equipped in chest slot.",
+            "usage": "Grants unlimited flight, no energy. Restricted in PVP arenas via config.",
+            "acquisition": "Oracle Chest Divine (legendary) or admin auction.",
+            "effects": {
+                "positive": "Unlimited flight",
+                "negative": "Enforce region restrictions to avoid abuse"
+            },
+            "baseItem": "minecraft:elytra",
+            "craftable": false,
+            "nbt": {
+                "flight_unlimited": true,
+                "lore": "Relic of Ascension"
+            }
+        },
+        {
+            "id": "MJOLNIR",
+            "name": "Mjölnir of the Ascended",
+            "rarity": "Divine",
+            "category": "Weapon/Artifact",
+            "description": "A godly hammer which can be thrown and recalled; calls lightning on hit.",
+            "usage": "Throwable with recall; lightning AOE on strike.",
+            "acquisition": "Oracle Chest Divine (very rare) or admin sale.",
+            "effects": {
+                "positive": "Throw+recall, lightning 20% on hit, stun 0.8s",
+                "negative": "Wield restriction; grief potential; banned zones"
+            },
+            "baseItem": "minecraft:trident",
+            "craftable": false,
+            "nbt": {
+                "throwable": true,
+                "recall": true,
+                "lightningChance": 0.20
+            }
+        },
+        {
+            "id": "VANGUARD_BLADE",
+            "name": "Vanguard Blade",
+            "rarity": "Rare",
+            "category": "Weapon",
+            "description": "Reliable upgraded sword for midgame combat.",
+            "usage": "Slightly higher damage and lifesteal.",
+            "acquisition": "Divine Forge from netherite sword + MYTHIC_POWER_CORE or craft via upgrade patterns.",
+            "effects": {
+                "positive": "+3 damage vs netherite, 2% lifesteal",
+                "negative": "Higher repair costs"
+            },
+            "baseItem": "minecraft:netherite_sword",
+            "craftable": false,
+            "notes": "Obtain via Divine Forge or advanced crafting."
+        },
+        {
+            "id": "DIVINEBREAKER",
+            "name": "Divinebreaker",
+            "rarity": "Legendary",
+            "category": "Weapon",
+            "description": "A legendary sword capable of breaking through defenses.",
+            "usage": "High damage in PVE with special on-hit effects.",
+            "acquisition": "Oracle Chest Divine (legendary pool).",
+            "effects": {
+                "positive": "+20 base damage, 10% lifesteal, damage perks",
+                "negative": "May be banned in some PVP zones"
+            },
+            "baseItem": "minecraft:netherite_sword",
+            "craftable": false,
+            "nbt": {
+                "attackDamage": 22.0,
+                "attackSpeed": -2.4,
+                "lifesteal": 0.1,
+                "cleave": true,
+                "customModelData": 2003
+            }
+        },
+        {
+            "id": "REINFORCED_HELMET",
+            "name": "Reinforced Helmet",
+            "rarity": "Uncommon",
+            "category": "Armor",
+            "description": "Helmet with extra protection.",
+            "usage": "Adds tiered damage reduction.",
+            "acquisition": "Divine Forge or simple crafting with Divine Alloy Ingot components.",
+            "effects": {
+                "positive": "+15% protection",
+                "negative": "Weight: -1% movement optionally"
+            },
+            "baseItem": "minecraft:netherite_helmet",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 3.0,
+                "toughnessBonus": 3.0,
+                "healthBonus": 2.0
+            }
+        },
+        {
+            "id": "REINFORCED_CHESTPLATE",
+            "name": "Reinforced Chestplate",
+            "rarity": "Uncommon",
+            "category": "Armor",
+            "description": "Chestplate that grants extra HP and defense.",
+            "usage": "+2 HP and percent defense boost.",
+            "acquisition": "Divine Forge or crafting with Divine Alloy",
+            "effects": {
+                "positive": "+2 HP, +10% defense",
+                "negative": ""
+            },
+            "baseItem": "minecraft:netherite_chestplate",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 8.0,
+                "toughnessBonus": 3.0,
+                "healthBonus": 4.0
+            }
+        },
+        {
+            "id": "REINFORCED_LEGGINGS",
+            "name": "Reinforced Leggings",
+            "rarity": "Uncommon",
+            "category": "Armor",
+            "description": "Leg armor with moderate DR.",
+            "usage": "+10% damage reduction.",
+            "acquisition": "Divine Forge / crafting",
+            "effects": {
+                "positive": "+10% DR",
+                "negative": "slight speed penalty"
+            },
+            "baseItem": "minecraft:netherite_leggings",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 6.0,
+                "toughnessBonus": 3.0,
+                "healthBonus": 2.0
+            }
+        },
+        {
+            "id": "REINFORCED_BOOTS",
+            "name": "Reinforced Boots",
+            "rarity": "Uncommon",
+            "category": "Armor",
+            "description": "Boots that reduce fall damage.",
+            "usage": "-10% fall damage.",
+            "acquisition": "Crafting table or Divine Forge",
+            "effects": {
+                "positive": "Fall damage reduction",
+                "negative": ""
+            },
+            "baseItem": "minecraft:netherite_boots",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 3.0,
+                "toughnessBonus": 3.0,
+                "healthBonus": 2.0
+            }
+        },
+        {
+            "id": "ELITE_COMBAT_HELMET",
+            "name": "Elite Combat Helmet",
+            "rarity": "Epic",
+            "category": "Armor",
+            "description": "Tactical helmet with integrated life support. Part of the Elite Combat set.",
+            "usage": "+2 HP, +10% Damage Reduction.",
+            "acquisition": "Divine Forge or Oracle Chest.",
+            "effects": {
+                "positive": "+2 HP, +10% DR",
+                "negative": ""
+            },
+            "baseItem": "minecraft:netherite_helmet",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 4.0,
+                "toughnessBonus": 4.0,
+                "healthBonus": 4.0
+            }
+        },
+        {
+            "id": "ELITE_COMBAT_SET",
+            "name": "Elite Combat Chestplate",
+            "rarity": "Epic",
+            "category": "Armor",
+            "description": "Heavy-duty chestplate designed for extreme conditions. Part of the Elite Combat set.",
+            "usage": "+4 HP, +15% Damage Reduction.",
+            "acquisition": "Divine Forge or Oracle Chest.",
+            "effects": {
+                "positive": "+4 HP, +15% DR",
+                "negative": ""
+            },
+            "baseItem": "minecraft:netherite_chestplate",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 10.0,
+                "toughnessBonus": 4.0,
+                "healthBonus": 8.0
+            }
+        },
+        {
+            "id": "ELITE_COMBAT_LEGGINGS",
+            "name": "Elite Combat Leggings",
+            "rarity": "Epic",
+            "category": "Armor",
+            "description": "Reinforced leg armor for tactical mobility. Part of the Elite Combat set.",
+            "usage": "+2 HP, +10% Damage Reduction.",
+            "acquisition": "Divine Forge or Oracle Chest.",
+            "effects": {
+                "positive": "+2 HP, +10% DR",
+                "negative": ""
+            },
+            "baseItem": "minecraft:netherite_leggings",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 7.0,
+                "toughnessBonus": 4.0,
+                "healthBonus": 4.0
+            }
+        },
+        {
+            "id": "ELITE_COMBAT_BOOTS",
+            "name": "Elite Combat Boots",
+            "rarity": "Epic",
+            "category": "Armor",
+            "description": "Shock-absorbing boots. Part of the Elite Combat set.",
+            "usage": "+2 HP, +5% DR, No Fall Damage.",
+            "acquisition": "Divine Forge or Oracle Chest.",
+            "effects": {
+                "positive": "+2 HP, +5% DR, Fall Damage Immune",
+                "negative": ""
+            },
+            "baseItem": "minecraft:netherite_boots",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 4.0,
+                "toughnessBonus": 4.0,
+                "healthBonus": 4.0,
+                "fallDamageImmune": true
+            }
+        },
+        {
+            "id": "PRECISION_HOE",
+            "name": "Precision Hoe",
+            "rarity": "Common",
+            "category": "Tool",
+            "description": "Improves farming speed and auto-replants basic seeds.",
+            "usage": "Faster tilling and occasional auto-replant.",
+            "acquisition": "Craftable in table from iron + ETHEREAL_SHARD + wood",
+            "effects": {
+                "positive": "+30% farming speed",
+                "negative": "None"
+            },
+            "baseItem": "minecraft:iron_hoe",
+            "craftable": true,
+            "recipe": {
+                "type": "crafting_shaped",
+                "pattern": [
+                    " E ",
+                    " S ",
+                    " W "
+                ],
+                "key": {
+                    "E": "minecraft:amethyst_shard",
+                    "S": "minecraft:iron_ingot",
+                    "W": "minecraft:oak_planks"
+                },
+                "result": {
+                    "item": "PRECISION_HOE",
+                    "count": 1
+                }
+            }
+        },
+        {
+            "id": "HYPER_FARMER_HOE",
+            "name": "Hyper Farmer Hoe",
+            "rarity": "Rare",
+            "category": "Tool",
+            "description": "Mass-harvest and auto-replant tool.",
+            "usage": "Mass harvesting of crops with auto replant.",
+            "acquisition": "Divine Forge or crafting with MYTHIC_POWER_CORE + PRECISION_HOE",
+            "effects": {
+                "positive": "Auto-harvest & replant; area 3x3",
+                "negative": "High durability cost"
+            },
+            "baseItem": "minecraft:diamond_hoe",
+            "craftable": false
+        },
+        {
+            "id": "ENHANCED_MINER_PICKAXE",
+            "name": "Enhanced Miner's Pickaxe",
+            "rarity": "Uncommon",
+            "category": "Tool",
+            "description": "First-tier upgraded pickaxe with increased speed.",
+            "usage": "Mining speed +20% and slight durability increase.",
+            "acquisition": "Divine Forge upgrade from diamond/netherite pick + MYTHIC_POWER_CORE or as mid-tier craft.",
+            "effects": {
+                "positive": "Faster mining",
+                "negative": "Higher repair cost"
+            },
+            "baseItem": "minecraft:diamond_pickaxe",
+            "craftable": false
+        },
+        {
+            "id": "SUPER_MINER_PICKAXE",
+            "name": "Super Miner's Pickaxe",
+            "rarity": "Rare",
+            "category": "Tool",
+            "description": "Second-tier pickaxe: fast, auto-pickup and bonus drops.",
+            "usage": "Mining speed +80%, auto-pickup radius 3, +chance Enhancement Shard",
+            "acquisition": "Divine Forge or high-tier crafting via DIVINE_POWER_CORE",
+            "effects": {
+                "positive": "Very fast mining & convenience",
+                "negative": "Potential server strain if abused"
+            },
+            "baseItem": "minecraft:netherite_pickaxe",
+            "craftable": false
+        },
+        {
+            "id": "REFINED_AXE",
+            "name": "Refined Axe",
+            "rarity": "Uncommon",
+            "category": "Tool",
+            "description": "Improved axe with faster chopping.",
+            "usage": "Tree-fell mechanics at higher tiers with upgrades.",
+            "acquisition": "Craft/Divine Forge",
+            "effects": {
+                "positive": "Faster wood harvesting",
+                "negative": ""
+            },
+            "baseItem": "minecraft:diamond_axe",
+            "craftable": true,
+            "recipe": {
+                "type": "crafting_shaped",
+                "pattern": [
+                    " E ",
+                    " A ",
+                    " E "
+                ],
+                "key": {
+                    "E": "minecraft:amethyst_shard",
+                    "A": "minecraft:diamond_axe"
+                },
+                "result": {
+                    "item": "REFINED_AXE",
+                    "count": 1
+                }
+            }
+        },
+        {
+            "id": "SUPER_LUMBERJACK_AXE",
+            "name": "Super Lumberjack Axe",
+            "rarity": "Rare",
+            "category": "Tool",
+            "description": "Tears down full trees in one swing.",
+            "usage": "Fells whole tree at once (careful with protections).",
+            "acquisition": "Divine Forge or heavy crafting",
+            "effects": {
+                "positive": "Huge convenience",
+                "negative": "Can be abused; region locks recommended"
+            },
+            "baseItem": "minecraft:netherite_axe",
+            "craftable": false
+        },
+        {
+            "id": "EXCAVATOR_SHOVEL",
+            "name": "Excavator Shovel",
+            "rarity": "Uncommon",
+            "category": "Tool",
+            "description": "Shovel for 3x3 digging patterns.",
+            "usage": "Area dig 3x3 per swing.",
+            "acquisition": "Crafting table or Divine Forge",
+            "effects": {
+                "positive": "Fast land clearing",
+                "negative": "Durability drain"
+            },
+            "baseItem": "minecraft:diamond_shovel",
+            "craftable": true,
+            "recipe": {
+                "type": "crafting_shaped",
+                "pattern": [
+                    " E ",
+                    " S ",
+                    " E "
+                ],
+                "key": {
+                    "E": "minecraft:amethyst_shard",
+                    "S": "minecraft:diamond_shovel"
+                },
+                "result": {
+                    "item": "EXCAVATOR_SHOVEL",
+                    "count": 1
+                }
+            }
+        },
+        {
+            "id": "EARTHMOVER_SHOVEL",
+            "name": "Earthmover Shovel",
+            "rarity": "Rare",
+            "category": "Tool",
+            "description": "Large-area earth mover for landscapes (5x5).",
+            "usage": "Giant area dig for terrain projects.",
+            "acquisition": "Divine Forge / high crafting",
+            "effects": {
+                "positive": "Huge convenience",
+                "negative": "Server lag risk; require cooldown"
+            },
+            "baseItem": "minecraft:netherite_shovel",
+            "craftable": false
+        },
+        {
+            "id": "GACHA_CRATE_BASIC",
+            "name": "Gacha Crate (Basic)",
+            "rarity": "Uncommon",
+            "category": "Crate",
+            "description": "Right-click to spin! Chance for resources.",
+            "usage": "Consumable. Pity system included.",
+            "acquisition": "Admin Shop / Auction",
+            "effects": {
+                "positive": "Random loot",
+                "negative": "Gambling"
+            },
+            "baseItem": "minecraft:ender_chest",
+            "craftable": false,
+            "nbt": {
+                "crateType": "basic",
+                "pityGroup": "global"
+            }
+        },
+        {
+            "id": "GACHA_CRATE_PREMIUM",
+            "name": "Gacha Crate (Premium)",
+            "rarity": "Epic",
+            "category": "Crate",
+            "description": "Right-click to spin! High chance for Legendaries.",
+            "usage": "Consumable. Pity system included.",
+            "acquisition": "Admin Shop / Auction",
+            "effects": {
+                "positive": "Better loot",
+                "negative": "Expensive"
+            },
+            "baseItem": "minecraft:ender_chest",
+            "craftable": false,
+            "nbt": {
+                "crateType": "premium",
+                "pityGroup": "global",
+                "enchantment_glint": true
+            }
+        },
+        {
+            "id": "ULTRA_MINER",
+            "name": "Ultra Miner Pickaxe",
+            "rarity": "Legendary",
+            "category": "Tool",
+            "description": "Netherite Core. Instantly mines. Auto-smelt.",
+            "usage": "Mining. Right-click to toggle 3x3/Tummel.",
+            "acquisition": "Gacha Legendary Pool",
+            "effects": {
+                "positive": "Speed x8, Fortune V+, Auto-smelt",
+                "negative": "None"
+            },
+            "baseItem": "minecraft:netherite_pickaxe",
+            "craftable": false,
+            "nbt": {
+                "mineSpeedMultiplier": 8.0,
+                "autoSmelt": true,
+                "autoPickupRadius": 5,
+                "fortuneLevel": 5,
+                "areaModes": [
+                    1,
+                    3,
+                    5
+                ],
+                "divine": true
+            }
+        },
+        {
+            "id": "PURIFIED_WATER",
+            "name": "Purified Water",
+            "rarity": "Common",
+            "category": "Consumable",
+            "description": "Clean, safe drinking water.",
+            "usage": "Drink to restore 30 Thirst.",
+            "acquisition": "Furnace: Water Bottle -> Purified Water",
+            "effects": {
+                "positive": "+30 Thirst",
+                "negative": ""
+            },
+            "baseItem": "minecraft:potion",
+            "craftable": true,
+            "furnace_recipe": {
+                "type": "smelting",
+                "input": "minecraft:potion",
+                "result": "PURIFIED_WATER",
+                "cooking_time": 200
+            }
+        },
+        {
+            "id": "JUICER",
+            "name": "Juicer Machine",
+            "rarity": "Uncommon",
+            "category": "Machine",
+            "description": "Extracts juice from fruits.",
+            "usage": "Place down. Input Fruit + Purified Water.",
+            "acquisition": "Crafting",
+            "effects": {
+                "positive": "Makes Juice",
+                "negative": ""
+            },
+            "baseItem": "minecraft:brewing_stand",
+            "craftable": true,
+            "recipe": {
+                "type": "crafting_shaped",
+                "pattern": [
+                    " I ",
+                    "ICI",
+                    "R R"
+                ],
+                "key": {
+                    "I": "minecraft:iron_ingot",
+                    "C": "minecraft:cauldron",
+                    "R": "minecraft:redstone"
+                },
+                "result": {
+                    "item": "JUICER",
+                    "count": 1
+                }
+            }
+        },
+        {
+            "id": "PRIME_DRILL",
+            "name": "Prime Drill",
+            "rarity": "Epic",
+            "category": "Tool",
+            "description": "Mechanical drill prototype for fast tunneling.",
+            "usage": "High-speed tunneling with configurable modes.",
+            "acquisition": "Mall epic or Divine Forge",
+            "effects": {
+                "positive": "Very high tunneling rate",
+                "negative": "Performance heavy"
+            },
+            "baseItem": "minecraft:diamond_pickaxe",
+            "craftable": false
+        },
+        {
+            "id": "FORTUNE_SWORD_NEMESIS",
+            "name": "Fortune Sword: Nemesis",
+            "rarity": "Legendary",
+            "category": "Weapon",
+            "description": "Legendary sword that increases mob drop quantities.",
+            "usage": "On kill, chance to yield extra drops; Sharpness L4 base.",
+            "acquisition": "Oracle Chest Divine only",
+            "effects": {
+                "positive": "+50% extra drops on mob kills (configurable)",
+                "negative": "Can unbalance economy"
+            },
+            "baseItem": "minecraft:netherite_sword",
+            "craftable": false
+        },
+        {
+            "id": "RAPID_DAGGER",
+            "name": "Rapid Dagger",
+            "rarity": "Uncommon",
+            "category": "Weapon",
+            "description": "Fast attacking dagger with minor crit boost.",
+            "usage": "High attack speed, low damage, +crit chance.",
+            "acquisition": "Mall or low-tier forge",
+            "effects": {
+                "positive": "Quick strikes & crits",
+                "negative": "Low durability"
+            },
+            "baseItem": "minecraft:iron_sword",
+            "craftable": true,
+            "recipe": {
+                "type": "crafting_shaped",
+                "pattern": [
+                    " I ",
+                    "III",
+                    " S "
+                ],
+                "key": {
+                    "I": "minecraft:iron_ingot",
+                    "S": "minecraft:stick"
+                },
+                "result": {
+                    "item": "RAPID_DAGGER",
+                    "count": 1
+                }
+            }
+        },
+        {
+            "id": "HEAVY_GREATSWORD",
+            "name": "Heavy Greatsword",
+            "rarity": "Epic",
+            "category": "Weapon",
+            "description": "Slow, heavy weapon with high cleave damage.",
+            "usage": "Boss fights and crowd control.",
+            "acquisition": "Divine Forge or high recipe",
+            "effects": {
+                "positive": "High damage cleave",
+                "negative": "Very slow attack speed"
+            },
+            "baseItem": "minecraft:netherite_sword",
+            "craftable": false,
+            "nbt": {
+                "attackDamage": 16.0,
+                "attackSpeed": -3.2,
+                "cleave": true
+            }
+        },
+        {
+            "id": "BLESSED_WATER",
+            "name": "Blessed Water",
+            "rarity": "Common",
+            "category": "Consumable",
+            "description": "Purified drinking water produced by smelting Water Bottle in furnace.",
+            "usage": "Restores thirst +30 when consumed.",
+            "acquisition": "Smelt water bottle in vanilla furnace -> Blessed Water (200 ticks).",
+            "effects": {
+                "positive": "Restores thirst",
+                "negative": "Requires fuel to produce"
+            },
+            "baseItem": "minecraft:potion",
+            "craftable": false,
+            "furnace_recipe": {
+                "type": "smelting",
+                "input": "minecraft:potion",
+                "result": "BLESSED_WATER",
+                "cooking_time": 200
+            }
+        },
+        {
+            "id": "LOST_KNIGHT_HELMET",
+            "name": "Helmet of the Lost Knight",
+            "rarity": "Legendary",
+            "category": "Armor",
+            "description": "Ghostly helmet with faint glowing eyes. Part of the Lost Knight set.",
+            "usage": "+4 HP, +15% DR, Night Vision.",
+            "acquisition": "Oracle Chest Divine (legendary pool).",
+            "effects": {
+                "positive": "+4 HP, +15% DR, Night Vision",
+                "negative": ""
+            },
+            "baseItem": "minecraft:netherite_helmet",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 5.0,
+                "toughnessBonus": 5.0,
+                "healthBonus": 4.0,
+                "night_vision": true
+            }
+        },
+        {
+            "id": "ARMOR_OF_LOST_KNIGHT",
+            "name": "Chestplate of the Lost Knight",
+            "rarity": "Legendary",
+            "category": "Armor",
+            "description": "Ghostly chestplate providing immense defense. Part of the Lost Knight set.",
+            "usage": "+8 HP, +25% DR, Invisibility while sneaking.",
+            "acquisition": "Oracle Chest Divine (legendary pool).",
+            "effects": {
+                "positive": "Sneak invisibility, +25% DR, +8 HP",
+                "negative": "Loses durability fast when invis"
+            },
+            "baseItem": "minecraft:netherite_chestplate",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 12.0,
+                "toughnessBonus": 5.0,
+                "healthBonus": 8.0,
+                "invisibility_sneak": true
+            }
+        },
+        {
+            "id": "LOST_KNIGHT_LEGGINGS",
+            "name": "Leggings of the Lost Knight",
+            "rarity": "Legendary",
+            "category": "Armor",
+            "description": "Semi-transparent leg armor. Part of the Lost Knight set.",
+            "usage": "+4 HP, +15% DR.",
+            "acquisition": "Oracle Chest Divine (legendary pool).",
+            "effects": {
+                "positive": "+4 HP, +15% DR",
+                "negative": ""
+            },
+            "baseItem": "minecraft:netherite_leggings",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 8.0,
+                "toughnessBonus": 5.0,
+                "healthBonus": 4.0
+            }
+        },
+        {
+            "id": "LOST_KNIGHT_BOOTS",
+            "name": "Boots of the Lost Knight",
+            "rarity": "Legendary",
+            "category": "Armor",
+            "description": "Weightless boots that glide above the ground. Part of the Lost Knight set.",
+            "usage": "+4 HP, +10% DR, Speed II.",
+            "acquisition": "Oracle Chest Divine (legendary pool).",
+            "effects": {
+                "positive": "+4 HP, +10% DR, Speed II",
+                "negative": ""
+            },
+            "baseItem": "minecraft:netherite_boots",
+            "craftable": false,
+            "nbt": {
+                "armorBonus": 5.0,
+                "toughnessBonus": 5.0,
+                "healthBonus": 4.0,
+                "speedBonus": 0.4
+            }
+        },
+        {
+            "id": "SKYSHAPER_LANCE",
+            "name": "Skyshaper Lance",
+            "rarity": "Legendary",
+            "category": "Weapon/Tool",
+            "description": "Ranged weapon that shoots explosive wind charges.",
+            "usage": "Right click to shoot Wind Charge.",
+            "acquisition": "Oracle Chest Divine.",
+            "effects": {
+                "positive": "Range damage + knockback",
+                "negative": "Ammo/Mana system?"
+            },
+            "baseItem": "minecraft:stick",
+            "craftable": false,
+            "nbt": {
+                "customModelData": 7001,
+                "shootProjectile": "wind_charge"
+            }
+        },
+        {
+            "id": "SIEVE_BASE",
+            "name": "Sieve",
+            "rarity": "Common",
+            "category": "Machine",
+            "description": "Place to use sieves.",
+            "usage": "Insert mesh and right click with dirt/gravel/sand.",
+            "acquisition": "Vanilla Craft (planks/sticks).",
+            "effects": {
+                "positive": "Resource gen",
+                "negative": "Manual labor"
+            },
+            "baseItem": "minecraft:oak_slab",
+            "craftable": true
+        },
+        {
+            "id": "SIEVE_MESH_STRING",
+            "name": "String Mesh",
+            "rarity": "Common",
+            "category": "Component",
+            "description": "Basic sieve mesh.",
+            "usage": "Inside Sieve.",
+            "acquisition": "Craft: 9 string.",
+            "effects": {
+                "positive": "Basic drops",
+                "negative": "Low rates"
+            },
+            "baseItem": "minecraft:white_carpet",
+            "craftable": true
+        },
+        {
+            "id": "SIEVE_MESH_FLINT",
+            "name": "Flint Mesh",
+            "rarity": "Uncommon",
+            "category": "Component",
+            "description": "Improved sieve mesh.",
+            "usage": "Inside Sieve.",
+            "acquisition": "Craft: 9 flint.",
+            "effects": {
+                "positive": "Better drops",
+                "negative": ""
+            },
+            "baseItem": "minecraft:gray_carpet",
+            "craftable": true
+        },
+        {
+            "id": "SIEVE_MESH_IRON",
+            "name": "Iron Mesh",
+            "rarity": "Rare",
+            "category": "Component",
+            "description": "Iron reinforced mesh.",
+            "usage": "Inside Sieve.",
+            "acquisition": "Craft: 9 iron ingots.",
+            "effects": {
+                "positive": "Good drops",
+                "negative": ""
+            },
+            "baseItem": "minecraft:iron_trapdoor",
+            "craftable": true
+        },
+        {
+            "id": "SIEVE_MESH_DIAMOND",
+            "name": "Diamond Mesh",
+            "rarity": "Epic",
+            "category": "Component",
+            "description": "High tier mesh.",
+            "usage": "Inside Sieve.",
+            "acquisition": "Craft: 9 diamonds.",
+            "effects": {
+                "positive": "High rates",
+                "negative": ""
+            },
+            "baseItem": "minecraft:light_blue_carpet",
+            "craftable": true
+        },
+        {
+            "id": "SIEVE_MESH_NETHERITE",
+            "name": "Netherite Mesh",
+            "rarity": "Legendary",
+            "category": "Component",
+            "description": "Ultimate mesh.",
+            "usage": "Inside Sieve.",
+            "acquisition": "Craft: 9 netherite ingots (expensive!).",
+            "effects": {
+                "positive": "Best rates",
+                "negative": "Very expensive"
+            },
+            "baseItem": "minecraft:black_carpet",
+            "craftable": true
+        },
+        {
+            "id": "COBBLE_MINION",
+            "name": "§6Cobblestone Minion",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Auto-mines a 5x5 platform below it. Generates stone and ores automatically.",
+            "usage": "Place on ground. Right-click to collect. Connect chest for auto-output.",
+            "acquisition": "Shop/Craft",
+            "effects": {
+                "positive": "Auto-mining, generates ores",
+                "negative": "Needs space below"
+            },
+            "baseItem": "minecraft:spawner",
+            "craftable": true,
+            "recipe": {
+                "type": "crafting_shaped",
+                "pattern": [
+                    "CCC",
+                    "CPC",
+                    "CCC"
+                ],
+                "key": {
+                    "C": "minecraft:cobblestone",
+                    "P": "minecraft:piston"
+                },
+                "result": {
+                    "item": "COBBLE_MINION",
+                    "count": 1
+                }
+            }
+        },
+        {
+            "id": "CROOK",
+            "name": "<green>Wooden Crook</green>",
+            "rarity": "COMMON",
+            "category": "Tool",
+            "description": "Use on leaves to getting silkworms.",
+            "usage": "Break leaves.",
+            "acquisition": "Craft.",
+            "effects": {
+                "positive": "Silkworm gen",
+                "negative": ""
+            },
+            "baseItem": "minecraft:wooden_hoe",
+            "craftable": true
+        },
+        {
+            "id": "ORACLE_CHEST_BASIC",
+            "name": "<gold>Oracle Chest (Basic)</gold>",
+            "rarity": "UNCOMMON",
+            "category": "Container",
+            "description": "A standard crate for the Gacha system.",
+            "usage": "Right-click to open.",
+            "acquisition": "Shop/Craft.",
+            "effects": {
+                "positive": "Loot",
+                "negative": ""
+            },
+            "baseItem": "minecraft:chest",
+            "craftable": true,
+            "recipe": {
+                "type": "crafting_shaped",
+                "pattern": [
+                    "ECE",
+                    "CBC",
+                    "ECE"
+                ],
+                "key": {
+                    "E": "minecraft:amethyst_shard",
+                    "C": "minecraft:emerald",
+                    "B": "minecraft:ender_chest"
+                },
+                "result": {
+                    "item": "ORACLE_CHEST_BASIC",
+                    "count": 1
+                },
+                "btc_cost": 1000
+            }
+        },
+        {
+            "id": "ORACLE_CHEST_DIVINE",
+            "name": "<light_purple>Oracle Chest (Divine)</light_purple>",
+            "rarity": "EPIC",
+            "category": "Container",
+            "description": "A divine crate for the Gacha system.",
+            "usage": "Right-click to open.",
+            "acquisition": "Shop.",
+            "effects": {
+                "positive": "Better Loot",
+                "negative": ""
+            },
+            "baseItem": "minecraft:ender_chest",
+            "craftable": false
+        },
+        {
+            "id": "ORACLE_CHEST_PREMIUM",
+            "name": "<aqua>Oracle Chest (Premium)</aqua>",
+            "rarity": "RARE",
+            "category": "Container",
+            "description": "A premium crate for the Gacha system.",
+            "usage": "Right-click to open.",
+            "acquisition": "Shop.",
+            "effects": {
+                "positive": "Great Loot",
+                "negative": ""
+            },
+            "baseItem": "minecraft:ender_chest",
+            "craftable": false
+        },
+        {
+            "id": "spawner_pig",
+            "name": "§fPig Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Pigs when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_cow",
+            "name": "§fCow Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Cows when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_sheep",
+            "name": "§fSheep Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Sheep when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_chicken",
+            "name": "§fChicken Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Chickens when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_rabbit",
+            "name": "§fRabbit Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Rabbits when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_horse",
+            "name": "§fHorse Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Horses when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_donkey",
+            "name": "§fDonkey Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Donkeys when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_mule",
+            "name": "§fMule Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Mules when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_llama",
+            "name": "§fLlama Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Llamas when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_trader_llama",
+            "name": "§fTrader Llama Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Trader Llamas when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_cat",
+            "name": "§fCat Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Cats when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_wolf",
+            "name": "§fWolf Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Wolves when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_parrot",
+            "name": "§fParrot Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Parrots when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_panda",
+            "name": "§fPanda Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Pandas when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_polar_bear",
+            "name": "§fPolar Bear Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Polar Bears when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_fox",
+            "name": "§fFox Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Foxes when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_bee",
+            "name": "§fBee Spawner",
+            "rarity": "UNCOMMON",
+            "category": "Machine",
+            "description": "Spawns Bees when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_axolotl",
+            "name": "§fAxolotl Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Axolotls when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_zombie",
+            "name": "§fZombie Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Zombies when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_skeleton",
+            "name": "§fSkeleton Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Skeletons when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_creeper",
+            "name": "§fCreeper Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Creepers when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_spider",
+            "name": "§fSpider Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Spiders when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_cave_spider",
+            "name": "§fCave Spider Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Cave Spiders when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_enderman",
+            "name": "§fEnderman Spawner",
+            "rarity": "EPIC",
+            "category": "Machine",
+            "description": "Spawns Endermen when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_blaze",
+            "name": "§fBlaze Spawner",
+            "rarity": "EPIC",
+            "category": "Machine",
+            "description": "Spawns Blazes when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_ghast",
+            "name": "§fGhast Spawner",
+            "rarity": "EPIC",
+            "category": "Machine",
+            "description": "Spawns Ghasts when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_wither_skeleton",
+            "name": "§fWither Skeleton Spawner",
+            "rarity": "EPIC",
+            "category": "Machine",
+            "description": "Spawns Wither Skeletons when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_slime",
+            "name": "§fSlime Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Slimes when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_magma_cube",
+            "name": "§fMagma Cube Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Magma Cubes when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        },
+        {
+            "id": "spawner_witch",
+            "name": "§fWitch Spawner",
+            "rarity": "RARE",
+            "category": "Machine",
+            "description": "Spawns Witches when powered.",
+            "usage": "Place as block. Charge with energy to spawn mobs.",
+            "baseItem": "minecraft:spawner",
+            "craftable": false
+        }
+    ],
+    "crafting_recipes": [],
+    "furnace_recipes": [
+        {
+            "id": "blessed_water_smelt",
+            "type": "smelting",
+            "input": "minecraft:potion",
+            "result": "BLESSED_WATER",
+            "experience": 0.1,
+            "cooking_time": 200
+        }
+    ],
+    "divine_forge_config": {
+        "enabled": true,
+        "ui_slots": {
+            "slotA": 0,
+            "slotB": 1,
+            "preview": 2,
+            "stabilizerSlot": 3
+        },
+        "fusion_rules_description": "If both items have same enchant type & level L => result level L+1. Multi-enchant merge merges matching enchants.",
+        "cost_formula": {
+            "baseCost": 5,
+            "multiplier": 2,
+            "formula": "cost = baseCost * multiplier^(L-1)"
+        },
+        "stabilizer_item": "GEAR_STABILIZER",
+        "stabilizer_discount": 0.5,
+        "guarantee_with_stabilizer": true,
+        "max_safe_level": 2000000000,
+        "notes": "Atomic transactions required; show preview with final NBT and BTC cost before confirming."
+    },
+    "gacha_config": {
+        "enabled": true,
+        "crate_types": {
+            "basic": {
+                "item": "ORACLE_CHEST_BASIC",
+                "priceBTC": 1000,
+                "admin_stock_control": true,
+                "default_rates": {
+                    "common": 7000,
+                    "uncommon": 2000,
+                    "rare": 800,
+                    "epic": 150,
+                    "legendary": 50
+                }
+            },
+            "divine": {
+                "item": "ORACLE_CHEST_DIVINE",
+                "priceBTC": 5000,
+                "admin_stock_control": true,
+                "default_rates": {
+                    "common": 0,
+                    "uncommon": 0,
+                    "rare": 0,
+                    "epic": 9000,
+                    "legendary": 1000
+                }
+            },
+            "premium": {
+                "item": "ORACLE_CHEST_PREMIUM",
+                "priceBTC": 2500,
+                "admin_stock_control": true,
+                "default_rates": {
+                    "common": 0,
+                    "uncommon": 2000,
+                    "rare": 5000,
+                    "epic": 2500,
+                    "legendary": 500
+                }
+            }
+        },
+        "legendary_pool": [
+            "MJOLNIR",
+            "GODWINGS",
+            "DIVINE_EXCAVATOR",
+            "DIVINEBREAKER",
+            "ARMOR_OF_LOST_KNIGHT",
+            "SKYSHAPER_LANCE"
+        ],
+        "pity_threshold": 100,
+        "pity_behavior": "guaranteed_legendary_at_threshold_reset_on_legendary",
+        "player_data_key": "gachaCount"
+    },
+    "shop_config": {
+        "creation_method": "sign_plus_chest",
+        "creation_action": "sneak_right_click_chest_with_sign",
+        "auto_detect_chest": true,
+        "shop_editor_gui_fields": [
+            "slot",
+            "displayName",
+            "count",
+            "priceBTC",
+            "buyable",
+            "sellable",
+            "taxPercent",
+            "autoPrice"
+        ],
+        "transaction_atomic": true,
+        "default_tax": 0.05,
+        "data_model_example": {
+            "shopId": "shop-uuid",
+            "owner": "player-uuid",
+            "chestLocation": {
+                "x": 0,
+                "y": 64,
+                "z": 0,
+                "world": "world"
+            },
+            "signLocation": {
+                "x": 0,
+                "y": 65,
+                "z": 0,
+                "world": "world"
+            },
+            "items": [
+                {
+                    "slot": 0,
+                    "itemType": "DIVINE_EXCAVATOR",
+                    "displayName": "Divine Excavator",
+                    "count": 1,
+                    "priceBTC": 50000,
+                    "buyable": true,
+                    "sellable": false
+                }
+            ],
+            "autoScan": false,
+            "tax": 0.05
+        }
+    },
+    "player_data_schema_example": {
+        "uuid": "player-uuid",
+        "btc_balance": 1250,
+        "gachaCount": 42,
+        "thirst": 78,
+        "shopsOwned": [
+            "shop-uuid"
+        ],
+        "ownedItemsNBT": {}
+    },
+    "developer_notes": {
+        "crafting_btc_hook": "Intercept InventoryClickEvent/CraftItemEvent and perform atomic BTC deduction before giving result.",
+        "divine_excavator_hook": "On BlockBreakEvent, detect item NBT divine:true then apply custom break speed, auto-smelt, and auto-pickup. Implement area mining with careful throttling.",
+        "oracle_crate": "On right-click crate, consume one and open server-side GUI. Use persistent player.gachaCount for pity logic.",
+        "shop_atomic": "Lock chest region while purchase to prevent race conditions. Use server transactions.",
+        "thirst": "Use BossBar API per-player; schedule periodic drains based on activity and persist on logout.",
+        "performance": "Throttle batch operations and limit features per world or region to prevent abuse."
+    }
+}

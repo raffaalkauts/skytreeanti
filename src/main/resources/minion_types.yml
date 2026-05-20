@@ -1,0 +1,128 @@
+# Minion System Configuration
+
+# Minion types with base stats and upgrade costs
+minions:
+  FARMER:
+    displayName: "§aFarmer Minion"
+    baseSpeed: 1.0     # Actions per minute
+    baseRange: 5       # Block radius
+    actions:
+      - "HARVEST_CROPS"
+      - "REPLANT"
+    upgradeCosts:
+      2: 1000
+      3: 2500
+      4: 5000
+      5: 10000   # Storage unlocks here
+      6: 20000
+      7: 40000
+      8: 75000
+      9: 125000
+      10: 200000  # Skin unlocks here
+  
+  MINER:
+    displayName: "§7Miner Minion"
+    baseSpeed: 0.8
+    baseRange: 3
+    actions:
+      - "MINE_BLOCKS"
+      - "COLLECT_DROPS"
+    upgradeCosts:
+      2: 1500
+      3: 3500
+      4: 7500
+      5: 15000
+      6: 30000
+      7: 60000
+      8: 100000
+      9: 175000
+      10: 300000
+  
+  LUMBERJACK:
+    displayName: "§6Lumberjack Minion"
+    baseSpeed: 0.9
+    baseRange: 7
+    actions:
+      - "CHOP_TREES"
+      - "REPLANT_SAPLINGS"
+    upgradeCosts:
+      2: 1200
+      3: 3000
+      4: 6000
+      5: 12000
+      6: 25000
+      7: 50000
+      8: 90000
+      9: 150000
+      10: 250000
+  
+  FISHER:
+    displayName: "§bFisher Minion"
+    baseSpeed: 0.7
+    baseRange: 1
+    actions:
+      - "AUTO_FISH"
+    upgradeCosts:
+      2: 2000
+      3: 4000
+      4: 8000
+      5: 16000
+      6: 32000
+      7: 64000
+      8: 120000
+      9: 200000
+      10: 350000
+  
+  AUTO_SIEVE:
+    displayName: "§eSieve Minion"
+    baseSpeed: 1.2
+    baseRange: 5
+    actions:
+      - "AUTO_SIEVE"
+      - "COLLECT_RESULTS"
+    upgradeCosts:
+      2: 1800
+      3: 4500
+      4: 9000
+      5: 18000
+      6: 35000
+      7: 70000
+      8: 130000
+      9: 220000
+      10: 400000
+
+# Minion skins and unlock requirements
+skins:
+  STEVE:
+    unlocked: true
+    cost: 0
+  ALEX:
+    unlocked: true
+    cost: 0
+  ZOMBIE:
+    unlocked: false
+    cost: 5000  # Shards
+  SKELETON:
+    unlocked: false
+    cost: 5000
+  CREEPER:
+    unlocked: false
+    cost: 7500
+  ENDERMAN:
+    unlocked: false
+    cost: 10000
+  VILLAGER:
+    unlocked: false
+    cost: 7500
+  PIGLIN:
+    unlocked: false
+    cost: 10000
+
+# General settings
+settings:
+  maxMinionsPerIsland: 10
+  storageUnlockLevel: 5
+  storageCapacity: 27  # Slots
+  skinUnlockLevel: 10
+  actionInterval: 20   # Ticks between actions
+  autoCollect: true

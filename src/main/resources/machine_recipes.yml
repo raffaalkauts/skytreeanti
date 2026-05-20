@@ -1,0 +1,25 @@
+# Machine Auto-Crafter Recipes
+# Format:
+# recipe_id:
+#   inputs:
+#     - MATERIAL: AMOUNT
+#     - custom_item_id: AMOUNT
+#   output:
+#     MATERIAL or custom_item_id: AMOUNT
+#   time: TICKS (Default 100)
+
+diamond_helmet:
+  inputs:
+    - DIAMOND: 5
+  output:
+    DIAMOND_HELMET: 1
+  time: 100
+
+compressed_cobble:
+  inputs:
+    - COBBLESTONE: 9
+  output:
+    COBBLESTONE: 9 # Placeholder if we don't have compressed_cobblestone in registry yet
+  time: 60
+
+# Add more as needed

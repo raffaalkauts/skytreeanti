@@ -1,0 +1,93 @@
+# Trust Level Permission Configuration
+
+# Permission matrices for each trust level
+trustLevels:
+  VISITOR:
+    displayName: "§7Visitor"
+    description: "Can view the island but cannot interact"
+    permissions:
+      - DOORS
+    defaultLevel: true
+  
+  BUILDER:
+    displayName: "§eBuilder"
+    description: "Can build and break blocks"
+    permissions:
+      - BUILD
+      - BREAK
+      - DOORS
+      - USE_ITEMS
+    requiresInvite: true
+  
+  MODERATOR:
+    displayName: "§bModerator"
+    description: "Can access most island features"
+    permissions:
+      - BUILD
+      - BREAK
+      - CONTAINER
+      - REDSTONE
+      - DOORS
+      - ANIMALS
+      - USE_ITEMS
+      - PVP
+    requiresInvite: true
+  
+  CO_OWNER:
+    displayName: "§aCo-Owner"
+    description: "Full permissions except deletion"
+    permissions:
+      - BUILD
+      - BREAK
+      - CONTAINER
+      - REDSTONE
+      - DOORS
+      - ANIMALS
+      - USE_ITEMS
+      - PVP
+    requiresInvite: true
+    specialPerks:
+      - "Can manage trust levels"
+      - "Can access island settings"
+      - "Can view island bank"
+
+# Permission descriptions
+permissions:
+  BUILD:
+    name: "Place Blocks"
+    description: "Allows placing blocks on the island"
+  
+  BREAK:
+    name: "Break Blocks"
+    description: "Allows breaking blocks on the island"
+  
+  CONTAINER:
+    name: "Open Containers"
+    description: "Allows opening chests, furnaces, etc."
+  
+  REDSTONE:
+    name: "Use Redstone"
+    description: "Allows using buttons, levers, pressure plates"
+  
+  DOORS:
+    name: "Use Doors"
+    description: "Allows opening doors, trapdoors, gates"
+  
+  ANIMALS:
+    name: "Interact with Animals"
+    description: "Allows breeding, leashing, shearing animals"
+  
+  PVP:
+    name: "Player vs Player"
+    description: "Allows attacking other players"
+  
+  USE_ITEMS:
+    name: "Use Items"
+    description: "Allows using buckets, flint and steel, etc."
+
+# Trust settings
+settings:
+  maxTrustedPerIsland: 50
+  trusteesCanInvite: false  # Only owner can invite
+  removeTrustOnLeave: false
+  notifyOnTrustChange: true

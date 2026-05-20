@@ -1,0 +1,145 @@
+# Island Quest System Configuration
+# Daily island-specific challenges
+
+# Quest generation settings
+dailyQuestCount: 3  # Generate 3 quests per day
+resetTime: "00:00"  # Midnight server time
+
+# Quest tiers
+tiers:
+  bronze:
+    color: "§6"
+    rewardMultiplier: 1.0
+  silver:
+    color: "§7"
+    rewardMultiplier: 2.0
+  gold:
+    color: "§e"
+    rewardMultiplier: 3.0
+
+# Quest templates
+quests:
+  # Mining quests
+  mine_cobblestone:
+    name: "Cobblestone Collector"
+    description: "Mine %amount% cobblestone on your island"
+    type: "BLOCK_BREAK"
+    target: "COBBLESTONE"
+    tier: "bronze"
+    requirements:
+      bronze: 1000
+      silver: 5000
+      gold: 10000
+    rewards:
+      usdt:
+        bronze: 100
+        silver: 500
+        gold: 2000
+      shards:
+        bronze: 10
+        silver: 50
+        gold: 200
+  
+  mine_ores:
+    name: "Ore Hunter"
+    description: "Mine %amount% ores (any type)"
+    type: "BLOCK_BREAK"
+    target: "ORE"
+    tier: "silver"
+    requirements:
+      bronze: 50
+      silver: 200
+      gold: 500
+    rewards:
+      usdt:
+        bronze: 200
+        silver: 1000
+        gold: 4000
+      shards:
+        bronze: 20
+        silver: 100
+        gold: 400
+  
+  # Farming quests
+  harvest_crops:
+    name: "Farmer"
+    description: "Harvest %amount% crops"
+    type: "BLOCK_BREAK"
+    target: "CROP"
+    tier: "bronze"
+    requirements:
+      bronze: 100
+      silver: 500
+      gold: 1000
+    rewards:
+      usdt:
+        bronze: 100
+        silver: 500
+        gold: 2000
+      shards:
+        bronze: 10
+        silver: 50
+        gold: 200
+  
+  # Combat quests
+  kill_mobs:
+    name: "Monster Slayer"
+    description: "Kill %amount% mobs on your island"
+    type: "MOB_KILL"
+    target: "ANY"
+    tier: "silver"
+    requirements:
+      bronze: 50
+      silver: 100
+      gold: 250
+    rewards:
+      usdt:
+        bronze: 150
+        silver: 750
+        gold: 3000
+      shards:
+        bronze: 15
+        silver: 75
+        gold: 300
+  
+  # Economy quests
+  earn_money:
+    name: "Capitalist"
+    description: "Earn %amount% USDT from island activities"
+    type: "MONEY_EARN"
+    target: "USDT"
+    tier: "gold"
+    requirements:
+      bronze: 5000
+      silver: 25000
+      gold: 100000
+    rewards:
+      usdt:
+        bronze: 500
+        silver: 2500
+        gold: 10000
+      shards:
+        bronze: 50
+        silver: 250
+        gold: 1000
+  
+  # Building quests
+  place_blocks:
+    name: "Builder"
+    description: "Place %amount% blocks on your island"
+    type: "BLOCK_PLACE"
+    target: "ANY"
+    tier: "bronze"
+    requirements:
+      bronze: 500
+      silver: 2000
+      gold: 5000
+    rewards:
+      usdt:
+        bronze: 100
+        silver: 500
+        gold: 2000
+      shards:
+        bronze: 10
+        silver: 50
+        gold: 200

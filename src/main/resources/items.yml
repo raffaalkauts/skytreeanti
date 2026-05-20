@@ -1,0 +1,1060 @@
+
+items:
+  # ===================================
+  # TOOLS (ADDED)
+  # ===================================
+  netherite_pickaxe: { material: NETHERITE_PICKAXE, name: "§4Netherite Pickaxe", lore: ["§7Powerful pickaxe"] }
+  netherite_axe: { material: NETHERITE_AXE, name: "§4Netherite Axe", lore: ["§7Powerful axe"] }
+  netherite_shovel: { material: NETHERITE_SHOVEL, name: "§4Netherite Shovel", lore: ["§7Powerful shovel"] }
+  netherite_hoe: { material: NETHERITE_HOE, name: "§4Netherite Hoe", lore: ["§7Powerful hoe"] }
+  netherite_sword: { material: NETHERITE_SWORD, name: "§4Netherite Sword", lore: ["§7Powerful sword"] }
+
+  # ===================================
+  # REDSTONE ITEMS (ADDED)
+  # ===================================
+  redstone_torch: { material: REDSTONE_TORCH, name: "§cRedstone Torch" }
+  redstone_lamp: { material: REDSTONE_LAMP, name: "§6Redstone Lamp" }
+  redstone_block: { material: REDSTONE_BLOCK, name: "§cRedstone Block" }
+  repeater: { material: REPEATER, name: "§cRedstone Repeater" }
+  comparator: { material: COMPARATOR, name: "§cRedstone Comparator" }
+  observer: { material: OBSERVER, name: "§cObserver" }
+  piston: { material: PISTON, name: "§7Piston" }
+  sticky_piston: { material: STICKY_PISTON, name: "§2Sticky Piston" }
+  dispenser: { material: DISPENSER, name: "§7Dispenser" }
+  dropper: { material: DROPPER, name: "§7Dropper" }
+  hopper: { material: HOPPER, name: "§7Hopper" }
+  note_block: { material: NOTE_BLOCK, name: "§6Note Block" }
+  jukebox: { material: JUKEBOX, name: "§6Jukebox" }
+  lever: { material: LEVER, name: "§7Lever" }
+  tripwire_hook: { material: TRIPWIRE_HOOK, name: "§7Tripwire Hook" }
+  trapped_chest: { material: TRAPPED_CHEST, name: "§cTrapped Chest" }
+  daylight_detector: { material: DAYLIGHT_DETECTOR, name: "§eDaylight Detector" }
+
+  # ===================================
+  # FOOD ITEMS (ADDED)
+  # ===================================
+  bread: { material: BREAD, name: "§eBread" }
+  cookie: { material: COOKIE, name: "§6Cookie" }
+  cake: { material: CAKE, name: "§fCake" }
+  pumpkin_pie: { material: PUMPKIN_PIE, name: "§6Pumpkin Pie" }
+  golden_apple: { material: GOLDEN_APPLE, name: "§eGolden Apple" }
+  enchanted_golden_apple: { material: ENCHANTED_GOLDEN_APPLE, name: "§dEnchanted Golden Apple" }
+  golden_carrot: { material: GOLDEN_CARROT, name: "§eGolden Carrot" }
+  glistering_melon_slice: { material: GLISTERING_MELON_SLICE, name: "§eGlistering Melon Slice" }
+
+  # ===================================
+  # UTILITY (ADDED)
+  # ===================================
+  map: { material: MAP, name: "§7Map" }
+  writable_book: { material: WRITABLE_BOOK, name: "§fBook and Quill" }
+  written_book: { material: WRITTEN_BOOK, name: "§fWritten Book" }
+  firework_rocket: { material: FIREWORK_ROCKET, name: "§eFirework Rocket" }
+
+  crook_wood:
+    material: WOODEN_HOE
+    name: "§fWooden Crook"
+    lore:
+      - "§7Pull leaves for saplings"
+      - "§aEfficiency X"
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  crook_stone:
+    material: STONE_HOE
+    name: "§7Stone Crook"
+    lore:
+      - "§7Better durability"
+      - "§aEfficiency X"
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  crook_bone:
+    material: BONE
+    name: "§fBone Crook"
+    lore:
+      - "§7Fragile but effective"
+      - "§aEfficiency X"
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  crook_iron:
+    material: IRON_HOE
+    name: "§fIron Crook"
+    lore:
+      - "§7High durability"
+      - "§aEfficiency X"
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  crook_gold:
+    material: GOLDEN_HOE
+    name: "§eGold Crook"
+    lore:
+      - "§7Fast but fragile"
+      - "§aEfficiency X"
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  crook_diamond:
+    material: DIAMOND_HOE
+    name: "§bDiamond Crook"
+    lore:
+      - "§7Very durable"
+      - "§aEfficiency X"
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  crook_emerald:
+    material: EMERALD
+    name: "§aEmerald Crook"
+    lore:
+      - "§7Magical properties"
+      - "§aEfficiency X"
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  crook_netherite:
+    material: NETHERITE_HOE
+    name: "§4Netherite Crook"
+    lore:
+      - "§7Ultimate crook"
+      - "§aEfficiency X"
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  sell_wand:
+    material: BLAZE_ROD
+    name: "§6§lSell Wand §7(3x Multiplier)"
+    lore:
+      - "§7Right-click a chest to sell contents"
+      - "§eMultiplier: §bx3"
+      - "§8§oA premium utility tool"
+
+  hammer_wood:
+    material: WOODEN_PICKAXE
+    name: "§fWooden Hammer"
+    lore:
+      - "§7Crushes blocks"
+    enchants:
+      EFFICIENCY: 0
+    flags: [HIDE_ENCHANTS]
+
+  hammer_stone:
+    material: STONE_PICKAXE
+    name: "§7Stone Hammer"
+    lore:
+      - "§7Crushes faster"
+    enchants:
+      EFFICIENCY: 1
+    flags: [HIDE_ENCHANTS]
+
+  hammer_iron:
+    material: IRON_PICKAXE
+    name: "§fIron Hammer"
+    lore:
+      - "§7Fast crushing"
+    enchants:
+      EFFICIENCY: 2
+    flags: [HIDE_ENCHANTS]
+
+  hammer_gold:
+    material: GOLDEN_PICKAXE
+    name: "§eGold Hammer"
+    lore:
+      - "§7Very fast crushing"
+    enchants:
+      EFFICIENCY: 4
+    flags: [HIDE_ENCHANTS]
+
+  hammer_diamond:
+    material: DIAMOND_PICKAXE
+    name: "§bDiamond Hammer"
+    lore:
+      - "§7Durable crushing"
+    enchants:
+      EFFICIENCY: 3
+    flags: [HIDE_ENCHANTS]
+
+  hammer_netherite:
+    material: NETHERITE_PICKAXE
+    name: "§4Netherite Hammer"
+    lore:
+      - "§7Ultimate hammer"
+    enchants:
+      EFFICIENCY: 5
+    flags: [HIDE_ENCHANTS]
+
+  mesh_string:
+    material: STRING
+    name: "§fString Mesh"
+    lore: ["§7Basic sifting"]
+
+  mesh_flint:
+    material: FLINT
+    name: "§8Flint Mesh"
+    lore: ["§7Improved sifting"]
+
+  mesh_iron:
+    material: IRON_INGOT
+    name: "§fIron Mesh"
+    lore: ["§7Good drops"]
+
+  mesh_gold:
+    material: GOLD_INGOT
+    name: "§eGold Mesh"
+    lore: ["§7Excellent drops"]
+
+  mesh_diamond:
+    material: DIAMOND
+    name: "§bDiamond Mesh"
+    lore: ["§7High tier drops"]
+
+  mesh_emerald:
+    material: EMERALD
+    name: "§aEmerald Mesh"
+    lore: ["§7Currency drops"]
+
+  mesh_netherite:
+    material: NETHERITE_INGOT
+    name: "§4Netherite Mesh"
+    lore: ["§7Best drops"]
+
+  pebble_diorite:
+    material: GRAVEL
+    name: "§fDiorite Pebble"
+    lore: ["§79 = 1 Diorite"]
+
+  pebble_andesite:
+    material: GRAVEL
+    name: "§7Andesite Pebble"
+    lore: ["§79 = 1 Andesite"]
+
+  pebble_basalt:
+    material: GRAVEL
+    name: "§8Basalt Pebble"
+    lore: ["§79 = 1 Basalt"]
+
+  pebble_blackstone:
+    material: GRAVEL
+    name: "§0Blackstone Pebble"
+    lore: ["§79 = 1 Blackstone"]
+
+  dust_iron:
+    material: GUNPOWDER
+    name: "§fIron Dust"
+    lore: ["§7Smelt for Iron Ingot"]
+
+  dust_gold:
+    material: GLOWSTONE_DUST
+    name: "§eGold Dust"
+    lore: ["§7Smelt for Gold Ingot"]
+
+  dust_copper:
+    material: GUNPOWDER
+    name: "§6Copper Dust"
+    lore: ["§7Smelt for Copper Ingot"]
+
+  dust_tin:
+    material: SUGAR
+    name: "§7Tin Dust"
+    lore: ["§7Smelt for Tin Ingot"]
+
+  dust_aluminum:
+    material: SUGAR
+    name: "§fAluminum Dust"
+    lore: ["§7Smelt for Aluminum"]
+
+  dust_silver:
+    material: SUGAR
+    name: "§7Silver Dust"
+    lore: ["§7Smelt for Silver"]
+
+  dust_lead:
+    material: GUNPOWDER
+    name: "§8Lead Dust"
+    lore: ["§7Smelt for Lead"]
+
+  dust_nickel:
+    material: SUGAR
+    name: "§7Nickel Dust"
+    lore: ["§7Smelt for Nickel"]
+
+  dust_zinc:
+    material: SUGAR
+    name: "§fZinc Dust"
+    lore: ["§7Smelt for Zinc"]
+
+  dust_brass:
+    material: GOLD_NUGGET
+    name: "§eBrass Dust"
+    lore: ["§7Copper + Zinc alloy"]
+
+  dust_bronze:
+    material: GOLD_NUGGET
+    name: "§6Bronze Dust"
+    lore: ["§7Copper + Tin alloy"]
+
+  dust_steel:
+    material: IRON_NUGGET
+    name: "§7Steel Dust"
+    lore: ["§7Iron + Coal alloy"]
+
+  dust_obsidian:
+    material: GUNPOWDER
+    name: "§5Obsidian Dust"
+    lore: ["§7Compress for Obsidian"]
+
+  dust_ender:
+    material: ENDER_PEARL
+    name: "§5Ender Dust"
+    lore: ["§7Magical ender essence"]
+
+  dust_uranium:
+    material: LIME_DYE
+    name: "§aUranium Dust"
+    lore: ["§7Smelt for Uranium Ingot", "§c§lRADIOACTIVE!"]
+
+  # ===================================
+  # ORE PIECES
+  # ===================================
+  piece_iron:
+    material: IRON_NUGGET
+    name: "§fIron Piece"
+    lore: ["§79 = 1 Iron Ore"]
+
+  piece_gold:
+    material: GOLD_NUGGET
+    name: "§eGold Piece"
+    lore: ["§79 = 1 Gold Ore"]
+
+  piece_copper:
+    material: COPPER_INGOT
+    name: "§6Copper Piece"
+    lore: ["§79 = 1 Copper Ore"]
+
+  piece_diamond:
+    material: DIAMOND
+    name: "§bDiamond Shard"
+    lore: ["§79 = 1 Diamond"]
+
+  piece_emerald:
+    material: EMERALD
+    name: "§aEmerald Shard"
+    lore: ["§79 = 1 Emerald"]
+
+  piece_coal:
+    material: CHARCOAL
+    name: "§8Coal Chunk"
+    lore: ["§79 = 1 Coal"]
+
+  piece_lapis:
+    material: LAPIS_LAZULI
+    name: "§9Lapis Fragment"
+    lore: ["§79 = 1 Lapis Block"]
+
+  piece_redstone:
+    material: REDSTONE
+    name: "§cRedstone Fragment"
+    lore: ["§79 = 1 Redstone Block"]
+
+  piece_quartz:
+    material: QUARTZ
+    name: "§fQuartz Shard"
+    lore: ["§79 = 1 Quartz Block"]
+
+  piece_tin:
+    material: IRON_NUGGET
+    name: "§7Tin Piece"
+    lore: ["§79 = 1 Tin Ore"]
+
+  piece_aluminum:
+    material: IRON_NUGGET
+    name: "§fAluminum Piece"
+    lore: ["§79 = 1 Aluminum Ore"]
+
+  piece_silver:
+    material: IRON_NUGGET
+    name: "§7Silver Piece"
+    lore: ["§79 = 1 Silver Ore"]
+
+  piece_lead:
+    material: IRON_NUGGET
+    name: "§8Lead Piece"
+    lore: ["§79 = 1 Lead Ore"]
+
+  piece_nickel:
+    material: IRON_NUGGET
+    name: "§7Nickel Piece"
+    lore: ["§79 = 1 Nickel Ore"]
+
+  piece_zinc:
+    material: IRON_NUGGET
+    name: "§fZinc Piece"
+    lore: ["§79 = 1 Zinc Ore"]
+
+  piece_uranium:
+    material: LIME_DYE
+    name: "§aUranium Piece"
+    lore: ["§79 = 1 Uranium Ore", "§c§lRADIOACTIVE!"]
+
+  # ===================================
+  # INGOTS
+  # ===================================
+  ingot_tin:
+    material: IRON_INGOT
+    name: "§7Tin Ingot"
+    lore: ["§7Smelted from Tin Dust"]
+
+  ingot_aluminum:
+    material: IRON_INGOT
+    name: "§fAluminum Ingot"
+    lore: ["§7Smelted from Aluminum Dust"]
+
+  ingot_silver:
+    material: IRON_INGOT
+    name: "§7Silver Ingot"
+    lore: ["§7Smelted from Silver Dust"]
+
+  ingot_lead:
+    material: IRON_INGOT
+    name: "§8Lead Ingot"
+    lore: ["§7Smelted from Lead Dust"]
+
+  ingot_nickel:
+    material: IRON_INGOT
+    name: "§7Nickel Ingot"
+    lore: ["§7Smelted from Nickel Dust"]
+
+  ingot_zinc:
+    material: IRON_INGOT
+    name: "§fZinc Ingot"
+    lore: ["§7Smelted from Zinc Dust"]
+
+  ingot_brass:
+    material: GOLD_INGOT
+    name: "§eBrass Ingot"
+    lore: ["§7Alloy: Copper + Zinc"]
+
+  ingot_bronze:
+    material: COPPER_INGOT
+    name: "§6Bronze Ingot"
+    lore: ["§7Alloy: Copper + Tin"]
+
+  ingot_steel:
+    material: IRON_INGOT
+    name: "§7Steel Ingot"
+    lore: ["§7Alloy: Iron + Coal"]
+
+  ingot_uranium:
+    material: LIME_DYE
+    name: "§aUranium Ingot"
+    lore: ["§7Radioactive fuel", "§c§lRADIOACTIVE!"]
+
+  # ===================================
+  # SILKWORMS & RELATED
+  # ===================================
+  silkworm:
+    material: STRING
+    name: "§eSilkworm"
+    lore: ["§7Right-click on leaves", "§7to infest them"]
+
+  silkworm_cooked:
+    material: STRING
+    name: "§6Cooked Silkworm"
+    lore: ["§7Food... I guess?"]
+
+  silk_mesh:
+    material: COBWEB
+    name: "§fSilk Mesh"
+    lore: ["§7Made from silk"]
+
+  # ===================================
+  # SEEDS & SPORES
+  # ===================================
+  ancient_spores:
+    material: WHEAT_SEEDS
+    name: "§2Ancient Spores"
+    lore: ["§7Grows grass on dirt"]
+
+  grass_seeds:
+    material: WHEAT_SEEDS
+    name: "§aGrass Seeds"
+    lore: ["§7Spreads grass"]
+
+  seed_carrot:
+    material: CARROT
+    name: "§6Carrot Seeds"
+
+  seed_potato:
+    material: POTATO
+    name: "§ePotato Seeds"
+
+  seed_beetroot:
+    material: BEETROOT_SEEDS
+    name: "§cBeetroot Seeds"
+
+  seed_melon:
+    material: MELON_SEEDS
+    name: "§2Melon Seeds"
+
+  seed_pumpkin:
+    material: PUMPKIN_SEEDS
+    name: "§6Pumpkin Seeds"
+
+  seed_cocoa:
+    material: COCOA_BEANS
+    name: "§6Cocoa Beans"
+
+  seed_nether_wart:
+    material: NETHER_WART
+    name: "§cNether Wart"
+
+  seed_chorus:
+    material: CHORUS_FRUIT
+    name: "§5Chorus Fruit"
+
+  sapling_oak:
+    material: OAK_SAPLING
+    name: "§2Oak Sapling"
+
+  sapling_birch:
+    material: BIRCH_SAPLING
+    name: "§fBirch Sapling"
+
+  sapling_spruce:
+    material: SPRUCE_SAPLING
+    name: "§2Spruce Sapling"
+
+  sapling_jungle:
+    material: JUNGLE_SAPLING
+    name: "§2Jungle Sapling"
+
+  sapling_acacia:
+    material: ACACIA_SAPLING
+    name: "§6Acacia Sapling"
+
+  # ===================================
+  # MACHINES & BLOCKS
+  # ===================================
+  barrel:
+    material: BARREL
+    name: "§eBarrel"
+    lore: ["§7Turns saplings into water"]
+
+  crucible:
+    material: CAULDRON
+    name: "§eCrucible"
+    lore: ["§7Melts cobble into lava"]
+
+  cobble_gen:
+    material: DISPENSER
+    name: "§7Cobblestone Generator"
+    lore: ["§7Auto-generates cobble"]
+
+  compressor:
+    material: PISTON
+    name: "§fCompressor"
+    lore: ["§7Compresses items"]
+
+  pulverizer:
+    material: IRON_BLOCK
+    name: "§7Pulverizer"
+    lore: ["§7Crushes ores into dusts"]
+
+  furnace_advanced:
+    material: BLAST_FURNACE
+    name: "§6Advanced Furnace"
+    lore: ["§7Faster smelting", "§710x speed of vanilla furnace"]
+
+  auto_crafter:
+    material: CRAFTING_TABLE
+    name: "§6Auto-Crafter"
+    lore: ["§7Automatically crafts items", "§7Requires recipe selection"]
+
+  sieve:
+    material: HOPPER
+    name: "§7Sieve"
+    lore: ["§7Sifts blocks for resources", "§7Place over Chest, use with Mesh"]
+
+  # ===================================
+  # DIRT ESSENCE
+  # ===================================
+  dirt_essence:
+    material: BROWN_DYE
+    name: "§6Dirt Essence"
+    lore: ["§7Obtained from composting", "§74 = 1 Dirt"]
+
+  # ===================================
+  # SPAWNERS
+  # ===================================
+  spawner_core:
+    material: NETHER_STAR
+    name: "§dSpawner Core"
+    lore: ["§7Engine for a spawner"]
+
+  powered_spawner:
+    material: NETHER_STAR
+    name: "§dPowered Spawner"
+    lore: ["§7Self-running spawner block"]
+
+  # ===================================
+  # AUTOMATION & MINING
+  # ===================================
+  item_pipe:
+    material: IRON_BARS
+    name: "§7Item Pipe"
+    lore: ["§7Transports items between containers"]
+
+  linker_tool:
+    material: WIND_CHARGE
+    name: "§b§lLinker Tool"
+    lore: ["§7Right-click containers to link them", "§7Left-click to clear links"]
+
+  # ===================================
+  # MINIONS
+  # ===================================
+  minion_farmer:
+    material: ARMOR_STAND
+    name: "§6§lFarmer Minion"
+    lore: ["§7Automatic harvester and replanter", "§7Radius: 5x5"]
+
+  minion_miner:
+    material: ARMOR_STAND
+    name: "§6§lMiner Minion"
+    lore: ["§7Automatic block miner", "§7Radius: 5x5"]
+
+  minion_lumberjack:
+    material: ARMOR_STAND
+    name: "§6§lLumberjack Minion"
+    lore: ["§7Automatic tree chopper", "§7Radius: 7x7"]
+
+  minion_fisher:
+    material: ARMOR_STAND
+    name: "§6§lFisher Minion"
+    lore: ["§7Automatic fisherman", "§7Requires water nearby"]
+
+  # ===================================
+  # COMPRESSED BLOCKS
+  # ===================================
+  compressed_cobble_1x:
+    material: COBBLESTONE
+    name: "§7Compressed Cobblestone"
+    lore: ["§79 Cobble compressed"]
+
+  compressed_cobble_2x:
+    material: STONE
+    name: "§72x Compressed Cobble"
+    lore: ["§79 1x compressed"]
+
+  compressed_dirt_1x:
+    material: DIRT
+    name: "§6Compressed Dirt"
+    lore: ["§79 Dirt compressed"]
+
+  compressed_dirt_2x:
+    material: COARSE_DIRT
+    name: "§62x Compressed Dirt"
+    lore: ["§79 1x compressed"]
+
+  compressed_gravel_1x:
+    material: GRAVEL
+    name: "§7Compressed Gravel"
+    lore: ["§79 Gravel compressed"]
+
+  compressed_gravel_2x:
+    material: COARSE_DIRT
+    name: "§72x Compressed Gravel"
+    lore: ["§79 1x compressed"]
+
+  compressed_sand_1x:
+    material: SAND
+    name: "§eCompressed Sand"
+    lore: ["§79 Sand compressed"]
+
+  compressed_sand_2x:
+    material: SANDSTONE
+    name: "§e2x Compressed Sand"
+    lore: ["§79 1x compressed"]
+
+  compressed_dust_1x:
+    material: GUNPOWDER
+    name: "§7Compressed Dust"
+    lore: ["§79 Dust compressed"]
+
+  # ===================================
+  # SPECIAL RESOURCES
+  # ===================================
+  water_bottle:
+    material: POTION
+    name: "§bWater Bottle"
+    lore: ["§7Contains water"]
+
+  purified_water:
+    material: POTION
+    name: "§bPurified Water"
+    lore: ["§7Clean, thirst-quenching water", "§7Safe to drink"]
+
+  lava_bottle:
+    material: MAGMA_CREAM
+    name: "§6Lava Bottle"
+    lore: ["§7Contains lava", "§c§lHOT!"]
+
+  witch_water_bottle:
+    material: POTION
+    name: "§5Witch Water"
+    lore: ["§7Magical fluid", "§7Transforms mobs"]
+
+  # ===================================
+  # GACHA CRATES
+  # ===================================
+  oracle_chest_basic:
+    material: CHEST
+    name: "§eOracle Chest (Basic)"
+    lore: ["§7Right-click to open", "§7Contains basic rewards"]
+
+  oracle_chest_premium:
+    material: ENDER_CHEST
+    name: "§dOracle Chest (Premium)"
+    lore: ["§7Right-click to open", "§7Contains premium rewards"]
+
+  oracle_chest_divine:
+    material: RED_SHULKER_BOX
+    name: "§5Oracle Chest (Divine)"
+    lore: ["§7Right-click to open", "§7Contains divine rewards"]
+
+  # ===================================
+  # 1.21 POTIONS
+  # ===================================
+  potion_infestation:
+    material: POTION
+    name: "§fPotion of Infestation"
+    lore: ["§7Infests mobs on death"]
+    potion-type: INFESTED
+
+  potion_oozing:
+    material: POTION
+    name: "§aPotion of Oozing"
+    lore: ["§7Slime on death"]
+    potion-type: OOZING
+
+  potion_weaving:
+    material: POTION
+    name: "§fPotion of Weaving"
+    lore: ["§7Cobwebs on death"]
+    potion-type: WEAVING
+
+  potion_wind_charging:
+    material: POTION
+    name: "§bPotion of Wind Charging"
+    lore: ["§7Wind burst on death"]
+    potion-type: WIND_CHARGED
+
+  # ===================================
+  # GOD TOOLS (Shard Shop)
+  # ===================================
+  prime_drill:
+    material: DIAMOND_PICKAXE
+    name: "§e§lPrime Drill"
+    lore: ["§7Unlocks the true power of mining", "§6Ability: §eInstant Break", "§7Instantly breaks any block", "§7when left-clicked."]
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+    unbreakable: true
+
+  timber_axe:
+    material: NETHERITE_AXE
+    name: "§4§lGOD-TIER §cTimber Axe"
+    lore: ["§7The ultimate lumberjack tool.", "§6Ability: §eTimber", "§7Breaks entire trees instantly.", "§8§oFor Shard Shop elites only."]
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  trench_pickaxe:
+    material: NETHERITE_PICKAXE
+    name: "§4§lGOD-TIER §cTrench Pick"
+    lore: ["§7The mountain leveler.", "§6Ability: §eTrench (3x3)", "§7Breaks blocks in a 3x3 area.", "§8§oFor Shard Shop elites only."]
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  trench_shovel:
+    material: NETHERITE_SHOVEL
+    name: "§4§lGOD-TIER §cTrench Shovel"
+    lore: ["§7The desert clearer.", "§6Ability: §eTrench (3x3)", "§7Breaks blocks in a 3x3 area.", "§8§oFor Shard Shop elites only."]
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  harvester_hoe:
+    material: NETHERITE_HOE
+    name: "§4§lGOD-TIER §cHarvester Hoe"
+    lore: ["§7The ultimate farmer tool.", "§6Ability: §eAuto-Sells Crops", "§7Automatically sells harvested crops.", "§8§oFor Shard Shop elites only."]
+    enchants:
+      EFFICIENCY: 10
+    flags: [HIDE_ENCHANTS]
+
+  slayer_sword:
+    material: NETHERITE_SWORD
+    name: "§4§lGOD-TIER §cSlayer Sword"
+    lore: ["§7The bane of existence.", "§6Ability: §eLooting X + Sharpness X", "§7Extreme damage and drops.", "§8§oFor Shard Shop elites only."]
+    enchants:
+      EFFICIENCY: 10
+      SHARPNESS: 10
+      LOOTING: 10
+    flags: [HIDE_ENCHANTS]
+
+  god_wings:
+    material: ELYTRA
+    name: "§4§lGOD-TIER §cGod Wings"
+    lore: ["§7Flight for the gods.", "§6Ability: §eCreative Flight", "§7Allows you to fly like in creative mode.", "§8§oFor Shard Shop elites only."]
+    enchants:
+      UNBREAKING: 10
+      PROTECTION: 10
+
+  # ===================================
+  # GHOST ITEMS (formerly missing definitions)
+  # ===================================
+  storage_controller:
+    material: COMPARATOR
+    name: "§6Storage Controller"
+    lore: ["§7Core of the storage network"]
+
+  juicer:
+    material: HOPPER
+    name: "§eJuicer"
+    lore: ["§7Squeezes fruits into juice"]
+
+  divine_excavator:
+    material: DIAMOND_SHOVEL
+    name: "§5§lDivine Excavator"
+    lore: ["§7Legendary digging tool"]
+    enchants:
+      EFFICIENCY: 8
+    flags: [HIDE_ENCHANTS]
+
+  divinebreaker:
+    material: NETHERITE_SWORD
+    name: "§5§lDivinebreaker"
+    lore: ["§7Legendary blade", "§610% lifesteal on hit"]
+    enchants:
+      SHARPNESS: 8
+      LOOTING: 5
+    flags: [HIDE_ENCHANTS]
+
+  mjolnir:
+    material: NETHERITE_AXE
+    name: "§b§lMjolnir"
+    lore: ["§7Hammer of the gods", "§620% chance to strike lightning"]
+    enchants:
+      SHARPNESS: 7
+      EFFICIENCY: 6
+    flags: [HIDE_ENCHANTS]
+
+  skyshaper_lance:
+    material: TRIDENT
+    name: "§b§lSkyshaper Lance"
+    lore: ["§7Legendary spear"]
+    enchants:
+      SHARPNESS: 6
+    flags: [HIDE_ENCHANTS]
+
+  # ===================================
+  # GLASS WATER BUCKET
+  # ===================================
+  glass_water_bucket:
+    material: GLASS_BOTTLE
+    name: "§bGlass Water Bucket"
+    lore: ["§7Single-use water bucket", "§7Breaks after placing water"]
+
+  # ===================================
+  # ARMOR SETS (Sample: Tin & Aluminum)
+  # ===================================
+  tin_helmet: { material: CHAINMAIL_HELMET, name: "§fTin Helmet", lore: ["§7Full Set Bonus: Speed I"] }
+  tin_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§fTin Chestplate", lore: ["§7Full Set Bonus: Speed I"] }
+  tin_leggings: { material: CHAINMAIL_LEGGINGS, name: "§fTin Leggings", lore: ["§7Full Set Bonus: Speed I"] }
+  tin_boots: { material: CHAINMAIL_BOOTS, name: "§fTin Boots", lore: ["§7Full Set Bonus: Speed I"] }
+  tin_pickaxe: { material: IRON_PICKAXE, name: "§fTin Pickaxe", lore: ["§7Ability: Haste I"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  tin_axe: { material: IRON_AXE, name: "§fTin Axe", lore: ["§7Ability: Haste I"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  tin_shovel: { material: IRON_SHOVEL, name: "§fTin Shovel", lore: ["§7Ability: Haste I"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  tin_hoe: { material: IRON_HOE, name: "§fTin Hoe", lore: ["§7Ability: Haste I"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  tin_sword: { material: IRON_SWORD, name: "§fTin Sword", lore: ["§7Passive: Speed II"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+
+  aluminum_helmet: { material: CHAINMAIL_HELMET, name: "§fAluminum Helmet", lore: ["§7Full Set Bonus: Luck I"] }
+  aluminum_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§fAluminum Chestplate", lore: ["§7Full Set Bonus: Luck I"] }
+  aluminum_leggings: { material: CHAINMAIL_LEGGINGS, name: "§fAluminum Leggings", lore: ["§7Full Set Bonus: Luck I"] }
+  aluminum_boots: { material: CHAINMAIL_BOOTS, name: "§fAluminum Boots", lore: ["§7Full Set Bonus: Luck I"] }
+  aluminum_pickaxe: { material: IRON_PICKAXE, name: "§fAluminum Pickaxe", lore: ["§7Ability: Haste I"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  aluminum_axe: { material: IRON_AXE, name: "§fAluminum Axe", lore: ["§7Ability: Haste I"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  aluminum_shovel: { material: IRON_SHOVEL, name: "§fAluminum Shovel", lore: ["§7Ability: Haste I"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  aluminum_hoe: { material: IRON_HOE, name: "§fAluminum Hoe", lore: ["§7Ability: Haste I"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  aluminum_sword: { material: IRON_SWORD, name: "§fAluminum Sword", lore: ["§7Passive: Luck I"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+
+  silver_helmet: { material: CHAINMAIL_HELMET, name: "§7Silver Helmet", lore: ["§7Full Set Bonus: Resistance I"] }
+  silver_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§7Silver Chestplate", lore: ["§7Full Set Bonus: Resistance I"] }
+  silver_leggings: { material: CHAINMAIL_LEGGINGS, name: "§7Silver Leggings", lore: ["§7Full Set Bonus: Resistance I"] }
+  silver_boots: { material: CHAINMAIL_BOOTS, name: "§7Silver Boots", lore: ["§7Full Set Bonus: Resistance I"] }
+  silver_pickaxe: { material: IRON_PICKAXE, name: "§7Silver Pickaxe", lore: ["§7Ability: Haste II"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  silver_axe: { material: IRON_AXE, name: "§7Silver Axe", lore: ["§7Ability: Haste II"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  silver_shovel: { material: IRON_SHOVEL, name: "§7Silver Shovel", lore: ["§7Ability: Haste II"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  silver_hoe: { material: IRON_HOE, name: "§7Silver Hoe", lore: ["§7Ability: Haste II"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  silver_sword: { material: IRON_SWORD, name: "§7Silver Sword", lore: ["§7Passive: Resistance I"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+
+  lead_helmet: { material: CHAINMAIL_HELMET, name: "§8Lead Helmet", lore: ["§7Full Set Bonus: Resistance I", "§7Full Set Penalty: Slowness I"] }
+  lead_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§8Lead Chestplate", lore: ["§7Full Set Bonus: Resistance I", "§7Full Set Penalty: Slowness I"] }
+  lead_leggings: { material: CHAINMAIL_LEGGINGS, name: "§8Lead Leggings", lore: ["§7Full Set Bonus: Resistance I", "§7Full Set Penalty: Slowness I"] }
+  lead_boots: { material: CHAINMAIL_BOOTS, name: "§8Lead Boots", lore: ["§7Full Set Bonus: Resistance I", "§7Full Set Penalty: Slowness I"] }
+  lead_pickaxe: { material: IRON_PICKAXE, name: "§8Lead Pickaxe", lore: ["§7Heavy but effective"], enchants: { EFFICIENCY: 4 }, flags: [HIDE_ENCHANTS] }
+  lead_axe: { material: IRON_AXE, name: "§8Lead Axe", lore: ["§7Heavy but effective"], enchants: { EFFICIENCY: 4 }, flags: [HIDE_ENCHANTS] }
+  lead_shovel: { material: IRON_SHOVEL, name: "§8Lead Shovel", lore: ["§7Heavy but effective"], enchants: { EFFICIENCY: 4 }, flags: [HIDE_ENCHANTS] }
+  lead_hoe: { material: IRON_HOE, name: "§8Lead Hoe", lore: ["§7Heavy but effective"], enchants: { EFFICIENCY: 4 }, flags: [HIDE_ENCHANTS] }
+  lead_sword: { material: IRON_SWORD, name: "§8Lead Sword", lore: ["§7Slow but powerful"], enchants: { EFFICIENCY: 4 }, flags: [HIDE_ENCHANTS] }
+
+  nickel_helmet: { material: CHAINMAIL_HELMET, name: "§7Nickel Helmet", lore: ["§7Full Set Bonus: Fire Resistance I"] }
+  nickel_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§7Nickel Chestplate", lore: ["§7Full Set Bonus: Fire Resistance I"] }
+  nickel_leggings: { material: CHAINMAIL_LEGGINGS, name: "§7Nickel Leggings", lore: ["§7Full Set Bonus: Fire Resistance I"] }
+  nickel_boots: { material: CHAINMAIL_BOOTS, name: "§7Nickel Boots", lore: ["§7Full Set Bonus: Fire Resistance I"] }
+  nickel_pickaxe: { material: IRON_PICKAXE, name: "§7Nickel Pickaxe", lore: ["§7Fire-resistant tool"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  nickel_axe: { material: IRON_AXE, name: "§7Nickel Axe", lore: ["§7Fire-resistant tool"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  nickel_shovel: { material: IRON_SHOVEL, name: "§7Nickel Shovel", lore: ["§7Fire-resistant tool"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  nickel_hoe: { material: IRON_HOE, name: "§7Nickel Hoe", lore: ["§7Fire-resistant tool"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  nickel_sword: { material: IRON_SWORD, name: "§7Nickel Sword", lore: ["§7Fire aspect"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+
+  zinc_helmet: { material: CHAINMAIL_HELMET, name: "§fZinc Helmet", lore: ["§7Full Set Bonus: Absorption I"] }
+  zinc_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§fZinc Chestplate", lore: ["§7Full Set Bonus: Absorption I"] }
+  zinc_leggings: { material: CHAINMAIL_LEGGINGS, name: "§fZinc Leggings", lore: ["§7Full Set Bonus: Absorption I"] }
+  zinc_boots: { material: CHAINMAIL_BOOTS, name: "§fZinc Boots", lore: ["§7Full Set Bonus: Absorption I"] }
+  zinc_pickaxe: { material: IRON_PICKAXE, name: "§fZinc Pickaxe", lore: ["§7Lightweight tool"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  zinc_axe: { material: IRON_AXE, name: "§fZinc Axe", lore: ["§7Lightweight tool"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  zinc_shovel: { material: IRON_SHOVEL, name: "§fZinc Shovel", lore: ["§7Lightweight tool"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  zinc_hoe: { material: IRON_HOE, name: "§fZinc Hoe", lore: ["§7Lightweight tool"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+  zinc_sword: { material: IRON_SWORD, name: "§fZinc Sword", lore: ["§7Light and deadly"], enchants: { EFFICIENCY: 5 }, flags: [HIDE_ENCHANTS] }
+
+  brass_helmet: { material: CHAINMAIL_HELMET, name: "§eBrass Helmet", lore: ["§7Full Set Bonus: Water Breathing I"] }
+  brass_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§eBrass Chestplate", lore: ["§7Full Set Bonus: Water Breathing I"] }
+  brass_leggings: { material: CHAINMAIL_LEGGINGS, name: "§eBrass Leggings", lore: ["§7Full Set Bonus: Water Breathing I"] }
+  brass_boots: { material: CHAINMAIL_BOOTS, name: "§eBrass Boots", lore: ["§7Full Set Bonus: Water Breathing I"] }
+  brass_pickaxe: { material: IRON_PICKAXE, name: "§eBrass Pickaxe", lore: ["§7Alloy tool"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  brass_axe: { material: IRON_AXE, name: "§eBrass Axe", lore: ["§7Alloy tool"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  brass_shovel: { material: IRON_SHOVEL, name: "§eBrass Shovel", lore: ["§7Alloy tool"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  brass_hoe: { material: IRON_HOE, name: "§eBrass Hoe", lore: ["§7Alloy tool"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  brass_sword: { material: IRON_SWORD, name: "§eBrass Sword", lore: ["§7Alloy blade"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+
+  bronze_helmet: { material: CHAINMAIL_HELMET, name: "§6Bronze Helmet", lore: ["§7Full Set Bonus: Regeneration I"] }
+  bronze_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§6Bronze Chestplate", lore: ["§7Full Set Bonus: Regeneration I"] }
+  bronze_leggings: { material: CHAINMAIL_LEGGINGS, name: "§6Bronze Leggings", lore: ["§7Full Set Bonus: Regeneration I"] }
+  bronze_boots: { material: CHAINMAIL_BOOTS, name: "§6Bronze Boots", lore: ["§7Full Set Bonus: Regeneration I"] }
+  bronze_pickaxe: { material: IRON_PICKAXE, name: "§6Bronze Pickaxe", lore: ["§7Strong alloy tool"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  bronze_axe: { material: IRON_AXE, name: "§6Bronze Axe", lore: ["§7Strong alloy tool"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  bronze_shovel: { material: IRON_SHOVEL, name: "§6Bronze Shovel", lore: ["§7Strong alloy tool"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  bronze_hoe: { material: IRON_HOE, name: "§6Bronze Hoe", lore: ["§7Strong alloy tool"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+  bronze_sword: { material: IRON_SWORD, name: "§6Bronze Sword", lore: ["§7Strong alloy blade"], enchants: { EFFICIENCY: 6 }, flags: [HIDE_ENCHANTS] }
+
+  steel_helmet: { material: CHAINMAIL_HELMET, name: "§7Steel Helmet", lore: ["§7Full Set Bonus: Strength I, Resistance I"] }
+  steel_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§7Steel Chestplate", lore: ["§7Full Set Bonus: Strength I, Resistance I"] }
+  steel_leggings: { material: CHAINMAIL_LEGGINGS, name: "§7Steel Leggings", lore: ["§7Full Set Bonus: Strength I, Resistance I"] }
+  steel_boots: { material: CHAINMAIL_BOOTS, name: "§7Steel Boots", lore: ["§7Full Set Bonus: Strength I, Resistance I"] }
+  steel_pickaxe: { material: IRON_PICKAXE, name: "§7Steel Pickaxe", lore: ["§7High-grade tool"], enchants: { EFFICIENCY: 7 }, flags: [HIDE_ENCHANTS] }
+  steel_axe: { material: IRON_AXE, name: "§7Steel Axe", lore: ["§7High-grade tool"], enchants: { EFFICIENCY: 7 }, flags: [HIDE_ENCHANTS] }
+  steel_shovel: { material: IRON_SHOVEL, name: "§7Steel Shovel", lore: ["§7High-grade tool"], enchants: { EFFICIENCY: 7 }, flags: [HIDE_ENCHANTS] }
+  steel_hoe: { material: IRON_HOE, name: "§7Steel Hoe", lore: ["§7High-grade tool"], enchants: { EFFICIENCY: 7 }, flags: [HIDE_ENCHANTS] }
+  steel_sword: { material: IRON_SWORD, name: "§7Steel Sword", lore: ["§7High-grade blade"], enchants: { EFFICIENCY: 7 }, flags: [HIDE_ENCHANTS] }
+
+  uranium_helmet: { material: CHAINMAIL_HELMET, name: "§aUranium Helmet", lore: ["§7Full Set Penalty: Hunger I", "§c§lRADIOACTIVE!"] }
+  uranium_chestplate: { material: CHAINMAIL_CHESTPLATE, name: "§aUranium Chestplate", lore: ["§7Full Set Penalty: Hunger I", "§c§lRADIOACTIVE!"] }
+  uranium_leggings: { material: CHAINMAIL_LEGGINGS, name: "§aUranium Leggings", lore: ["§7Full Set Penalty: Hunger I", "§c§lRADIOACTIVE!"] }
+  uranium_boots: { material: CHAINMAIL_BOOTS, name: "§aUranium Boots", lore: ["§7Full Set Penalty: Hunger I", "§c§lRADIOACTIVE!"] }
+  uranium_pickaxe: { material: IRON_PICKAXE, name: "§aUranium Pickaxe", lore: ["§7Radioactive tool", "§c§lRADIOACTIVE!"], enchants: { EFFICIENCY: 8 }, flags: [HIDE_ENCHANTS] }
+  uranium_axe: { material: IRON_AXE, name: "§aUranium Axe", lore: ["§7Radioactive tool", "§c§lRADIOACTIVE!"], enchants: { EFFICIENCY: 8 }, flags: [HIDE_ENCHANTS] }
+  uranium_shovel: { material: IRON_SHOVEL, name: "§aUranium Shovel", lore: ["§7Radioactive tool", "§c§lRADIOACTIVE!"], enchants: { EFFICIENCY: 8 }, flags: [HIDE_ENCHANTS] }
+  uranium_hoe: { material: IRON_HOE, name: "§aUranium Hoe", lore: ["§7Radioactive tool", "§c§lRADIOACTIVE!"], enchants: { EFFICIENCY: 8 }, flags: [HIDE_ENCHANTS] }
+  uranium_sword: { material: IRON_SWORD, name: "§aUranium Sword", lore: ["§7Radioactive blade", "§c§lRADIOACTIVE!"], enchants: { EFFICIENCY: 8 }, flags: [HIDE_ENCHANTS] }
+
+  # ===================================
+  # BOATS & CHEST BOATS (ADDED)
+  # ===================================
+  oak_boat: { material: OAK_BOAT, name: "§6Oak Boat" }
+  spruce_boat: { material: SPRUCE_BOAT, name: "§6Spruce Boat" }
+  birch_boat: { material: BIRCH_BOAT, name: "§fBirch Boat" }
+  jungle_boat: { material: JUNGLE_BOAT, name: "§6Jungle Boat" }
+  acacia_boat: { material: ACACIA_BOAT, name: "§6Acacia Boat" }
+  dark_oak_boat: { material: DARK_OAK_BOAT, name: "§6Dark Oak Boat" }
+  mangrove_boat: { material: MANGROVE_BOAT, name: "§6Mangrove Boat" }
+  cherry_boat: { material: CHERRY_BOAT, name: "§dCherry Boat" }
+  bamboo_raft: { material: BAMBOO_RAFT, name: "§eBamboo Raft" }
+
+  oak_chest_boat: { material: OAK_CHEST_BOAT, name: "§6Oak Chest Boat" }
+  spruce_chest_boat: { material: SPRUCE_CHEST_BOAT, name: "§6Spruce Chest Boat" }
+  birch_chest_boat: { material: BIRCH_CHEST_BOAT, name: "§fBirch Chest Boat" }
+  jungle_chest_boat: { material: JUNGLE_CHEST_BOAT, name: "§6Jungle Chest Boat" }
+  acacia_chest_boat: { material: ACACIA_CHEST_BOAT, name: "§6Acacia Chest Boat" }
+  dark_oak_chest_boat: { material: DARK_OAK_CHEST_BOAT, name: "§6Dark Oak Chest Boat" }
+  mangrove_chest_boat: { material: MANGROVE_CHEST_BOAT, name: "§6Mangrove Chest Boat" }
+  cherry_chest_boat: { material: CHERRY_CHEST_BOAT, name: "§dCherry Chest Boat" }
+  bamboo_chest_raft: { material: BAMBOO_CHEST_RAFT, name: "§eBamboo Chest Raft" }
+
+  # ===================================
+  # SIGNS, DOORS, BUTTONS (ADDED)
+  # ===================================
+  oak_sign: { material: OAK_SIGN, name: "§6Oak Sign" }
+  spruce_sign: { material: SPRUCE_SIGN, name: "§6Spruce Sign" }
+  birch_sign: { material: BIRCH_SIGN, name: "§fBirch Sign" }
+  jungle_sign: { material: JUNGLE_SIGN, name: "§6Jungle Sign" }
+  acacia_sign: { material: ACACIA_SIGN, name: "§6Acacia Sign" }
+  dark_oak_sign: { material: DARK_OAK_SIGN, name: "§6Dark Oak Sign" }
+  mangrove_sign: { material: MANGROVE_SIGN, name: "§6Mangrove Sign" }
+  cherry_sign: { material: CHERRY_SIGN, name: "§dCherry Sign" }
+  bamboo_sign: { material: BAMBOO_SIGN, name: "§eBamboo Sign" }
+  crimson_sign: { material: CRIMSON_SIGN, name: "§5Crimson Sign" }
+  warped_sign: { material: WARPED_SIGN, name: "§bWarped Sign" }
+
+  oak_door: { material: OAK_DOOR, name: "§6Oak Door" }
+  spruce_door: { material: SPRUCE_DOOR, name: "§6Spruce Door" }
+  birch_door: { material: BIRCH_DOOR, name: "§fBirch Door" }
+  jungle_door: { material: JUNGLE_DOOR, name: "§6Jungle Door" }
+  acacia_door: { material: ACACIA_DOOR, name: "§6Acacia Door" }
+  dark_oak_door: { material: DARK_OAK_DOOR, name: "§6Dark Oak Door" }
+  mangrove_door: { material: MANGROVE_DOOR, name: "§6Mangrove Door" }
+  cherry_door: { material: CHERRY_DOOR, name: "§dCherry Door" }
+  crimson_door: { material: CRIMSON_DOOR, name: "§5Crimson Door" }
+  warped_door: { material: WARPED_DOOR, name: "§bWarped Door" }
+  iron_door: { material: IRON_DOOR, name: "§7Iron Door" }
+
+  oak_button: { material: OAK_BUTTON, name: "§6Oak Button" }
+  stone_button: { material: STONE_BUTTON, name: "§7Stone Button" }
+  polished_blackstone_button: { material: POLISHED_BLACKSTONE_BUTTON, name: "§8Blackstone Button" }
+
+  # ===================================
+  # MUSIC DISCS (ADDED)
+  # ===================================
+  music_disc_13: { material: MUSIC_DISC_13, name: "§eMusic Disc 13" }
+  music_disc_cat: { material: MUSIC_DISC_CAT, name: "§eMusic Disc Cat" }
+  music_disc_blocks: { material: MUSIC_DISC_BLOCKS, name: "§eMusic Disc Blocks" }
+  music_disc_chirp: { material: MUSIC_DISC_CHIRP, name: "§eMusic Disc Chirp" }
+  music_disc_far: { material: MUSIC_DISC_FAR, name: "§eMusic Disc Far" }
+  music_disc_mall: { material: MUSIC_DISC_MALL, name: "§eMusic Disc Mall" }
+  music_disc_mellohi: { material: MUSIC_DISC_MELLOHI, name: "§eMusic Disc Mellohi" }
+  music_disc_stal: { material: MUSIC_DISC_STAL, name: "§eMusic Disc Stal" }
+  music_disc_strad: { material: MUSIC_DISC_STRAD, name: "§eMusic Disc Strad" }
+  music_disc_ward: { material: MUSIC_DISC_WARD, name: "§eMusic Disc Ward" }
+  music_disc_11: { material: MUSIC_DISC_11, name: "§eMusic Disc 11" }
+  music_disc_wait: { material: MUSIC_DISC_WAIT, name: "§eMusic Disc Wait" }
+  music_disc_otherside: { material: MUSIC_DISC_OTHERSIDE, name: "§eMusic Disc Otherside" }
+  music_disc_5: { material: MUSIC_DISC_5, name: "§eMusic Disc 5" }
+  music_disc_pigstep: { material: MUSIC_DISC_PIGSTEP, name: "§eMusic Disc Pigstep" }
+  music_disc_relic: { material: MUSIC_DISC_RELIC, name: "§eMusic Disc Relic" }
+  music_disc_creator: { material: MUSIC_DISC_CREATOR, name: "§eMusic Disc Creator" }
+  music_disc_creator_music_box: { material: MUSIC_DISC_CREATOR_MUSIC_BOX, name: "§eMusic Disc Creator Box" }
+  music_disc_precipice: { material: MUSIC_DISC_PRECIPICE, name: "§eMusic Disc Precipice" }
+
+  # ===================================
+  # SPECIAL ITEMS
+  # ===================================
+  skytree_guide: { material: BOOK, name: "§a§lSkytree Guide", lore: ["§7Right-click to open the guide", "§7Contains all you need to know"] }

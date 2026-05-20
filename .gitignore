@@ -1,0 +1,38 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Java
+*.class
+target/
+
+# Build directories
+Build/
+JAR/
+libs/
+apache-maven-3.9.5/
+
+# Build artifacts
+*.jar
+*.log
+*.args
+*.zip
+sources.txt
+dependency-reduced-pom.xml
+
+# Build output (specific files, not scripts)
+build_output*
+build_error*
+build_log*
+build_debug.log
+maven_debug.log
+package_log.txt
+last_build.log
+compile-errors.txt
+compile_error*
+compile_debug*
+compile_log.txt
+
+# OS
+.DS_Store

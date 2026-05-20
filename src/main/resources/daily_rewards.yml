@@ -1,0 +1,31 @@
+rewards:
+  1:
+    name: "§a1.000 Coins"
+    cmd: "eco give %player% 1000"
+    icon: "GOLD_NUGGET"
+  2:
+    name: "§b10 Shards"
+    cmd: "shards give %player% 10"
+    icon: "PRISMARINE_SHARD"
+  3:
+    name: "§eVote Key"
+    cmd: "crate give %player% vote 1"
+    icon: "TRIPWIRE_HOOK"
+  4:
+    name: "§a2.500 Coins"
+    cmd: "eco give %player% 2500"
+    icon: "GOLD_INGOT"
+  5:
+    name: "§b25 Shards"
+    cmd: "shards give %player% 25"
+    icon: "PRISMARINE_SHARD"
+  6:
+    name: "§dCommon Key"
+    cmd: "crate give %player% common 1"
+    icon: "TRIPWIRE_HOOK"
+  7:
+    name: "§6§lSTREAK BONUS: §e5.000 Coins + Rare Key"
+    cmd: 
+    - "eco give %player% 5000"
+    - "crate give %player% rare 1"
+    icon: "DIAMOND"

@@ -1,0 +1,45 @@
+# Custom Fish Configuration
+# Maps fish IDs to Custom Model Data (CMD) for resource packs
+# Also defines special visual overrides for variants
+
+# Generic Variant Settings (Applied if no specific override exists)
+variants:
+  SHINY:
+    display_format: "<gradient:#FF0000:#FFD700>%s</gradient>"
+    particle: "END_ROD"
+    sound: "BLOCK_AMETHYST_BLOCK_CHIME"
+    glint: true
+  GOLD:
+    display_format: "<gradient:#FFAA00:#FFFF55>Golden %s</gradient>"
+    particle: "FLAME"
+    sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+    glint: true
+  ANCIENT:
+    display_format: "<gradient:#444444:#888888>Ancient %s</gradient>"
+    particle: "ASH"
+    sound: "BLOCK_ANCIENT_DEBRIS_BREAK"
+    glint: false
+
+# Fish Specific Settings
+fish:
+  clownfish:
+    base_model_data: 1000
+    # Variants add +1, +2, +3 etc to base_model_data by default
+    # SHINY = +1 (1001)
+    # GOLD = +2 (1002)
+    # ANCIENT = +3 (1003)
+  
+  swordfish:
+    base_model_data: 2000
+  
+  jellyfish:
+    base_model_data: 3000
+  
+  seahorses:
+    base_model_data: 4000
+    
+  manta_ray:
+    base_model_data: 5000
+    
+  kraken:
+    base_model_data: 6000

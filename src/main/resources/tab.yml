@@ -1,0 +1,12 @@
+# Tablist Configuration
+# You can use standard color codes (& or §) or MiniMessage (<red>, <gradient>, etc.)
+
+header: |
+  <gradient:#FFD700:#FFA500><bold>SKYTREE NETWORK</bold></gradient>
+  <gray>The Ultimate Sky Factory Experience</gray>
+  
+footer: |
+  <gray>Players Online: <gold>%online%</gold></gray>
+  <gray>Your Balance: <green>%balance% ₮</green></gray>
+  
+  <yellow>Join our Discord: <white>discord.gg/skytree</white></yellow>

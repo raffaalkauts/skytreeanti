@@ -1,0 +1,289 @@
+name: Skytree
+main: com.wiredid.skytree.SkytreePlugin
+version: 1.5
+api-version: "1.21"
+authors: [wiredwisma]
+description: Complete SkyFactory-like SkyBlock plugin with 150+ items, Achievements, Quests, Energy System
+softdepend: [ProtocolLib]
+
+commands:
+  skytree:
+    description: Main Skytree command
+    usage: /skytree <subcommand>
+    aliases: [is, island, st]
+  shop:
+    description: Open the global shop
+    usage: /shop
+    aliases: [s, market, toko]
+  quest:
+    description: Open your quest log
+    usage: /quest
+    aliases: [q, quests, mission, tugas]
+  bal:
+    description: Check your balance
+    usage: /bal
+    aliases: [btc, money, balance, duit]
+  baltop:
+    description: View the richest players
+    usage: /baltop
+    aliases: [moneytop]
+  pay:
+    description: Pay another player
+    usage: /pay <player> <amount>
+    aliases: [transfer]
+  hub:
+    description: Return to overworld spawn
+    usage: /hub
+    aliases: [spawn, lobby]
+  skytree_give:
+    description: Give custom items (Admin only)
+    usage: /skytree_give <player> <item> [amount]
+    permission: skytree.give
+  warp:
+    description: Island warp points
+    usage: /warp [set|delete|list] <name>
+    aliases: [warps, w]
+  setbal:
+    description: Set player balance (Admin)
+    usage: /setbal <player> <amount>
+    permission: skytree.admin
+  addbal:
+    description: Add to player balance (Admin)
+    usage: /addbal <player> <amount>
+    permission: skytree.admin
+  sethome:
+    description: Set your island home
+    usage: /sethome
+    aliases: [sh]
+  home:
+    description: Teleport to your island home
+    usage: /home
+    aliases: [h]
+  delhome:
+    description: Delete your island home
+    usage: /delhome
+    aliases: [dh]
+  tpa:
+    description: Request to teleport to another player
+    usage: /tpa <player>
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept
+    aliases: [tpyes, tpaa]
+  tpdeny:
+    description: Deny a teleport request
+    usage: /tpdeny
+    aliases: [tpno]
+  guide:
+    description: Open the Skytree Guide
+    usage: /guide
+    aliases: [helpme]
+  rod:
+    description: Fishing Rod Management
+    usage: /rod [enchant|give]
+  fish:
+    description: Fish Management
+    usage: /fish [sell|shop]
+  sg:
+    description: Open sell GUI
+    usage: /sg [sellgui]
+    aliases: [sellgui]
+  vault:
+    description: Open your personal storage
+    usage: /vault
+    aliases: [pv, storage, brankas]
+  sort:
+    description: Sort your inventory
+    usage: /sort
+    aliases: [inventorysort, rapihin]
+  trash:
+    description: Smart trash filter system
+    usage: /trash
+    aliases: [filter, buang]
+  bank:
+    description: Banking system - Deposit, withdraw, transfer
+    usage: /bank [balance|deposit|withdraw|transfer|history|stats]
+    aliases: [b, banking]
+  bankadmin:
+    description: Bank administration commands
+    usage: /bankadmin [reconcile|audit|setrate|stats|reload]
+    permission: skytree.bank.admin
+  minion:
+    description: Manage your minions
+    usage: /minion [collectall]
+    aliases: [m]
+  rtp:
+    description: Teleport to a random location
+    usage: /rtp
+    aliases: [wild]
+  kits:
+    description: Open kits menu
+    usage: /kits
+    aliases: [kit]
+  ah:
+    description: Open the Auction House
+    usage: /ah [sell|listings|orders]
+    aliases: [auction, auctionhouse]
+  orders:
+    description: Open Buy Orders
+    usage: /orders
+  settings:
+    description: Manage island and player settings
+    usage: /settings
+    aliases: [options, preference]
+  bounty:
+    description: View and set player bounties
+    usage: /bounty <player> <amount>
+    aliases: [bounties, reward]
+  shards:
+    description: View and spend your shards
+    usage: /shards
+    aliases: [shard, shardshop]
+  leaderboard:
+    description: View server leaderboards
+    usage: /leaderboard [bal|is|shards|playtime]
+    aliases: [lb, top]
+  trust:
+    description: Trust a player on your island
+    usage: /trust <player> [level]
+  untrust:
+    description: Untrust a player on your island
+    usage: /untrust <player>
+  trustlist:
+    description: View trusted players on your island
+    usage: /trustlist
+  ic:
+    description: Switch to island chat
+    usage: /ic [message]
+  lc:
+    description: Switch to local chat
+    usage: /lc [message]
+  gc:
+    description: Switch to global chat
+    usage: /gc [message]
+  chathist:
+    description: View chat history
+    usage: /chathist
+    aliases: [chathistory]
+  crates:
+    description: Open crates menu
+    usage: /crates
+    aliases: [crate, keys]
+  history:
+    description: View transaction history
+    usage: /history
+  transactions:
+    description: View economy transactions
+    usage: /transactions
+    aliases: [trans]
+  admin:
+    description: Admin dashboard
+    usage: /admin
+    permission: skytree.admin
+  rank:
+    description: View and purchase ranks
+    usage: /rank
+    aliases: [ranks, rnk, setrank]
+  feed:
+    description: Restore your hunger
+    usage: /feed
+    permission: skytree.rank.feed
+  heal:
+    description: Restore your health
+    usage: /heal
+    permission: skytree.rank.heal
+  fly:
+    description: Toggle flight mode
+    usage: /fly
+    permission: skytree.rank.fly
+  nick:
+    description: Set your nickname
+    usage: /nick <name>
+    permission: skytree.rank.nick
+  daily:
+    description: Claim daily rewards
+    usage: /daily
+    aliases: [rewards]
+  islandshop:
+    description: Manage island shops
+    usage: /islandshop [create|remove]
+  chat:
+    description: Chat settings and channels
+    usage: /chat
+  ce:
+    description: Custom enchantments
+    usage: /ce
+    aliases: [enchants, customenchant]
+  menu:
+    description: Open main menu
+    usage: /menu
+    aliases: [mainmenu, mm]
+  profile:
+    description: View player profile
+    usage: /profile
+  glow:
+    description: Toggle your glow effect
+    usage: /glow
+    permission: skytree.rank.glow
+  tags:
+    description: Open tags menu
+    usage: /tags
+    aliases: [tag, cosmetics]
+  bait:
+    description: Open bait shop and management
+    usage: /bait
+  sell:
+    description: Open sell GUI
+    usage: /sell
+    aliases: [sg, sellgui]
+  items:
+    description: Browse all custom items and how to obtain them
+    usage: /items [list|help|<itemId>]
+    aliases: [catalog, recipes]
+  jobs:
+    description: View your job progression and stats
+    usage: /jobs
+    aliases: [job, profession, pekerjaan]
+  econadmin:
+    description: Admin commands for economy manager
+    usage: /econadmin <stats|set|recalc|reload>
+    permission: skytree.admin
+  jobadmin:
+    description: Admin commands for job system
+    usage: /jobadmin <info|setlevel|setxp|reset|top|reload>
+    permission: skytree.admin
+
+permissions:
+  skytree.admin:
+    description: Admin access
+    default: op
+  skytree.use:
+    description: Basic plugin usage
+    default: true
+  skytree.island.create:
+    description: Create an island
+    default: true
+  skytree.bypass:
+    description: Bypass island protections
+    default: op
+  skytree.give:
+    description: Give custom items to players
+    default: op
+  skytree.bank.admin:
+    description: Bank administration access
+    default: op
+  skytree.rank.feed:
+    description: Access to /feed command
+    default: true
+  skytree.rank.heal:
+    description: Access to /heal command
+    default: true
+  skytree.rank.fly:
+    description: Access to /fly command
+    default: true
+  skytree.rank.nick:
+    description: Access to /nick command
+    default: true
+  skytree.rank.glow:
+    description: Access to /glow command
+    default: true

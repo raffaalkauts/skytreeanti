@@ -1,0 +1,82 @@
+# Bait System Configuration for Fishing
+
+baits:
+  WORM:
+    displayName: "§7Worm"
+    lore:
+      - "§7A common bait for fishing"
+      - " "
+      - "§a+10% Common Fish"
+    bonuses:
+      common: 0.10
+      uncommon: 0.0
+      rare: 0.0
+      legendary: 0.0
+    shopPrice: 50      # USDT per bait
+    stackSize: 64
+    craftingRecipe:
+      enabled: true
+      ingredients:
+        - DIRT: 8
+        - WHEAT_SEEDS: 1
+      result: 16  # Craft yields 16 baits
+  
+  MINNOW:
+    displayName: "§bMinnow"
+    lore:
+      - "§7A small fish used as bait"
+      - " "
+      - "§a+20% Uncommon Fish"
+    bonuses:
+      common: 0.0
+      uncommon: 0.20
+      rare: 0.0
+      legendary: 0.0
+    shopPrice: 200
+    stackSize: 64
+    craftingRecipe:
+      enabled: false
+  
+  SQUID:
+    displayName: "§8Squid Bait"
+    lore:
+      - "§7Premium bait from squid ink"
+      - " "
+      - "§a+30% Rare Fish"
+    bonuses:
+      common: 0.0
+      uncommon: 0.0
+      rare: 0.30
+      legendary: 0.0
+    shopPrice: 1000
+    stackSize: 64
+    craftingRecipe:
+      enabled: true
+      ingredients:
+        - INK_SAC: 4
+        - TROPICAL_FISH: 2
+      result: 8
+  
+  ENCHANTED:
+    displayName: "§6§lEnchanted Bait"
+    lore:
+      - "§7Magical bait infused with power"
+      - " "
+      - "§a+50% Legendary Fish"
+      - "§c§oExtremely Rare"
+    bonuses:
+      common: 0.0
+      uncommon: 0.0
+      rare: 0.0
+      legendary: 0.50
+    shopPrice: 5000
+    stackSize: 16
+    craftingRecipe:
+      enabled: false  # Only obtainable from shop or events
+
+# General settings
+settings:
+  consumeOnUse: true
+  showActiveInActionBar: true
+  maxEquippedBaits: 64  # Max stack that can be equipped
+  baitMessage: "§a§l[Fishing] §aEquipped %amount%x %bait%!"

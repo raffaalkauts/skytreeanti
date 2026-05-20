@@ -1,0 +1,42 @@
+# Machine Upgrade System Configuration
+
+# Tier definitions
+tiers:
+  1:
+    name: "Basic"
+    speed: 1.0        # 100% speed
+    efficiency: 1.0   # 100% efficiency
+    capacity: 1.0     # 100% capacity
+    upgradeCost: 0    # Starting tier
+  
+  2:
+    name: "Advanced"
+    speed: 1.5        # 150% speed
+    efficiency: 1.2   # 120% efficiency (less waste)
+    capacity: 1.25    # 125% capacity
+    upgradeCost: 50000  # 50k USDT
+  
+  3:
+    name: "Master"
+    speed: 2.0        # 200% speed
+    efficiency: 1.5   # 150% efficiency
+    capacity: 1.5     # 150% capacity
+    upgradeCost: 200000  # 200k USDT
+
+# Machine-specific settings
+machines:
+  auto_crafter:
+    enabled: true
+    baseProcessTime: 100  # ticks
+    maxOutputSlots: 27
+  
+  auto_sieve:
+    enabled: true
+    baseProcessTime: 60  # ticks
+    autoCollect: true
+
+# Upgrade GUI settings
+gui:
+  title: "§6§lMachine Upgrade"
+  confirmationRequired: true
+  showStats: true

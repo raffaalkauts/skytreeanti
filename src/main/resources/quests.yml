@@ -1,0 +1,91 @@
+categories:
+  beginner:
+    name: "§a§lBeginner"
+    icon: GRASS_BLOCK
+  economy:
+    name: "§e§lEconomy"
+    icon: GOLD_INGOT
+  advanced:
+    name: "§d§lAdvanced"
+    icon: DIAMOND
+
+quests:
+  create_island:
+    category: beginner
+    name: "First Steps"
+    description: "Create your island"
+    type: ISLAND_CREATE
+    target: 1
+    rewards:
+      money: 100
+      message: "§aWelcome to Skytree!"
+    hint: "Use /is create"
+  
+  break_blocks:
+    category: beginner
+    name: "Breaking In"
+    description: "Break 50 blocks"
+    type: BLOCK_BREAK
+    target: 50
+    requires: create_island
+    rewards:
+      money: 200
+    hint: "Break any block on your island"
+
+  hammer_time:
+    category: beginner
+    name: "Hammer Master"
+    description: "Use hammer 10 times"
+    type: HAMMER_USE
+    target: 10
+    requires: break_blocks
+    rewards:
+      money: 300
+    hint: "Use a hammer to crush cobble"
+
+  sieve_dirt:
+    category: beginner
+    name: "Sifting Through"
+    description: "Sieve 20 dirt"
+    type: SIEVE_USE
+    target: 20
+    requires: hammer_time
+    rewards:
+      money: 400
+    hint: "Use a sieve on dirt"
+
+  shop_buy:
+    category: economy
+    name: "Shopping Spree"
+    description: "Buy 1 item from shop"
+    type: SHOP_BUY
+    target: 1
+    rewards:
+      money: 250
+    hint: "Use /shop to buy items"
+
+  money_maker:
+    category: economy
+    name: "Money Maker"
+    description: "Earn 1000 BTC"
+    type: MONEY_EARN
+    target: 1000
+    requires: shop_buy
+    rewards:
+      money: 500
+      shards: 50
+    hint: "Sell items or catch fish"
+
+  fish_expert:
+    category: advanced
+    name: "Fisherman"
+    description: "Catch 20 fish"
+    type: FISHING
+    target: 20
+    rewards:
+      money: 1000
+      shards: 100
+      items:
+        - material: FISHING_ROD
+          amount: 1
+    hint: "Use a fishing rod"

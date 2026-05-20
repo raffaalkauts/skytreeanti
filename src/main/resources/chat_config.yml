@@ -1,0 +1,102 @@
+# Chat System Configuration
+
+# Chat cooldowns (in seconds) per rank
+cooldowns:
+  IOLITE: 3
+  BERYL: 2
+  GARNET: 1
+  AMETHYST: 0
+  EMERALD: 0
+  DIVINE: 0
+
+# Chat channels
+channels:
+  global:
+    enabled: true
+    prefix: ""
+    permission: "skytree.chat.global"
+    range: -1  # -1 = unlimited
+  
+  island:
+    enabled: true
+    prefix: "§a[Island] "
+    permission: "skytree.chat.island"
+    command: "/ic"
+  
+  team:
+    enabled: true
+    prefix: "§b[Team] "
+    permission: "skytree.chat.team"
+    command: "/tc"
+  
+  local:
+    enabled: true
+    prefix: "§8[Local] "
+    permission: "skytree.chat.local"
+    command: "/local"
+    range: 50  # Blocks
+
+# Chat reactions (emoji)
+reactions:
+  enabled: true
+  maxPerMessage: 3
+  allowedEmojis:
+    - "👍"
+    - "❤️"
+    - "😂"
+    - "😮"
+    - "😢"
+    - "🔥"
+    - "⭐"
+    - "💯"
+
+# Chat bubbles (holograms)
+bubbles:
+  enabled: true
+  duration: 5  # Seconds
+  height: 2.3  # Blocks above player head
+  permission: "skytree.chat.bubbles"
+
+# Mentions
+mentions:
+  enabled: true
+  sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  highlightColor: "§e"
+  notifyMessage: "§e%player% §7mentioned you!"
+
+# Profanity filter
+filter:
+  enabled: true
+  strictMode: false  # If true, blocks message entirely. If false, replaces words
+  replacement: "***"
+  words:
+    - "badword1"
+    - "badword2"
+    # Add more as needed
+
+# Chat history
+history:
+  enabled: true
+  maxMessages: 100
+  saveOnQuit: true
+
+# Message formatting commands
+formatting:
+  me:
+    enabled: true
+    format: "§7* %player% %message%"
+  shout:
+    enabled: true
+    format: "§c§l[SHOUT] %player%: %message%"
+    sound: "ENTITY_ENDER_DRAGON_GROWL"
+    cooldown: 60  # Seconds
+  whisper:
+    enabled: true
+    format: "§d[Whisper] §7%sender% → %receiver%: %message%"
+
+# Anti-spam
+antiSpam:
+  enabled: true
+  maxSameMessages: 3
+  similarThreshold: 0.8  # 80% similarity
+  blockDuration: 30  # Seconds

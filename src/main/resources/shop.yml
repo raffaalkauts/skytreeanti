@@ -1,0 +1,1239 @@
+# Skytree Shop Configuration - ABSOLUTE COMPLETE Edition
+# Prices are in BTC (Adjusted for economy balance)
+# Contains EVERY survival item in Minecraft 1.21
+
+categories:
+  # =================================================================
+  # BLOCKS: Natural
+  # =================================================================
+  blocks_natural:
+    dirt: { price: 20, sell: 4 }
+    grass_block: { price: 20, sell: 4 }
+    podzol: { price: 20, sell: 4 }
+    coarse_dirt: { price: 30, sell: 6 }
+    mycelium: { price: 25, sell: 5 }
+    rooted_dirt: { price: 25, sell: 5 }
+    mud: { price: 40, sell: 8 }
+    clay: { price: 40, sell: 8 }
+    gravel: { price: 15, sell: 3 }
+    sand: { price: 15, sell: 3 }
+    red_sand: { price: 20, sell: 4 }
+    ice: { price: 30, sell: 6 }
+    packed_ice: { price: 40, sell: 8 }
+    blue_ice: { price: 30, sell: 6 }
+    snow_block: { price: 15, sell: 3 }
+    moss_block: { price: 10, sell: 2 }
+    leaf_litter: { price: 1, sell: 0.2 }
+    obsidian: { price: 50, sell: 10 }
+    crying_obsidian: { price: 125, sell: 25 }
+    netherrack: { price: 15, sell: 3 }
+    crimson_nylium: { price: 5, sell: 1 }
+    warped_nylium: { price: 5, sell: 1 }
+    soul_sand: { price: 15, sell: 3 }
+    soul_soil: { price: 20, sell: 4 }
+    basalt: { price: 25, sell: 5 }
+    smooth_basalt: { price: 20, sell: 4 }
+    polished_basalt: { price: 20, sell: 4 }
+    blackstone: { price: 20, sell: 4 }
+    end_stone: { price: 5, sell: 1 }
+    magma_block: { price: 20, sell: 4 }
+    sponge: { price: 2500, sell: 500 }
+    wet_sponge: { price: 2000, sell: 400 }
+    dripstone_block: { price: 30, sell: 6 }
+    pointed_dripstone: { price: 40, sell: 8 }
+    calcite: { price: 20, sell: 4 }
+    tuff: { price: 20, sell: 4 }
+
+  # =================================================================
+  # BLOCKS: Stone & Deepslate
+  # =================================================================
+  blocks_stone:
+    cobblestone: { price: 15, sell: 3 }
+    stone: { price: 20, sell: 4 }
+    smooth_stone: { price: 20, sell: 4 }
+    stone_bricks: { price: 20, sell: 4 }
+    cracked_stone_bricks: { price: 20, sell: 4 }
+    chiseled_stone_bricks: { price: 20, sell: 4 }
+    mossy_cobblestone: { price: 40, sell: 8 }
+    mossy_stone_bricks: { price: 20, sell: 4 }
+    granite: { price: 20, sell: 4 }
+    polished_granite: { price: 40, sell: 8 }
+    diorite: { price: 20, sell: 4 }
+    polished_diorite: { price: 40, sell: 8 }
+    andesite: { price: 20, sell: 4 }
+    polished_andesite: { price: 40, sell: 8 }
+    cobbled_deepslate: { price: 20, sell: 4 }
+    deepslate: { price: 20, sell: 4 }
+    polished_deepslate: { price: 40, sell: 8 }
+    deepslate_bricks: { price: 20, sell: 4 }
+    cracked_deepslate_bricks: { price: 20, sell: 4 }
+    deepslate_tiles: { price: 20, sell: 4 }
+    cracked_deepslate_tiles: { price: 20, sell: 4 }
+    chiseled_deepslate: { price: 20, sell: 4 }
+    reinforced_deepslate: { price: 50, sell: 10 }
+    bricks: { price: 25, sell: 5 }
+    mud_bricks: { price: 20, sell: 4 }
+    packed_mud: { price: 20, sell: 4 }
+    sandstone: { price: 20, sell: 4 }
+    chiseled_sandstone: { price: 22.5, sell: 4.5 }
+    cut_sandstone: { price: 20, sell: 4 }
+    smooth_sandstone: { price: 20, sell: 4 }
+    red_sandstone: { price: 15, sell: 3 }
+    chiseled_red_sandstone: { price: 15, sell: 3 }
+    cut_red_sandstone: { price: 15, sell: 3 }
+    smooth_red_sandstone: { price: 20, sell: 4 }
+    prismarine: { price: 30, sell: 6 }
+    prismarine_bricks: { price: 20, sell: 4 }
+    dark_prismarine: { price: 15, sell: 3 }
+    sea_lantern: { price: 550, sell: 110 }
+    nether_bricks: { price: 15, sell: 3 }
+    red_nether_bricks: { price: 20, sell: 4 }
+    cracked_nether_bricks: { price: 15, sell: 3 }
+    chiseled_nether_bricks: { price: 22.5, sell: 4.5 }
+    end_stone_bricks: { price: 5, sell: 1 }
+    purpur_block: { price: 15, sell: 3 }
+    purpur_pillar: { price: 15, sell: 3 }
+    quartz_block: { price: 30, sell: 6 }
+    chiseled_quartz_block: { price: 22.5, sell: 4.5 }
+    quartz_bricks: { price: 10, sell: 2 }
+    quartz_pillar: { price: 10, sell: 2 }
+    smooth_quartz: { price: 10, sell: 2 }
+    amethyst_block: { price: 1000, sell: 200 }
+    # Slabs & Stairs & Walls
+    cobblestone_slab: { price: 20, sell: 4 }
+    cobblestone_stairs: { price: 20, sell: 4 }
+    cobblestone_wall: { price: 5, sell: 1 }
+    stone_slab: { price: 20, sell: 4 }
+    stone_stairs: { price: 20, sell: 4 }
+    smooth_stone_slab: { price: 20, sell: 4 }
+    stone_brick_slab: { price: 20, sell: 4 }
+    stone_brick_stairs: { price: 20, sell: 4 }
+    stone_brick_wall: { price: 15, sell: 3 }
+    granite_slab: { price: 20, sell: 4 }
+    granite_stairs: { price: 20, sell: 4 }
+    granite_wall: { price: 15, sell: 3 }
+    diorite_slab: { price: 30, sell: 6 }
+    diorite_stairs: { price: 20, sell: 4 }
+    diorite_wall: { price: 15, sell: 3 }
+    andesite_slab: { price: 30, sell: 6 }
+    andesite_stairs: { price: 20, sell: 4 }
+    andesite_wall: { price: 15, sell: 3 }
+    sandstone_slab: { price: 20, sell: 4 }
+    sandstone_stairs: { price: 20, sell: 4 }
+    sandstone_wall: { price: 15, sell: 3 }
+    red_sandstone_slab: { price: 20, sell: 4 }
+    red_sandstone_stairs: { price: 15, sell: 3 }
+    red_sandstone_wall: { price: 15, sell: 3 }
+    mossy_cobblestone_slab: { price: 20, sell: 4 }
+    mossy_cobblestone_stairs: { price: 20, sell: 4 }
+    mossy_cobblestone_wall: { price: 5, sell: 1 }
+    mossy_stone_brick_slab: { price: 20, sell: 4 }
+    mossy_stone_brick_stairs: { price: 20, sell: 4 }
+    mossy_stone_brick_wall: { price: 15, sell: 3 }
+    cobbled_deepslate_slab: { price: 30, sell: 6 }
+    cobbled_deepslate_stairs: { price: 20, sell: 4 }
+    cobbled_deepslate_wall: { price: 10, sell: 2 }
+    deepslate_brick_slab: { price: 30, sell: 6 }
+    deepslate_brick_stairs: { price: 20, sell: 4 }
+    deepslate_brick_wall: { price: 15, sell: 3 }
+    deepslate_tile_slab: { price: 30, sell: 6 }
+    deepslate_tile_stairs: { price: 20, sell: 4 }
+    deepslate_tile_wall: { price: 15, sell: 3 }
+
+  # =================================================================
+  # BLOCKS: 1.21 Copper & Tuff
+  # =================================================================
+  blocks_copper:
+    tuff_slab: { price: 20, sell: 4 }
+    tuff_stairs: { price: 20, sell: 4 }
+    tuff_wall: { price: 10, sell: 2 }
+    chiseled_tuff: { price: 20, sell: 4 }
+    polished_tuff: { price: 20, sell: 4 }
+    polished_tuff_slab: { price: 20, sell: 4 }
+    polished_tuff_stairs: { price: 20, sell: 4 }
+    polished_tuff_wall: { price: 15, sell: 3 }
+    tuff_bricks: { price: 20, sell: 4 }
+    tuff_brick_slab: { price: 20, sell: 4 }
+    tuff_brick_stairs: { price: 20, sell: 4 }
+    tuff_brick_wall: { price: 15, sell: 3 }
+    chiseled_tuff_bricks: { price: 20, sell: 4 }
+    copper_block: { price: 125, sell: 25 }
+    exposed_copper: { price: 25, sell: 5 }
+    weathered_copper: { price: 37.5, sell: 7.5 }
+    oxidized_copper: { price: 37.5, sell: 7.5 }
+    cut_copper: { price: 37.5, sell: 7.5 }
+    exposed_cut_copper: { price: 37.5, sell: 7.5 }
+    weathered_cut_copper: { price: 37.5, sell: 7.5 }
+    oxidized_cut_copper: { price: 37.5, sell: 7.5 }
+    cut_copper_stairs: { price: 37.5, sell: 7.5 }
+    exposed_cut_copper_stairs: { price: 37.5, sell: 7.5 }
+    weathered_cut_copper_stairs: { price: 37.5, sell: 7.5 }
+    oxidized_cut_copper_stairs: { price: 37.5, sell: 7.5 }
+    cut_copper_slab: { price: 25, sell: 5 }
+    exposed_cut_copper_slab: { price: 25, sell: 5 }
+    weathered_cut_copper_slab: { price: 25, sell: 5 }
+    oxidized_cut_copper_slab: { price: 25, sell: 5 }
+    chiseled_copper: { price: 20, sell: 4 }
+    copper_grate: { price: 50, sell: 10 }
+    copper_bulb: { price: 80, sell: 16 }
+    copper_door: { price: 50, sell: 10 }
+    copper_trapdoor: { price: 20, sell: 4 }
+
+  # =================================================================
+  # BLOCKS: Woods
+  # =================================================================
+  blocks_wood:
+    # OAK
+    oak_log: { price: 80, sell: 16 }
+    oak_wood: { price: 80, sell: 16 }
+    stripped_oak_log: { price: 80, sell: 16 }
+    stripped_oak_wood: { price: 80, sell: 16 }
+    oak_planks: { price: 20, sell: 4 }
+    oak_stairs: { price: 20, sell: 4 }
+    oak_slab: { price: 20, sell: 4 }
+    oak_fence: { price: 20, sell: 4 }
+    oak_fence_gate: { price: 20, sell: 4 }
+    oak_door: { price: 40, sell: 8 }
+    oak_trapdoor: { price: 20, sell: 4 }
+    oak_pressure_plate: { price: 50, sell: 10 }
+    oak_button: { price: 20, sell: 4 }
+    # SPRUCE
+    spruce_log: { price: 80, sell: 16 }
+    spruce_wood: { price: 80, sell: 16 }
+    stripped_spruce_log: { price: 80, sell: 16 }
+    stripped_spruce_wood: { price: 80, sell: 16 }
+    spruce_planks: { price: 20, sell: 4 }
+    spruce_stairs: { price: 20, sell: 4 }
+    spruce_slab: { price: 20, sell: 4 }
+    spruce_fence: { price: 20, sell: 4 }
+    spruce_fence_gate: { price: 20, sell: 4 }
+    spruce_door: { price: 40, sell: 8 }
+    spruce_trapdoor: { price: 20, sell: 4 }
+    spruce_pressure_plate: { price: 50, sell: 10 }
+    spruce_button: { price: 20, sell: 4 }
+    # BIRCH
+    birch_log: { price: 80, sell: 16 }
+    birch_wood: { price: 80, sell: 16 }
+    stripped_birch_log: { price: 80, sell: 16 }
+    stripped_birch_wood: { price: 80, sell: 16 }
+    birch_planks: { price: 20, sell: 4 }
+    birch_stairs: { price: 20, sell: 4 }
+    birch_slab: { price: 20, sell: 4 }
+    birch_fence: { price: 20, sell: 4 }
+    birch_fence_gate: { price: 20, sell: 4 }
+    birch_door: { price: 40, sell: 8 }
+    birch_trapdoor: { price: 20, sell: 4 }
+    birch_pressure_plate: { price: 50, sell: 10 }
+    birch_button: { price: 20, sell: 4 }
+    # JUNGLE
+    jungle_log: { price: 80, sell: 16 }
+    jungle_wood: { price: 80, sell: 16 }
+    stripped_jungle_log: { price: 80, sell: 16 }
+    stripped_jungle_wood: { price: 80, sell: 16 }
+    jungle_planks: { price: 20, sell: 4 }
+    jungle_stairs: { price: 20, sell: 4 }
+    jungle_slab: { price: 20, sell: 4 }
+    jungle_fence: { price: 20, sell: 4 }
+    jungle_fence_gate: { price: 20, sell: 4 }
+    jungle_door: { price: 40, sell: 8 }
+    jungle_trapdoor: { price: 20, sell: 4 }
+    jungle_pressure_plate: { price: 50, sell: 10 }
+    jungle_button: { price: 20, sell: 4 }
+    # ACACIA
+    acacia_log: { price: 80, sell: 16 }
+    acacia_wood: { price: 80, sell: 16 }
+    stripped_acacia_log: { price: 80, sell: 16 }
+    stripped_acacia_wood: { price: 80, sell: 16 }
+    acacia_planks: { price: 20, sell: 4 }
+    acacia_stairs: { price: 20, sell: 4 }
+    acacia_slab: { price: 20, sell: 4 }
+    acacia_fence: { price: 20, sell: 4 }
+    acacia_fence_gate: { price: 20, sell: 4 }
+    acacia_door: { price: 40, sell: 8 }
+    acacia_trapdoor: { price: 20, sell: 4 }
+    acacia_pressure_plate: { price: 50, sell: 10 }
+    acacia_button: { price: 20, sell: 4 }
+    # DARK OAK
+    dark_oak_log: { price: 80, sell: 16 }
+    dark_oak_wood: { price: 80, sell: 16 }
+    stripped_dark_oak_log: { price: 80, sell: 16 }
+    stripped_dark_oak_wood: { price: 80, sell: 16 }
+    dark_oak_planks: { price: 20, sell: 4 }
+    dark_oak_stairs: { price: 20, sell: 4 }
+    dark_oak_slab: { price: 20, sell: 4 }
+    dark_oak_fence: { price: 20, sell: 4 }
+    dark_oak_fence_gate: { price: 20, sell: 4 }
+    dark_oak_door: { price: 40, sell: 8 }
+    dark_oak_trapdoor: { price: 20, sell: 4 }
+    dark_oak_pressure_plate: { price: 50, sell: 10 }
+    dark_oak_button: { price: 20, sell: 4 }
+    # MANGROVE
+    mangrove_log: { price: 80, sell: 16 }
+    mangrove_wood: { price: 30, sell: 6 }
+    stripped_mangrove_log: { price: 80, sell: 16 }
+    stripped_mangrove_wood: { price: 30, sell: 6 }
+    mangrove_roots: { price: 20, sell: 4 }
+    muddy_mangrove_roots: { price: 20, sell: 4 }
+    mangrove_planks: { price: 20, sell: 4 }
+    mangrove_stairs: { price: 20, sell: 4 }
+    mangrove_slab: { price: 20, sell: 4 }
+    mangrove_fence: { price: 20, sell: 4 }
+    mangrove_fence_gate: { price: 20, sell: 4 }
+    mangrove_door: { price: 40, sell: 8 }
+    mangrove_trapdoor: { price: 20, sell: 4 }
+    mangrove_pressure_plate: { price: 50, sell: 10 }
+    mangrove_button: { price: 20, sell: 4 }
+    # CHERRY
+    cherry_log: { price: 80, sell: 16 }
+    cherry_wood: { price: 30, sell: 6 }
+    stripped_cherry_log: { price: 80, sell: 16 }
+    stripped_cherry_wood: { price: 30, sell: 6 }
+    cherry_planks: { price: 20, sell: 4 }
+    cherry_stairs: { price: 20, sell: 4 }
+    cherry_slab: { price: 20, sell: 4 }
+    cherry_fence: { price: 20, sell: 4 }
+    cherry_fence_gate: { price: 20, sell: 4 }
+    cherry_door: { price: 40, sell: 8 }
+    cherry_trapdoor: { price: 20, sell: 4 }
+    cherry_pressure_plate: { price: 50, sell: 10 }
+    cherry_button: { price: 20, sell: 4 }
+    # BAMBOO
+    bamboo_block: { price: 225, sell: 45 }
+    stripped_bamboo_block: { price: 20, sell: 4 }
+    bamboo_planks: { price: 20, sell: 4 }
+    bamboo_mosaic: { price: 5, sell: 1 }
+    bamboo_stairs: { price: 20, sell: 4 }
+    bamboo_mosaic_stairs: { price: 20, sell: 4 }
+    bamboo_slab: { price: 20, sell: 4 }
+    bamboo_mosaic_slab: { price: 20, sell: 4 }
+    bamboo_fence: { price: 20, sell: 4 }
+    bamboo_fence_gate: { price: 20, sell: 4 }
+    bamboo_door: { price: 40, sell: 8 }
+    bamboo_trapdoor: { price: 20, sell: 4 }
+    bamboo_pressure_plate: { price: 50, sell: 10 }
+    bamboo_button: { price: 20, sell: 4 }
+    # CRIMSON
+    crimson_stem: { price: 80, sell: 16 }
+    crimson_hyphae: { price: 80, sell: 16 }
+    stripped_crimson_stem: { price: 80, sell: 16 }
+    stripped_crimson_hyphae: { price: 80, sell: 16 }
+    crimson_planks: { price: 20, sell: 4 }
+    crimson_stairs: { price: 20, sell: 4 }
+    crimson_slab: { price: 20, sell: 4 }
+    crimson_fence: { price: 20, sell: 4 }
+    crimson_fence_gate: { price: 15, sell: 3 }
+    crimson_door: { price: 40, sell: 8 }
+    crimson_trapdoor: { price: 20, sell: 4 }
+    crimson_pressure_plate: { price: 50, sell: 10 }
+    crimson_button: { price: 20, sell: 4 }
+    # WARPED
+    warped_stem: { price: 80, sell: 16 }
+    warped_hyphae: { price: 80, sell: 16 }
+    stripped_warped_stem: { price: 80, sell: 16 }
+    stripped_warped_hyphae: { price: 80, sell: 16 }
+    warped_planks: { price: 20, sell: 4 }
+    warped_stairs: { price: 20, sell: 4 }
+    warped_slab: { price: 20, sell: 4 }
+    warped_fence: { price: 20, sell: 4 }
+    warped_fence_gate: { price: 15, sell: 3 }
+    warped_door: { price: 40, sell: 8 }
+    warped_trapdoor: { price: 20, sell: 4 }
+    warped_pressure_plate: { price: 50, sell: 10 }
+    warped_button: { price: 20, sell: 4 }
+    stick: { price: 10, sell: 2 }
+
+  # =================================================================
+  # FARMING
+  # =================================================================
+  farming:
+    wheat_seeds: { price: 10, sell: 2 }
+    wheat: { price: 90, sell: 18 }
+    pumpkin_seeds: { price: 40, sell: 8 }
+    melon_seeds: { price: 20, sell: 4 }
+    beetroot_seeds: { price: 10, sell: 2 }
+    cocoa_beans: { price: 75, sell: 15 }
+    potato: { price: 80, sell: 16 }
+    poisonous_potato: { price: 160, sell: 32 }
+    carrot: { price: 80, sell: 16 }
+    beetroot: { price: 15, sell: 3 }
+    sugar_cane: { price: 100, sell: 20 }
+    bamboo: { price: 20, sell: 4 }
+    cactus: { price: 100, sell: 20 }
+    kelp: { price: 40, sell: 8 }
+    dried_kelp_block: { price: 1250, sell: 250 }
+    nether_wart: { price: 80, sell: 16 }
+    chorus_fruit: { price: 90, sell: 18 }
+    crimson_fungus: { price: 10, sell: 2 }
+    warped_fungus: { price: 15, sell: 3 }
+    brown_mushroom: { price: 5, sell: 1 }
+    red_mushroom: { price: 5, sell: 1 }
+    glow_berries: { price: 20, sell: 4 }
+    sweet_berries: { price: 40, sell: 8 }
+    torchflower_seeds: { price: 15, sell: 3 }
+    pitcher_pod: { price: 50, sell: 10 }
+    pumpkin: { price: 120, sell: 24 }
+    melon: { price: 30, sell: 6 }
+    melon_slice: { price: 30, sell: 6 }
+    apple: { price: 17.5, sell: 3.5 }
+    golden_apple: { price: 150, sell: 30 }
+    enchanted_golden_apple: { price: 1250, sell: 250 }
+    honey_block: { price: 100, sell: 20 }
+    honeycomb: { price: 22.5, sell: 4.5 }
+    honeycomb_block: { price: 100, sell: 20 }
+    # Saplings
+    oak_sapling: { price: 15, sell: 3 }
+    spruce_sapling: { price: 15, sell: 3 }
+    birch_sapling: { price: 15, sell: 3 }
+    jungle_sapling: { price: 15, sell: 3 }
+    acacia_sapling: { price: 15, sell: 3 }
+    dark_oak_sapling: { price: 15, sell: 3 }
+    mangrove_propagule: { price: 20, sell: 4 }
+    cherry_sapling: { price: 15, sell: 3 }
+    azalea: { price: 5, sell: 1 }
+    flowering_azalea: { price: 15, sell: 3 }
+
+  # =================================================================
+  # FOOD
+  # =================================================================
+  food:
+    apple: { price: 17.5, sell: 3.5 }
+    bread: { price: 5, sell: 1 }
+    porkchop: { price: 2.5, sell: 0.5 }
+    cooked_porkchop: { price: 20, sell: 4 }
+    beef: { price: 25, sell: 5 }
+    cooked_beef: { price: 17.5, sell: 3.5 }
+    chicken: { price: 30, sell: 6 }
+    cooked_chicken: { price: 40, sell: 8 }
+    mutton: { price: 20, sell: 4 }
+    cooked_mutton: { price: 15, sell: 3 }
+    rabbit: { price: 30, sell: 6 }
+    cooked_rabbit: { price: 100, sell: 20 }
+    cod: { price: 30, sell: 6 }
+    cooked_cod: { price: 10, sell: 2 }
+    salmon: { price: 30, sell: 6 }
+    cooked_salmon: { price: 10, sell: 2 }
+    tropical_fish: { price: 5, sell: 1 }
+    pufferfish: { price: 25, sell: 5 }
+    cookie: { price: 20, sell: 4 }
+    cake: { price: 900, sell: 180 }
+    pumpkin_pie: { price: 60, sell: 12 }
+    golden_apple: { price: 150, sell: 30 }
+    enchanted_golden_apple: { price: 1250, sell: 250 }
+    mushroom_stew: { price: 25, sell: 5 }
+    rabbit_stew: { price: 22.5, sell: 4.5 }
+    beetroot_soup: { price: 10, sell: 2 }
+    dried_kelp: { price: 90, sell: 18 }
+    honey_bottle: { price: 22.5, sell: 4.5 }
+    sweet_berries: { price: 40, sell: 8 }
+    glow_berries: { price: 20, sell: 4 }
+
+  # =================================================================
+  # MINERALS
+  # =================================================================
+  minerals:
+    coal: { price: 60, sell: 12 }
+    charcoal: { price: 40, sell: 8 }
+    coal_block: { price: 550, sell: 110 }
+    raw_iron: { price: 200, sell: 40 }
+    iron_ingot: { price: 25, sell: 5 }
+    iron_nugget: { price: 2.5, sell: 0.5 }
+    iron_block: { price: 225, sell: 45 }
+    raw_copper: { price: 2000, sell: 400 }
+    copper_ingot: { price: 70, sell: 14 }
+    copper_block: { price: 125, sell: 25 }
+    raw_gold: { price: 200, sell: 40 }
+    gold_ingot: { price: 25, sell: 5 }
+    gold_nugget: { price: 2.5, sell: 0.5 }
+    gold_block: { price: 225, sell: 45 }
+    diamond: { price: 600, sell: 120 }
+    diamond_block: { price: 5500, sell: 1100 }
+    emerald: { price: 40, sell: 8 }
+    emerald_block: { price: 337.5, sell: 67.5 }
+    lapis_lazuli: { price: 40, sell: 8 }
+    lapis_block: { price: 90, sell: 18 }
+    quartz: { price: 37.5, sell: 7.5 }
+    amethyst_shard: { price: 250, sell: 50 }
+    echo_shard: { price: 150, sell: 30 }
+    netherite_scrap: { price: 15000, sell: 3000 }
+    netherite_ingot: { price: 125000, sell: 25000 }
+    netherite_block: { price: 1125000, sell: 225000 }
+    redstone: { price: 250, sell: 50 }
+    redstone_block: { price: 2250, sell: 450 }
+
+  # =================================================================
+  # MOB DROPS
+  # =================================================================
+  mob_drops:
+    rotten_flesh: { price: 5, sell: 1 }
+    string: { price: 2.5, sell: 0.5 }
+    spider_eye: { price: 2.5, sell: 0.5 }
+    bone: { price: 15, sell: 3 }
+    bone_meal: { price: 5, sell: 1 }
+    gunpowder: { price: 5, sell: 1 }
+    ender_pearl: { price: 10, sell: 2 }
+    blaze_rod: { price: 10, sell: 2 }
+    blaze_powder: { price: 12.5, sell: 2.5 }
+    ghast_tear: { price: 150, sell: 30 }
+    magma_cream: { price: 80, sell: 16 }
+    slime_ball: { price: 20, sell: 4 }
+    phantom_membrane: { price: 25, sell: 5 }
+    shulker_shell: { price: 250, sell: 50 }
+    rabbit_hide: { price: 25, sell: 5 }
+    rabbit_foot: { price: 15, sell: 3 }
+    leather: { price: 200, sell: 40 }
+    feather: { price: 30, sell: 6 }
+    ink_sac: { price: 250, sell: 50 }
+    glow_ink_sac: { price: 750, sell: 150 }
+    scute: { price: 50, sell: 10 }
+    prismarine_shard: { price: 25, sell: 5 }
+    prismarine_crystals: { price: 35, sell: 7 }
+    nautilus_shell: { price: 500, sell: 100 }
+    heart_of_the_sea: { price: 2000, sell: 400 }
+    nether_star: { price: 37500, sell: 7500 }
+    dragon_breath: { price: 100, sell: 20 }
+    breeze_rod: { price: 30, sell: 6 }
+
+  # =================================================================
+  # BREWING
+  # =================================================================
+  brewing:
+    brewing_stand: { price: 75, sell: 15 }
+    cauldron: { price: 105, sell: 21 }
+    glass_bottle: { price: 30, sell: 6 }
+    blaze_powder: { price: 12.5, sell: 2.5 }
+    magma_cream: { price: 80, sell: 16 }
+    ghast_tear: { price: 150, sell: 30 }
+    fermented_spider_eye: { price: 15, sell: 3 }
+    spider_eye: { price: 2.5, sell: 0.5 }
+    golden_carrot: { price: 37.5, sell: 7.5 }
+    glistering_melon_slice: { price: 22.5, sell: 4.5 }
+    rabbit_foot: { price: 15, sell: 3 }
+    dragon_breath: { price: 100, sell: 20 }
+    phantom_membrane: { price: 25, sell: 5 }
+    slime_ball: { price: 20, sell: 4 }
+    gunpowder: { price: 5, sell: 1 }
+    glowstone_dust: { price: 5, sell: 1 }
+    redstone: { price: 250, sell: 50 }
+    nether_wart: { price: 80, sell: 16 }
+    sugar: { price: 20, sell: 4 }
+    pufferfish: { price: 25, sell: 5 }
+    turtle_helmet: { price: 1000, sell: 200 }
+    rabbit_stew: { price: 22.5, sell: 4.5 }
+    honey_bottle: { price: 22.5, sell: 4.5 }
+    clock: { price: 125, sell: 25 }
+    compass: { price: 150, sell: 30 }
+
+  # =================================================================
+  # DECORATION: Wool & Carpet
+  # =================================================================
+  decoration_wool:
+    white_wool: { price: 20, sell: 4 }
+    orange_wool: { price: 20, sell: 4 }
+    magenta_wool: { price: 20, sell: 4 }
+    light_blue_wool: { price: 20, sell: 4 }
+    yellow_wool: { price: 20, sell: 4 }
+    lime_wool: { price: 20, sell: 4 }
+    pink_wool: { price: 20, sell: 4 }
+    gray_wool: { price: 20, sell: 4 }
+    light_gray_wool: { price: 20, sell: 4 }
+    cyan_wool: { price: 20, sell: 4 }
+    purple_wool: { price: 20, sell: 4 }
+    blue_wool: { price: 20, sell: 4 }
+    brown_wool: { price: 20, sell: 4 }
+    green_wool: { price: 20, sell: 4 }
+    red_wool: { price: 20, sell: 4 }
+    black_wool: { price: 20, sell: 4 }
+    white_carpet: { price: 10, sell: 2 }
+    orange_carpet: { price: 10, sell: 2 }
+    magenta_carpet: { price: 10, sell: 2 }
+    light_blue_carpet: { price: 10, sell: 2 }
+    yellow_carpet: { price: 10, sell: 2 }
+    lime_carpet: { price: 10, sell: 2 }
+    pink_carpet: { price: 10, sell: 2 }
+    gray_carpet: { price: 10, sell: 2 }
+    light_gray_carpet: { price: 10, sell: 2 }
+    cyan_carpet: { price: 10, sell: 2 }
+    purple_carpet: { price: 10, sell: 2 }
+    blue_carpet: { price: 10, sell: 2 }
+    brown_carpet: { price: 10, sell: 2 }
+    green_carpet: { price: 10, sell: 2 }
+    red_carpet: { price: 10, sell: 2 }
+    black_carpet: { price: 10, sell: 2 }
+
+  # =================================================================
+  # DECORATION: Colored Blocks
+  # =================================================================
+  decoration_colored:
+    # GLASS
+    glass: { price: 100, sell: 20 }
+    white_stained_glass: { price: 30, sell: 6 }
+    orange_stained_glass: { price: 30, sell: 6 }
+    magenta_stained_glass: { price: 30, sell: 6 }
+    light_blue_stained_glass: { price: 30, sell: 6 }
+    yellow_stained_glass: { price: 30, sell: 6 }
+    lime_stained_glass: { price: 30, sell: 6 }
+    pink_stained_glass: { price: 30, sell: 6 }
+    gray_stained_glass: { price: 30, sell: 6 }
+    light_gray_stained_glass: { price: 30, sell: 6 }
+    cyan_stained_glass: { price: 30, sell: 6 }
+    purple_stained_glass: { price: 30, sell: 6 }
+    blue_stained_glass: { price: 30, sell: 6 }
+    brown_stained_glass: { price: 30, sell: 6 }
+    green_stained_glass: { price: 30, sell: 6 }
+    red_stained_glass: { price: 30, sell: 6 }
+    black_stained_glass: { price: 30, sell: 6 }
+    tinted_glass: { price: 100, sell: 20 }
+    # PANES
+    glass_pane: { price: 15, sell: 3 }
+    white_stained_glass_pane: { price: 15, sell: 3 }
+    orange_stained_glass_pane: { price: 15, sell: 3 }
+    magenta_stained_glass_pane: { price: 15, sell: 3 }
+    light_blue_stained_glass_pane: { price: 15, sell: 3 }
+    yellow_stained_glass_pane: { price: 15, sell: 3 }
+    lime_stained_glass_pane: { price: 15, sell: 3 }
+    pink_stained_glass_pane: { price: 15, sell: 3 }
+    gray_stained_glass_pane: { price: 15, sell: 3 }
+    light_gray_stained_glass_pane: { price: 15, sell: 3 }
+    cyan_stained_glass_pane: { price: 15, sell: 3 }
+    purple_stained_glass_pane: { price: 15, sell: 3 }
+    blue_stained_glass_pane: { price: 15, sell: 3 }
+    brown_stained_glass_pane: { price: 15, sell: 3 }
+    green_stained_glass_pane: { price: 15, sell: 3 }
+    red_stained_glass_pane: { price: 15, sell: 3 }
+    black_stained_glass_pane: { price: 15, sell: 3 }
+    # TERRACOTTA
+    terracotta: { price: 30, sell: 6 }
+    white_terracotta: { price: 30, sell: 6 }
+    orange_terracotta: { price: 30, sell: 6 }
+    magenta_terracotta: { price: 30, sell: 6 }
+    light_blue_terracotta: { price: 30, sell: 6 }
+    yellow_terracotta: { price: 30, sell: 6 }
+    lime_terracotta: { price: 30, sell: 6 }
+    pink_terracotta: { price: 30, sell: 6 }
+    gray_terracotta: { price: 30, sell: 6 }
+    light_gray_terracotta: { price: 30, sell: 6 }
+    cyan_terracotta: { price: 30, sell: 6 }
+    purple_terracotta: { price: 30, sell: 6 }
+    blue_terracotta: { price: 30, sell: 6 }
+    brown_terracotta: { price: 30, sell: 6 }
+    green_terracotta: { price: 30, sell: 6 }
+    red_terracotta: { price: 30, sell: 6 }
+    black_terracotta: { price: 20, sell: 4 }
+    # GLAZED TERRACOTTA (All 16)
+    white_glazed_terracotta: { price: 30, sell: 6 }
+    orange_glazed_terracotta: { price: 30, sell: 6 }
+    magenta_glazed_terracotta: { price: 30, sell: 6 }
+    light_blue_glazed_terracotta: { price: 30, sell: 6 }
+    yellow_glazed_terracotta: { price: 30, sell: 6 }
+    lime_glazed_terracotta: { price: 30, sell: 6 }
+    pink_glazed_terracotta: { price: 30, sell: 6 }
+    gray_glazed_terracotta: { price: 30, sell: 6 }
+    light_gray_glazed_terracotta: { price: 30, sell: 6 }
+    cyan_glazed_terracotta: { price: 30, sell: 6 }
+    purple_glazed_terracotta: { price: 30, sell: 6 }
+    blue_glazed_terracotta: { price: 30, sell: 6 }
+    brown_glazed_terracotta: { price: 30, sell: 6 }
+    green_glazed_terracotta: { price: 30, sell: 6 }
+    red_glazed_terracotta: { price: 30, sell: 6 }
+    black_glazed_terracotta: { price: 30, sell: 6 }
+    # CONCRETE
+    white_concrete: { price: 40, sell: 8 }
+    orange_concrete: { price: 40, sell: 8 }
+    magenta_concrete: { price: 40, sell: 8 }
+    light_blue_concrete: { price: 40, sell: 8 }
+    yellow_concrete: { price: 40, sell: 8 }
+    lime_concrete: { price: 40, sell: 8 }
+    pink_concrete: { price: 40, sell: 8 }
+    gray_concrete: { price: 40, sell: 8 }
+    light_gray_concrete: { price: 40, sell: 8 }
+    cyan_concrete: { price: 40, sell: 8 }
+    purple_concrete: { price: 40, sell: 8 }
+    blue_concrete: { price: 40, sell: 8 }
+    brown_concrete: { price: 40, sell: 8 }
+    green_concrete: { price: 40, sell: 8 }
+    red_concrete: { price: 40, sell: 8 }
+    black_concrete: { price: 40, sell: 8 }
+    # CONCRETE POWDER
+    white_concrete_powder: { price: 20, sell: 4 }
+    orange_concrete_powder: { price: 20, sell: 4 }
+    magenta_concrete_powder: { price: 20, sell: 4 }
+    light_blue_concrete_powder: { price: 20, sell: 4 }
+    yellow_concrete_powder: { price: 20, sell: 4 }
+    lime_concrete_powder: { price: 20, sell: 4 }
+    pink_concrete_powder: { price: 20, sell: 4 }
+    gray_concrete_powder: { price: 20, sell: 4 }
+    light_gray_concrete_powder: { price: 20, sell: 4 }
+    cyan_concrete_powder: { price: 20, sell: 4 }
+    purple_concrete_powder: { price: 20, sell: 4 }
+    blue_concrete_powder: { price: 20, sell: 4 }
+    brown_concrete_powder: { price: 20, sell: 4 }
+    green_concrete_powder: { price: 20, sell: 4 }
+    red_concrete_powder: { price: 20, sell: 4 }
+    black_concrete_powder: { price: 20, sell: 4 }
+    
+  # =================================================================
+  # DYES
+  # =================================================================
+  dyes:
+    white_dye: { price: 5, sell: 1 }
+    orange_dye: { price: 5, sell: 1 }
+    magenta_dye: { price: 5, sell: 1 }
+    light_blue_dye: { price: 5, sell: 1 }
+    yellow_dye: { price: 5, sell: 1 }
+    lime_dye: { price: 5, sell: 1 }
+    pink_dye: { price: 5, sell: 1 }
+    gray_dye: { price: 5, sell: 1 }
+    light_gray_dye: { price: 5, sell: 1 }
+    cyan_dye: { price: 5, sell: 1 }
+    purple_dye: { price: 5, sell: 1 }
+    blue_dye: { price: 5, sell: 1 }
+    brown_dye: { price: 5, sell: 1 }
+    green_dye: { price: 150, sell: 30 }
+    red_dye: { price: 5, sell: 1 }
+    black_dye: { price: 150, sell: 30 }
+    ink_sac: { price: 250, sell: 50 }
+    glow_ink_sac: { price: 750, sell: 150 }
+    lapis_lazuli: { price: 40, sell: 8 }
+    cocoa_beans: { price: 75, sell: 15 }
+    bone_meal: { price: 5, sell: 1 }
+
+  # =================================================================
+  # DECORATION: Misc
+  # =================================================================
+  decoration_misc:
+    flower_pot: { price: 10, sell: 2 }
+    painting: { price: 40, sell: 8 }
+    item_frame: { price: 15, sell: 3 }
+    glow_item_frame: { price: 80, sell: 16 }
+    armor_stand: { price: 100, sell: 20 }
+    end_rod: { price: 30, sell: 6 }
+    lantern: { price: 20, sell: 4 }
+    soul_lantern: { price: 20, sell: 4 }
+    campfire: { price: 20, sell: 4 }
+    soul_campfire: { price: 20, sell: 4 }
+    chain: { price: 5, sell: 1 }
+    iron_bars: { price: 5, sell: 1 }
+    ladder: { price: 25, sell: 5 }
+    scaffolding: { price: 5, sell: 1 }
+    torch: { price: 10, sell: 2 }
+    soul_torch: { price: 40, sell: 8 }
+    cobweb: { price: 15, sell: 3 }
+    vines: { price: 10, sell: 2 }
+    glow_lichen: { price: 20, sell: 4 }
+    lily_pad: { price: 20, sell: 4 }
+    spore_blossom: { price: 5, sell: 1 }
+    sculk_sensor: { price: 250, sell: 50 }
+    sculk_shrieker: { price: 5, sell: 1 }
+    dragon_head: { price: 5000, sell: 1000 }
+    creeper_head: { price: 5000, sell: 1000 }
+    zombie_head: { price: 5000, sell: 1000 }
+    skeleton_skull: { price: 5000, sell: 1000 }
+    wither_skeleton_skull: { price: 5000, sell: 1000 }
+    # Banners
+    white_banner: { price: 250, sell: 50 }
+    # Candles
+    candle: { price: 90, sell: 18 }
+    white_candle: { price: 90, sell: 18 }
+    # Signs & Hanging Signs (Oak Default)
+    oak_sign: { price: 45, sell: 9 }
+    oak_hanging_sign: { price: 45, sell: 9 }
+
+  # =================================================================
+  # REDSTONE
+  # =================================================================
+  redstone:
+    redstone: { price: 250, sell: 50 }
+    redstone_block: { price: 2250, sell: 450 }
+    redstone_torch: { price: 260, sell: 52 }
+    redstone_lamp: { price: 150, sell: 30 }
+    repeater: { price: 650, sell: 130 }
+    comparator: { price: 325, sell: 65 }
+    observer: { price: 625, sell: 125 }
+    piston: { price: 425, sell: 85 }
+    sticky_piston: { price: 500, sell: 100 }
+    dispenser: { price: 250, sell: 50 }
+    dropper: { price: 30, sell: 6 }
+    hopper: { price: 300, sell: 60 }
+    lever: { price: 20, sell: 4 }
+    tripwire_hook: { price: 5, sell: 1 }
+    oak_button: { price: 20, sell: 4 }
+    stone_button: { price: 20, sell: 4 }
+    oak_pressure_plate: { price: 50, sell: 10 }
+    stone_pressure_plate: { price: 50, sell: 10 }
+    heavy_weighted_pressure_plate: { price: 50, sell: 10 }
+    light_weighted_pressure_plate: { price: 50, sell: 10 }
+    trapped_chest: { price: 160, sell: 32 }
+    daylight_detector: { price: 52.5, sell: 10.5 }
+    note_block: { price: 150, sell: 30 }
+    jukebox: { price: 500, sell: 100 }
+    target: { price: 1350, sell: 270 }
+    slime_block: { price: 300, sell: 60 }
+    honey_block: { price: 100, sell: 20 }
+    lectern: { price: 50, sell: 10 }
+    lightning_rod: { price: 250, sell: 50 }
+    sculk_sensor: { price: 250, sell: 50 }
+    calibrated_sculk_sensor: { price: 100, sell: 20 }
+    
+  # =================================================================
+  # TRANSPORT
+  # =================================================================
+  transport:
+    rail: { price: 20, sell: 4 }
+    powered_rail: { price: 100, sell: 20 }
+    detector_rail: { price: 125, sell: 25 }
+    activator_rail: { price: 35, sell: 7 }
+    minecart: { price: 75, sell: 15 }
+    chest_minecart: { price: 75, sell: 15 }
+    furnace_minecart: { price: 120, sell: 24 }
+    tnt_minecart: { price: 112.5, sell: 22.5 }
+    hopper_minecart: { price: 75, sell: 15 }
+    bamboo_raft: { price: 22.5, sell: 4.5 }
+    bamboo_chest_raft: { price: 22.5, sell: 4.5 }
+    elytra: { price: 150000, sell: 30000 }
+    saddle: { price: 2500, sell: 500 }
+    carrot_on_a_stick: { price: 45, sell: 9 }
+    warped_fungus_on_a_stick: { price: 22.5, sell: 4.5 }
+
+  # =================================================================
+  # EQUIPMENT
+  # =================================================================
+  equipment:
+    bow: { price: 35, sell: 7 }
+    crossbow: { price: 37.5, sell: 7.5 }
+    shield: { price: 37.5, sell: 7.5 }
+    trident: { price: 50000, sell: 10000 }
+    flint_and_steel: { price: 30, sell: 6 }
+    shears: { price: 20, sell: 4 }
+    fishing_rod: { price: 40, sell: 8 }
+    spyglass: { price: 250, sell: 50 }
+    lead: { price: 25, sell: 5 }
+    name_tag: { price: 1000, sell: 200 }
+    clock: { price: 125, sell: 25 }
+    compass: { price: 150, sell: 30 }
+    recovery_compass: { price: 250, sell: 50 }
+    map: { price: 75, sell: 15 }
+    writable_book: { price: 75, sell: 15 }
+    # Iron
+    iron_sword: { price: 75, sell: 15 }
+    iron_pickaxe: { price: 37.5, sell: 7.5 }
+    iron_axe: { price: 37.5, sell: 7.5 }
+    iron_shovel: { price: 37.5, sell: 7.5 }
+    iron_hoe: { price: 75, sell: 15 }
+    iron_helmet: { price: 175, sell: 35 }
+    iron_chestplate: { price: 175, sell: 35 }
+    iron_leggings: { price: 175, sell: 35 }
+    iron_boots: { price: 175, sell: 35 }
+    # Diamond
+    diamond_sword: { price: 250, sell: 50 }
+    diamond_pickaxe: { price: 250, sell: 50 }
+    diamond_axe: { price: 250, sell: 50 }
+    diamond_shovel: { price: 250, sell: 50 }
+    diamond_hoe: { price: 250, sell: 50 }
+    diamond_helmet: { price: 225, sell: 45 }
+    diamond_chestplate: { price: 300, sell: 60 }
+    diamond_leggings: { price: 262.5, sell: 52.5 }
+    diamond_boots: { price: 187.5, sell: 37.5 }
+    # Netherite
+    netherite_sword: { price: 1500, sell: 300 }
+    netherite_pickaxe: { price: 1500, sell: 300 }
+    netherite_axe: { price: 1500, sell: 300 }
+    netherite_shovel: { price: 1500, sell: 300 }
+    netherite_hoe: { price: 1500, sell: 300 }
+    netherite_helmet: { price: 5000, sell: 1000 }
+    netherite_chestplate: { price: 5000, sell: 1000 }
+    netherite_leggings: { price: 5000, sell: 1000 }
+    netherite_boots: { price: 5000, sell: 1000 }
+    # Horse Armor
+    leather_horse_armor: { price: 75, sell: 15 }
+    iron_horse_armor: { price: 500, sell: 100 }
+    golden_horse_armor: { price: 1500, sell: 300 }
+    diamond_horse_armor: { price: 2500, sell: 500 }
+
+  # =================================================================
+  # CUSTOM ITEMS
+  # =================================================================
+  custom_items:
+    crook_wood: { price: 50, sell: 10 }
+    crook_stone: { price: 100, sell: 20 }
+    crook_bone: { price: 300, sell: 60 }
+    crook_iron: { price: 500, sell: 100 }
+    crook_gold: { price: 750, sell: 150 }
+    crook_emerald: { price: 1500, sell: 300 }
+    crook_diamond: { price: 2500, sell: 500 }
+    crook_netherite: { price: 10000, sell: 2000 }
+    hammer_wood: { price: 100, sell: 20 }
+    hammer_stone: { price: 200, sell: 40 }
+    hammer_iron: { price: 1000, sell: 200 }
+    hammer_gold: { price: 1500, sell: 300 }
+    hammer_diamond: { price: 5000, sell: 1000 }
+    hammer_netherite: { price: 20000, sell: 4000 }
+    mesh_string: { price: 100, sell: 20 }
+    mesh_flint: { price: 250, sell: 50 }
+    mesh_iron: { price: 1000, sell: 200 }
+    mesh_gold: { price: 2500, sell: 500 }
+    mesh_emerald: { price: 5000, sell: 1000 }
+    mesh_diamond: { price: 7500, sell: 1500 }
+    mesh_netherite: { price: 25000, sell: 5000 }
+    dust_iron: { price: 15, sell: 3 }
+    dust_gold: { price: 25, sell: 5 }
+    piece_iron: { price: 2, sell: 1 }
+    piece_gold: { price: 3, sell: 1 }
+    piece_diamond: { price: 11, sell: 2 }
+    sell_wand: { price: 50000, sell: 10000 }
+    skytree_guide: { price: 10, sell: 0 }
+    dirt_essence: { price: 5, sell: 1 }
+    water_bottle: { price: 20, sell: 4 }
+    lava_bottle: { price: 50, sell: 10 }
+    witch_water_bottle: { price: 100, sell: 20 }
+    glass_water_bucket: { price: 100, sell: 20 }
+    silkworm: { price: 30, sell: 5 }
+    silk_mesh: { price: 200, sell: 40 }
+    silkworm_cooked: { price: 50, sell: 10 }
+    spawner_core: { price: 50000, sell: 10000 }
+    powered_spawner: { price: 200000, sell: 40000 }
+
+  resources:
+    pebble_diorite: { price: 2, sell: 1 }
+    pebble_andesite: { price: 2, sell: 1 }
+    pebble_basalt: { price: 3, sell: 1 }
+    pebble_blackstone: { price: 3, sell: 1 }
+    piece_copper: { price: 3, sell: 1 }
+    piece_tin: { price: 4, sell: 1 }
+    piece_aluminum: { price: 4, sell: 1 }
+    piece_silver: { price: 5, sell: 1 }
+    piece_lead: { price: 5, sell: 1 }
+    piece_nickel: { price: 6, sell: 1 }
+    piece_zinc: { price: 6, sell: 1 }
+    piece_uranium: { price: 10, sell: 2 }
+    piece_coal: { price: 5, sell: 1 }
+    piece_emerald: { price: 15, sell: 3 }
+    piece_lapis: { price: 5, sell: 1 }
+    piece_redstone: { price: 4, sell: 1 }
+    piece_quartz: { price: 6, sell: 1 }
+    dust_copper: { price: 10, sell: 2 }
+    dust_tin: { price: 10, sell: 2 }
+    dust_aluminum: { price: 12, sell: 2 }
+    dust_silver: { price: 15, sell: 3 }
+    dust_lead: { price: 12, sell: 2 }
+    dust_nickel: { price: 15, sell: 3 }
+    dust_zinc: { price: 15, sell: 3 }
+    dust_uranium: { price: 30, sell: 6 }
+    dust_obsidian: { price: 20, sell: 4 }
+    dust_ender: { price: 25, sell: 5 }
+    dust_brass: { price: 20, sell: 4 }
+    dust_bronze: { price: 25, sell: 5 }
+    dust_steel: { price: 35, sell: 7 }
+    ingot_tin: { price: 30, sell: 6 }
+    ingot_aluminum: { price: 35, sell: 7 }
+    ingot_silver: { price: 50, sell: 10 }
+    ingot_lead: { price: 40, sell: 8 }
+    ingot_nickel: { price: 50, sell: 10 }
+    ingot_zinc: { price: 50, sell: 10 }
+    ingot_brass: { price: 70, sell: 14 }
+    ingot_bronze: { price: 90, sell: 18 }
+    ingot_steel: { price: 120, sell: 24 }
+    ingot_uranium: { price: 150, sell: 30 }
+    purified_water: { price: 30, sell: 5 }
+    grass_seeds: { price: 5, sell: 1 }
+    ancient_spores: { price: 10, sell: 2 }
+    seed_carrot: { price: 10, sell: 2 }
+    seed_potato: { price: 10, sell: 2 }
+    seed_beetroot: { price: 10, sell: 2 }
+    seed_melon: { price: 20, sell: 4 }
+    seed_pumpkin: { price: 20, sell: 4 }
+    seed_cocoa: { price: 15, sell: 3 }
+    seed_nether_wart: { price: 25, sell: 5 }
+    seed_chorus: { price: 30, sell: 6 }
+    sapling_oak: { price: 10, sell: 2 }
+    sapling_birch: { price: 10, sell: 2 }
+    sapling_spruce: { price: 10, sell: 2 }
+    sapling_jungle: { price: 15, sell: 3 }
+    sapling_acacia: { price: 15, sell: 3 }
+
+  blocks_compressed:
+    compressed_cobble_1x: { price: 40, sell: 8 }
+    compressed_cobble_2x: { price: 300, sell: 60 }
+    compressed_dirt_1x: { price: 40, sell: 8 }
+    compressed_dirt_2x: { price: 300, sell: 60 }
+    compressed_gravel_1x: { price: 80, sell: 16 }
+    compressed_gravel_2x: { price: 600, sell: 120 }
+    compressed_sand_1x: { price: 80, sell: 16 }
+    compressed_sand_2x: { price: 600, sell: 120 }
+    compressed_dust_1x: { price: 100, sell: 20 }
+
+  machines_custom:
+    sieve: { price: 5000, sell: 1000 }
+    barrel: { price: 50, sell: 10 }
+    crucible: { price: 8000, sell: 1600 }
+    cobble_gen: { price: 2000, sell: 400 }
+    compressor: { price: 15000, sell: 3000 }
+    pulverizer: { price: 20000, sell: 4000 }
+    furnace_advanced: { price: 10000, sell: 2000 }
+    auto_crafter: { price: 25000, sell: 5000 }
+
+  armor_sets:
+    tin_helmet: { price: 200, sell: 40 }
+    tin_chestplate: { price: 300, sell: 60 }
+    tin_leggings: { price: 250, sell: 50 }
+    tin_boots: { price: 200, sell: 40 }
+    tin_sword: { price: 250, sell: 50 }
+    tin_pickaxe: { price: 300, sell: 60 }
+    tin_axe: { price: 300, sell: 60 }
+    tin_shovel: { price: 150, sell: 30 }
+    tin_hoe: { price: 150, sell: 30 }
+    aluminum_helmet: { price: 300, sell: 60 }
+    aluminum_chestplate: { price: 400, sell: 80 }
+    aluminum_leggings: { price: 350, sell: 70 }
+    aluminum_boots: { price: 300, sell: 60 }
+    aluminum_sword: { price: 350, sell: 70 }
+    aluminum_pickaxe: { price: 400, sell: 80 }
+    aluminum_axe: { price: 400, sell: 80 }
+    aluminum_shovel: { price: 200, sell: 40 }
+    aluminum_hoe: { price: 200, sell: 40 }
+    silver_helmet: { price: 500, sell: 100 }
+    silver_chestplate: { price: 700, sell: 140 }
+    silver_leggings: { price: 600, sell: 120 }
+    silver_boots: { price: 500, sell: 100 }
+    silver_sword: { price: 600, sell: 120 }
+    silver_pickaxe: { price: 700, sell: 140 }
+    silver_axe: { price: 700, sell: 140 }
+    silver_shovel: { price: 350, sell: 70 }
+    silver_hoe: { price: 350, sell: 70 }
+    lead_helmet: { price: 400, sell: 80 }
+    lead_chestplate: { price: 550, sell: 110 }
+    lead_leggings: { price: 500, sell: 100 }
+    lead_boots: { price: 400, sell: 80 }
+    lead_sword: { price: 500, sell: 100 }
+    lead_pickaxe: { price: 550, sell: 110 }
+    lead_axe: { price: 550, sell: 110 }
+    lead_shovel: { price: 300, sell: 60 }
+    lead_hoe: { price: 300, sell: 60 }
+    nickel_helmet: { price: 600, sell: 120 }
+    nickel_chestplate: { price: 800, sell: 160 }
+    nickel_leggings: { price: 700, sell: 140 }
+    nickel_boots: { price: 600, sell: 120 }
+    nickel_sword: { price: 700, sell: 140 }
+    nickel_pickaxe: { price: 800, sell: 160 }
+    nickel_axe: { price: 800, sell: 160 }
+    nickel_shovel: { price: 400, sell: 80 }
+    nickel_hoe: { price: 400, sell: 80 }
+    zinc_helmet: { price: 600, sell: 120 }
+    zinc_chestplate: { price: 800, sell: 160 }
+    zinc_leggings: { price: 700, sell: 140 }
+    zinc_boots: { price: 600, sell: 120 }
+    zinc_sword: { price: 700, sell: 140 }
+    zinc_pickaxe: { price: 800, sell: 160 }
+    zinc_axe: { price: 800, sell: 160 }
+    zinc_shovel: { price: 400, sell: 80 }
+    zinc_hoe: { price: 400, sell: 80 }
+    brass_helmet: { price: 800, sell: 160 }
+    brass_chestplate: { price: 1100, sell: 220 }
+    brass_leggings: { price: 900, sell: 180 }
+    brass_boots: { price: 800, sell: 160 }
+    brass_sword: { price: 900, sell: 180 }
+    brass_pickaxe: { price: 1100, sell: 220 }
+    brass_axe: { price: 1100, sell: 220 }
+    brass_shovel: { price: 550, sell: 110 }
+    brass_hoe: { price: 550, sell: 110 }
+    bronze_helmet: { price: 1000, sell: 200 }
+    bronze_chestplate: { price: 1400, sell: 280 }
+    bronze_leggings: { price: 1200, sell: 240 }
+    bronze_boots: { price: 1000, sell: 200 }
+    bronze_sword: { price: 1200, sell: 240 }
+    bronze_pickaxe: { price: 1400, sell: 280 }
+    bronze_axe: { price: 1400, sell: 280 }
+    bronze_shovel: { price: 700, sell: 140 }
+    bronze_hoe: { price: 700, sell: 140 }
+    steel_helmet: { price: 1500, sell: 300 }
+    steel_chestplate: { price: 2000, sell: 400 }
+    steel_leggings: { price: 1700, sell: 340 }
+    steel_boots: { price: 1500, sell: 300 }
+    steel_sword: { price: 1700, sell: 340 }
+    steel_pickaxe: { price: 2000, sell: 400 }
+    steel_axe: { price: 2000, sell: 400 }
+    steel_shovel: { price: 1000, sell: 200 }
+    steel_hoe: { price: 1000, sell: 200 }
+    uranium_helmet: { price: 3000, sell: 600 }
+    uranium_chestplate: { price: 4500, sell: 900 }
+    uranium_leggings: { price: 3500, sell: 700 }
+    uranium_boots: { price: 3000, sell: 600 }
+    uranium_sword: { price: 3500, sell: 700 }
+    uranium_pickaxe: { price: 4500, sell: 900 }
+    uranium_axe: { price: 4500, sell: 900 }
+    uranium_shovel: { price: 2000, sell: 400 }
+    uranium_hoe: { price: 2000, sell: 400 }
+
+  minions:
+    minion_farmer: { price: 50000, sell: 10000 }
+    minion_miner: { price: 50000, sell: 10000 }
+    minion_lumberjack: { price: 50000, sell: 10000 }
+    minion_fisher: { price: 75000, sell: 15000 }
+
+  gadgets:
+    storage_controller: { price: 25000, sell: 5000 }
+    juicer: { price: 10000, sell: 2000 }
+    item_pipe: { price: 500, sell: 100 }
+    linker_tool: { price: 5000, sell: 1000 }
+
+  potions_custom:
+    potion_infestation: { price: 500, sell: 100 }
+    potion_oozing: { price: 500, sell: 100 }
+    potion_weaving: { price: 500, sell: 100 }
+    potion_wind_charging: { price: 500, sell: 100 }
+
+  tools_godtier:
+    prime_drill: { price: 50000, sell: 10000 }
+    timber_axe: { price: 50000, sell: 10000 }
+    trench_pickaxe: { price: 40000, sell: 8000 }
+    trench_shovel: { price: 40000, sell: 8000 }
+    harvester_hoe: { price: 40000, sell: 8000 }
+    slayer_sword: { price: 75000, sell: 15000 }
+    god_wings: { price: 100000, sell: 20000 }
+
+  mythic_items:
+    divine_excavator: { price: 200000, sell: 40000 }
+    divinebreaker: { price: 200000, sell: 40000 }
+    mjolnir: { price: 250000, sell: 50000 }
+    skyshaper_lance: { price: 300000, sell: 60000 }
+
+  # =================================================================
+  # =================================================================
+  # SPAWNERS: Comprehensive List
+  # =================================================================
+  spawners:
+    # Passive Mobs
+    spawner_pig: { price: 20000, sell: 4000 }
+    spawner_cow: { price: 25000, sell: 5000 }
+    spawner_sheep: { price: 20000, sell: 4000 }
+    spawner_chicken: { price: 15000, sell: 3000 }
+    spawner_rabbit: { price: 20000, sell: 4000 }
+    spawner_horse: { price: 40000, sell: 8000 }
+    spawner_donkey: { price: 40000, sell: 8000 }
+    spawner_mule: { price: 45000, sell: 9000 }
+    spawner_llama: { price: 35000, sell: 7000 }
+    spawner_parrot: { price: 50000, sell: 10000 }
+    spawner_panda: { price: 60000, sell: 12000 }
+    spawner_fox: { price: 30000, sell: 6000 }
+    spawner_bee: { price: 35000, sell: 7000 }
+    spawner_turtle: { price: 45000, sell: 9000 }
+    spawner_axolotl: { price: 45000, sell: 9000 }
+    spawner_goat: { price: 30000, sell: 6000 }
+    spawner_armadillo: { price: 50000, sell: 10000 }
+    spawner_frog: { price: 35000, sell: 7000 }
+    spawner_tadpole: { price: 20000, sell: 4000 }
+    spawner_allay: { price: 200000, sell: 40000 }
+    spawner_bat: { price: 25000, sell: 5000 }
+    spawner_camel: { price: 80000, sell: 16000 }
+    spawner_sniffer: { price: 150000, sell: 30000 }
+    spawner_cat: { price: 25000, sell: 5000 }
+    spawner_ocelot: { price: 35000, sell: 7000 }
+    spawner_mooshroom: { price: 40000, sell: 8000 }
+    spawner_skeleton_horse: { price: 120000, sell: 24000 }
+    spawner_zombie_horse: { price: 120000, sell: 24000 }
+    
+    # Neutral Mobs
+    spawner_spider: { price: 40000, sell: 8000 }
+    spawner_cave_spider: { price: 45000, sell: 9000 }
+    spawner_enderman: { price: 150000, sell: 30000 }
+    spawner_polar_bear: { price: 60000, sell: 12000 }
+    spawner_wolf: { price: 30000, sell: 6000 }
+    spawner_dolphin: { price: 40000, sell: 8000 }
+    spawner_piglin: { price: 70000, sell: 14000 }
+    spawner_zombified_piglin: { price: 65000, sell: 13000 }
+    spawner_zoglin: { price: 85000, sell: 17000 }
+    spawner_strider: { price: 45000, sell: 9000 }
+    spawner_iron_golem: { price: 500000, sell: 100000 }
+    spawner_snow_golem: { price: 50000, sell: 10000 }
+    spawner_elder_guardian: { price: 400000, sell: 80000 }
+    
+    # Hostile Mobs
+    spawner_zombie: { price: 50000, sell: 10000 }
+    spawner_skeleton: { price: 50000, sell: 10000 }
+    spawner_zombie_villager: { price: 90000, sell: 18000 }
+    spawner_creeper: { price: 75000, sell: 15000 }
+    spawner_slime: { price: 60000, sell: 12000 }
+    spawner_witch: { price: 80000, sell: 16000 }
+    spawner_guardian: { price: 100000, sell: 20000 }
+    spawner_blaze: { price: 100000, sell: 20000 }
+    spawner_ghast: { price: 120000, sell: 24000 }
+    spawner_magma_cube: { price: 50000, sell: 10000 }
+    spawner_wither_skeleton: { price: 200000, sell: 40000 }
+    spawner_shulker: { price: 300000, sell: 60000 }
+    spawner_phantom: { price: 100000, sell: 20000 }
+    spawner_drowned: { price: 60000, sell: 12000 }
+    spawner_husk: { price: 55000, sell: 11000 }
+    spawner_stray: { price: 55000, sell: 11000 }
+    spawner_silverfish: { price: 40000, sell: 8000 }
+    spawner_endermite: { price: 45000, sell: 9000 }
+    spawner_vex: { price: 150000, sell: 30000 }
+    spawner_vindicator: { price: 80000, sell: 16000 }
+    spawner_pillager: { price: 60000, sell: 12000 }
+    spawner_ravager: { price: 400000, sell: 80000 }
+    spawner_evoker: { price: 250000, sell: 50000 }
+    spawner_hoglin: { price: 60000, sell: 12000 }
+    spawner_piglin_brute: { price: 150000, sell: 30000 }
+    spawner_warden: { price: 1000000, sell: 200000 }
+    spawner_breeze: { price: 200000, sell: 40000 }
+    spawner_bogged: { price: 70000, sell: 14000 }
+    
+    # Aquatic Mobs
+    spawner_squid: { price: 30000, sell: 6000 }
+    spawner_glow_squid: { price: 40000, sell: 8000 }
+    spawner_cod: { price: 20000, sell: 4000 }
+    spawner_salmon: { price: 20000, sell: 4000 }
+    spawner_pufferfish: { price: 25000, sell: 5000 }
+    spawner_tropical_fish: { price: 25000, sell: 5000 }
+    
+    # Special Mobs
+    spawner_villager: { price: 750000, sell: 150000 }
+    spawner_wandering_trader: { price: 500000, sell: 100000 }
+    spawner_trader_llama: { price: 60000, sell: 12000 }
+
+  # =================================================================
+  # MACHINES
+  # =================================================================
+  machines:
+    machine_generator: { price: 100000 }
+    machine_processor: { price: 150000 }
+    machine_refinery: { price: 250000 }
+    machine_battery: { price: 80000 }
+    machine_quarry: { price: 500000 }
+
+  # =================================================================
+  # RANKS
+  # =================================================================
+  ranks:
+    rank_iolite: { price: 25000 }
+    rank_beryl: { price: 50000 }
+    rank_garnet: { price: 150000 }
+    rank_amethyst: { price: 500000 }
+    rank_emerald: { price: 1000000 }
+    rank_divine: { price: 5000000 }
+
+  # =================================================================
+  # MISC
+  # =================================================================
+  misc:
+    bucket: { price: 75, sell: 15 }
+    water_bucket: { price: 250, sell: 50 }
+    lava_bucket: { price: 300, sell: 60 }
+    milk_bucket: { price: 300, sell: 60 }
+    powder_snow_bucket: { price: 25, sell: 5 }
+    snowball: { price: 1.25, sell: 0.25 }
+    egg: { price: 15, sell: 3 }
+    totem_of_undying: { price: 1250, sell: 250 }
+    bundle: { price: 50, sell: 10 }
+    book: { price: 75, sell: 15 }
+    paper: { price: 15, sell: 3 }
+    stick: { price: 10, sell: 2 }
+    bowl: { price: 5, sell: 1 }
+    name_tag: { price: 1000, sell: 200 }
+    saddle: { price: 2500, sell: 500 }
+    elytra: { price: 150000, sell: 30000 }
+    firework_rocket: { price: 150, sell: 30 }
+    ender_pearl: { price: 10, sell: 2 }
+    eye_of_ender: { price: 100, sell: 20 }
+    honey_bottle: { price: 22.5, sell: 4.5 }
+    experience_bottle: { price: 75, sell: 15 }
+    spyglass: { price: 250, sell: 50 }
+    goat_horn: { price: 750, sell: 150 }

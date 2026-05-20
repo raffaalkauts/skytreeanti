@@ -1,0 +1,27 @@
+# Skytree Tag System Configuration
+
+tags:
+  newbie:
+    display: "§7[§fNewbie§7]"
+    permission: "skytree.tags.newbie"
+    cost: 0
+  farmer:
+    display: "§2[§aFarmer§2]"
+    permission: "skytree.tags.farmer"
+    cost: 5000
+  ocean_master:
+    display: "§1[§bOcean Master§1]"
+    permission: "skytree.tags.ocean_master"
+    cost: 25000
+  skytree_legend:
+    display: "§6[§eSkytree Legend§6]"
+    permission: "skytree.tags.legend"
+    cost: 100000
+  rich_kid:
+    display: "§d[§5Rich Kid§d]"
+    permission: "skytree.tags.rich"
+    cost: 500000
+  staff:
+    display: "§c[§4Staff§c]"
+    permission: "skytree.tags.staff"
+    cost: -1 # Not purchasable
