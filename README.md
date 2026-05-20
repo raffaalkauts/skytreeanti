@@ -15,9 +15,9 @@
 - **YAML Persistence**: Standalone data storage (no external plugins needed)
 
 ### Economy System ✅
-- **BTC Currency**: Custom in-game currency (BitCoins)
+- **USDT Currency**: Custom in-game currency (USD TETHER)
 - **Commands**: `/bal`, `/btc`, `/money`, `/pay`
-- **Starting Balance**: 100 BTC per player
+- **Starting Balance**: 100 USDT per player
 
 ### Custom Items (50+) ✅
 - **Crooks**: Wooden, Stone (for extra leaf drops + Silkworms)
